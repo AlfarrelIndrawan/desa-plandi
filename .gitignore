@@ -125,6 +125,5 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
-env-asli.txt
-env.conf
+.env
 .gitignore
