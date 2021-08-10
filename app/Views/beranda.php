@@ -64,6 +64,44 @@
         </div>
     </nav>
     <!-- batas navbar -->
+    <!-- carousel berita -->
+    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="saga.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="aot.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Contoh Caption Untuk Carousel untuk KKN Desa Plandi 2021</h5>
+                    <p>Some representative placeholder content for the first slide. Lorem ipsum, dolor sit
+                        amet consectetur adipisicing elit. Dicta saepe fuga eum repellat quos tempora quod
+                        veritatis ipsum assumenda. Inventore pariatur similique tempore hic sint eius voluptatum
+                        facere dicta deserunt. </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="saga.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- batas carousel berita -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
