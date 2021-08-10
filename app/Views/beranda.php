@@ -68,14 +68,14 @@
     <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="saga.jpg" class="d-block w-100" alt="...">
+                <img src="carousel1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="aot.png" class="d-block w-100" alt="...">
+                <img src="carousel2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Contoh Caption Untuk Carousel untuk KKN Desa Plandi 2021</h5>
                     <p>Some representative placeholder content for the first slide. Lorem ipsum, dolor sit
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="saga.jpg" class="d-block w-100" alt="...">
+                <img src="carousel3.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
