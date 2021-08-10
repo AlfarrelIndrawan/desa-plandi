@@ -8,12 +8,62 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assetcss/cssheader.css">
 
     <title>Hello, world!</title>
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+
+    <!-- header -->
+    <div class="container-xl">
+        <div class="row">
+
+            <!-- Nama dan Logo Kabupaten Malang -->
+            <div class="col">
+                <img class="logomalang" src="logomalang.png" width="74px" height="90px"></img>
+                <p class="pdesa">
+                    Desa Plandi - Wonosari
+                </p>
+            </div>
+            <!-- batas nama dan logo desa -->
+            <div class="col pembatas">
+            </div>
+            <!-- Email Desa -->
+            <div class="col email">
+                <img class="logoemail" src="logosurat.png" alt="email" width="47px" height="49px">
+                <p class="pemail">desa-plandi@malangkab.go.id</p>
+            </div>
+            <!-- batas Email Desa -->
+        </div>
+    </div>
+    <!-- batas header -->
+
+    <!-- navbar -->
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light" style="margin-top: 0px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Beranda<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Potensi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">
+                        Monografi
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- batas navbar -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
