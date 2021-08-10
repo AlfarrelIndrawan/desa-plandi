@@ -77,7 +77,7 @@
             <div class="carousel-item">
                 <img src="carousel2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Contoh Caption Untuk Carousel untuk KKN Desa Plandi 2021</h5>
+                    <h5>Contoh Caption Untuk Carousel untuk KKN Desa Plandi 2021 Dengan Judul yang sangat panjang</h5>
                     <p>Some representative placeholder content for the first slide. Lorem ipsum, dolor sit
                         amet consectetur adipisicing elit. Dicta saepe fuga eum repellat quos tempora quod
                         veritatis ipsum assumenda. Inventore pariatur similique tempore hic sint eius voluptatum
