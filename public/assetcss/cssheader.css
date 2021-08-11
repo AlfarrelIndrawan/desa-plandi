@@ -21,37 +21,43 @@
   padding-bottom: 20px;
 }
 
+.col.desa {
+  text-align: left;
+}
+
+.col.email {
+  text-align: right;
+}
+
 .pdesa {
   color: #90d26d;
   font-size: 20px;
   font-weight: bold;
-  bottom: 40px;
   line-height: 24px;
   position: absolute;
-  left: 115px;
+  left: 90px;
+  bottom: 37px;
 }
 
 .logomalang {
   position: relative;
-  left: 25px;
 }
 
 .logoemail {
-  position: absolute;
-  top: 38px;
   opacity: 50%;
-  left: 45px;
+  /* border: solid 1px red; */
+  margin-top: 27px;
 }
 
 .pemail {
+  float: right;
   color: #90d26d;
   font-size: 20px;
   font-weight: bold;
-  margin-left: 47px;
-  bottom: 40px;
   line-height: 24px;
-  position: absolute;
-  left: 45px;
+  margin-top: 37px;
+  /* border: solid 1px red; */
+  width: fit-content;
 }
 
 .nav-link:hover,
@@ -83,7 +89,6 @@
 
 .carousel-caption {
   text-align: left;
-  /* top: 500px; */
 }
 
 .carousel-caption p {
