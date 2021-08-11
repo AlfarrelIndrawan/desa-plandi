@@ -60,6 +60,10 @@
   width: fit-content;
 }
 
+.navbar {
+  background-color: white !important;
+}
+
 .nav-link:hover,
 .nav-link:focus,
 .nav-link.active {

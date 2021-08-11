@@ -16,7 +16,7 @@
 <body>
 
     <!-- header -->
-    <div class="container-xl" style="max-width: 1600px;">
+    <div class="container-xl" style="">
         <div class="row">
 
             <!-- Nama dan Logo Kabupaten Malang -->
