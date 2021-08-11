@@ -1,3 +1,4 @@
+/* css header */
 @media only screen and (max-width: 800px) {
   .col.email {
     display: none;
@@ -48,6 +49,7 @@
   /* border: solid 1px red; */
   margin-top: 27px;
 }
+/* batas css header */
 
 .pemail {
   float: right;
@@ -60,8 +62,16 @@
   width: fit-content;
 }
 
+/* css navbar */
 .navbar {
   background-color: white !important;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
 }
 
 .nav-link:hover,
@@ -77,7 +87,9 @@
 .nav-item {
   margin-inline: 25px;
 }
+/* batas navbar */
 
+/* css carousel */
 .carousel-item img,
 .carousel-item.active img {
   object-fit: contain;
@@ -112,3 +124,4 @@
   font-size: 60px;
   line-height: 60px;
 }
+/* batas css carousel */

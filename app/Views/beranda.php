@@ -16,7 +16,7 @@
 <body>
 
     <!-- header -->
-    <div class="container-xl" style="">
+    <div class="container-xl header">
         <div class="row">
 
             <!-- Nama dan Logo Kabupaten Malang -->
@@ -39,8 +39,8 @@
     <!-- batas header -->
 
     <!-- navbar -->
-    <nav class=" navbar navbar-expand-lg navbar-light bg-light" style="margin-top: 0px;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -69,8 +69,28 @@
     </nav>
     <!-- batas navbar -->
 
+    <!-- js untuk navbar -->
+    <script>
+        // js untuk navbar
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <!-- batas js untuk navbar -->
+
     <!-- carousel berita -->
-    <div>
+    <div id="carousel1" class="">
         <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -109,8 +129,8 @@
         </div>
         <!-- batas carousel berita -->
 
-        <div class="container-fluid" style="border: solid 1px red;">
-            UMKM
+        <div class="container-fluid" style="border: solid 1px red; font-size: 24px;">
+            UMKM Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel ipsa consequatur quas a, similique adipisci reprehenderit! Quas nam facere quisquam rem. Suscipit modi soluta accusantium reprehenderit nostrum a assumenda eaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, excepturi tenetur. Nemo, necessitatibus cupiditate. Cum commodi mollitia quae ea iusto provident nesciunt exercitationem ipsam nemo earum. Veniam assumenda quidem hic? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse sapiente similique voluptatibus nostrum in amet dicta, praesentium aliquid quae labore saepe laudantium doloribus perferendis voluptate, veritatis architecto ipsum nobis nisi? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, quis ex cupiditate labore tempora laboriosam eius nisi eligendi omnis in aspernatur laudantium nemo ea, sint quod est ullam officia numquam.
         </div>
 
         <!-- Optional JavaScript; choose one of the two! -->
