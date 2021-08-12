@@ -36,7 +36,7 @@
 /* batas css carousel */
 
 /* konten UMKM */
-.umkm {
-  text-align: center;
+.umkm,
+.peta {
   margin-top: 100px;
 }

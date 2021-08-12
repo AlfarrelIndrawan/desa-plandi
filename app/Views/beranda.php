@@ -129,25 +129,59 @@
     </div>
     <!-- batas carousel berita -->
 
-    <div class="container-xl umkm" style="border: solid 1px red;">
-        <h3 class="pb-3 mb-5 border-bottom" style="text-align: center;">
+    <div class="container-md umkm">
+        <h3 class=" pb-3 mb-5 border-bottom" style="text-align: center;">
             UMKM
         </h3>
         <div class="row mb-2">
             <div class="col-md-6">
-                <div class="card flex-md-row mb-4 shadow-sm h-md-250" style="background-image: url('logomalang.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
-                    <div class="card-body d-flex flex-column align-items-start">
-                        <h4 class="mb-0">
-                            <p class="text-dark" href="#">[EVENT TALK SKRIPSI : D-3]</p>
-                        </h4>
-                        <div class="mb-3 text-muted">11 Aug 2021</div>
-                        <p class="card-text mb-1" style="text-align: justify; ">
-                            Semangat Pagi, KBMSI !Kalian masih bingung perihal mekanisme dan topik-topik skripsi? Pas banget nih, Event Talk Skripsi hadir untuk menjawab kebingungan teman-teman! Pada Event Talk Skripsi nanti ... </p>
-                        <a href="http://kbmsi.filkom.ub.ac.id/Berita/id/20210811054934">Selengkapnya</a>
+                <div class="card mb-4 shadow" style=" border-radius: 20px;">
+                    <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                    <div class="card-body">
+                        <h5 class="card-title">UMKM 1</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="https://google.com">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4 shadow" style=" border-radius: 20px;">
+                    <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                    <div class="card-body">
+                        <h5 class="card-title">UMKM 2</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="https://google.com">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4 shadow" style=" border-radius: 20px;">
+                    <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                    <div class="card-body">
+                        <h5 class="card-title">UMKM 3</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="https://google.com">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4 shadow" style=" border-radius: 20px;">
+                    <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                    <div class="card-body">
+                        <h5 class="card-title">UMKM 4</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="https://google.com">Selengkapnya</a>
                     </div>
                 </div>
             </div>
         </div>
+        <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="https://google.com">UMKM Lainnya -></a></p>
+    </div>
+
+    <div class="container-md peta">
+        <h3 class=" pb-3 mb-5 border-bottom" style="text-align: center;">
+            Lokasi
+        </h3>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
