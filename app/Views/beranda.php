@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assetcss/cssheader.css">
+    <link rel="stylesheet" type="text/css" href="assetcss/cssberanda.css">
 
     <title>Beranda</title>
 </head>
@@ -90,57 +91,73 @@
     <!-- batas js untuk navbar -->
 
     <!-- carousel berita -->
-    <div id="carousel1" class="">
-        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="carousel1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>ini merupakan caption dari berita carousel yang ada di web desa plandi</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
+    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="carousel1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>ini merupakan caption dari berita carousel yang ada di web desa plandi</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
                 </div>
-                <div class="carousel-item">
-                    <img src="carousel2.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Contoh Caption Untuk Carousel untuk KKN Desa Plandi 2021 Dengan Judul yang sangat panjang</h5>
-                        <p>Some representative placeholder content for the first slide. Lorem ipsum, dolor sit
-                            amet consectetur adipisicing elit. Dicta saepe fuga eum repellat quos tempora quod
-                            veritatis ipsum assumenda. Inventore pariatur similique tempore hic sint eius voluptatum
-                            facere dicta deserunt. </p>
-                    </div>
+            </div>
+            <div class="carousel-item">
+                <img src="carousel2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Contoh Caption Untuk Carousel untuk KKN Desa Plandi 2021 Dengan Judul yang sangat panjang</h5>
+                    <p>Some representative placeholder content for the first slide. Lorem ipsum, dolor sit
+                        amet consectetur adipisicing elit. Dicta saepe fuga eum repellat quos tempora quod
+                        veritatis ipsum assumenda. Inventore pariatur similique tempore hic sint eius voluptatum
+                        facere dicta deserunt. </p>
                 </div>
-                <div class="carousel-item">
-                    <img src="carousel3.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ini Contoh Caption untuk carousel berita yang diletakkan setelah navbar</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+            </div>
+            <div class="carousel-item">
+                <img src="carousel3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Ini Contoh Caption untuk carousel berita yang diletakkan setelah navbar</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- batas carousel berita -->
+
+    <div class="container-xl umkm" style="border: solid 1px red;">
+        <h3 class="pb-3 mb-5 border-bottom" style="text-align: center;">
+            UMKM
+        </h3>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-250" style="background-image: url('logomalang.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <h4 class="mb-0">
+                            <p class="text-dark" href="#">[EVENT TALK SKRIPSI : D-3]</p>
+                        </h4>
+                        <div class="mb-3 text-muted">11 Aug 2021</div>
+                        <p class="card-text mb-1" style="text-align: justify; ">
+                            Semangat Pagi, KBMSI !Kalian masih bingung perihal mekanisme dan topik-topik skripsi? Pas banget nih, Event Talk Skripsi hadir untuk menjawab kebingungan teman-teman! Pada Event Talk Skripsi nanti ... </p>
+                        <a href="http://kbmsi.filkom.ub.ac.id/Berita/id/20210811054934">Selengkapnya</a>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-        <!-- batas carousel berita -->
+    </div>
 
-        <div class="container-fluid" style="border: solid 1px red; font-size: 24px;">
-            UMKM Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel ipsa consequatur quas a, similique adipisci reprehenderit! Quas nam facere quisquam rem. Suscipit modi soluta accusantium reprehenderit nostrum a assumenda eaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, excepturi tenetur. Nemo, necessitatibus cupiditate. Cum commodi mollitia quae ea iusto provident nesciunt exercitationem ipsam nemo earum. Veniam assumenda quidem hic? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse sapiente similique voluptatibus nostrum in amet dicta, praesentium aliquid quae labore saepe laudantium doloribus perferendis voluptate, veritatis architecto ipsum nobis nisi? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, quis ex cupiditate labore tempora laboriosam eius nisi eligendi omnis in aspernatur laudantium nemo ea, sint quod est ullam officia numquam.
-        </div>
+    <!-- Optional JavaScript; choose one of the two! -->
 
-        <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
-        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
