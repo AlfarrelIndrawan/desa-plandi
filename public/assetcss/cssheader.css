@@ -65,11 +65,8 @@
 /* css navbar */
 .navbar {
   background-color: white !important;
-  transition: padding 1s;
-}
-
-.navbar-brand {
-  position: relative;
+  padding: 15px;
+  transition: padding 0.5s;
 }
 
 .navbar-brand p {
@@ -85,7 +82,9 @@
   top: 0;
   width: 100%;
   z-index: 20;
-  transition: position 2s, padding 1s;
+  padding: 10px;
+  transition: padding 0.5s;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .nav-link:hover,
