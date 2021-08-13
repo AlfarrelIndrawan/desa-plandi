@@ -217,6 +217,10 @@
     </div>
     <!-- batas container lokasi -->
 
+    <div class="container-fluid" style="background-color: #90d26d; height: 50px;">
+
+    </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
