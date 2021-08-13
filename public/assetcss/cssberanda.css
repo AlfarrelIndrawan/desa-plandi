@@ -40,3 +40,35 @@
 .peta {
   margin-top: 100px;
 }
+/* batas konten umkm */
+
+/* css konten lokasi dan kontak */
+h5 {
+  font-size: 1.25rem;
+}
+
+a.mail,
+a.telepon {
+  color: black;
+  text-decoration: none;
+}
+
+a.mail:hover,
+a.mail:focus {
+  color: #006aff;
+}
+
+a.telepon:hover,
+a.telepon:focus {
+  color: #25d366;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h3 {
+  text-align: center;
+}
+/* batas css konten dan lokasi */

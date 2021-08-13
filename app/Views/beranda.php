@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assetcss/cssheader.css">
     <link rel="stylesheet" type="text/css" href="assetcss/cssberanda.css">
+    <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
+
 
     <title>Beranda</title>
 </head>
@@ -129,11 +131,13 @@
     </div>
     <!-- batas carousel berita -->
 
+    <!-- Container UMKM -->
     <div class="container-md umkm">
-        <h3 class=" pb-3 mb-5 border-bottom" style="text-align: center;">
+        <h3 class=" pb-3 mb-5 border-bottom">
             UMKM
         </h3>
         <div class="row mb-2">
+            <!-- item UMKM -->
             <div class="col-md-6">
                 <div class="card mb-4 shadow" style=" border-radius: 20px;">
                     <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
@@ -144,6 +148,7 @@
                     </div>
                 </div>
             </div>
+            <!-- batas item UMKM -->
             <div class="col-md-6">
                 <div class="card mb-4 shadow" style=" border-radius: 20px;">
                     <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
@@ -177,12 +182,40 @@
         </div>
         <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="https://google.com">UMKM Lainnya -></a></p>
     </div>
+    <!-- batas container UMKM -->
 
+    <!-- containe lokasi -->
     <div class="container-md peta">
-        <h3 class=" pb-3 mb-5 border-bottom" style="text-align: center;">
+        <h3 class=" pb-3 mb-5 border-bottom">
             Lokasi
         </h3>
+        <div class="row mb-2">
+            <!-- container peta dan alamat -->
+            <div class="col md-7">
+                <h5>Kantor Pemerintahan</h5>
+                <p>Jl. Juanda No.15, Plandi, Wonosari, Malang, Jawa Timur 65164</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31598.835121852306!2d112.50398536551133!3d-8.116304676051506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7899339d5327a9%3A0x23c338311c74a715!2sPlandi%2C%20Wonosari%2C%20Malang%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1628850759212!5m2!1sen!2sid" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <!-- batas container peta dan alamat -->
+            <div class="col-md-1 d-none d-md-block"></div>
+            <!-- container kontak -->
+            <div class="col md-4 mx-auto my-auto">
+                <h5 class="mb-2 pb-2 border-bottom">
+                    Kontak
+                </h5>
+                <ul class="contact-info mb-5">
+                    <a class="telepon" href="tel:08xx xxxx xxxx">
+                        <li><i class="fas fa-comment"></i> &nbsp;08xx xxxx xxxx</li>
+                    </a>
+                    <a class=" mail mailto" href="mailto:desa-plandi@malangkab.go.id">
+                        <li><i class="fas fa-at"></i> &nbsp;desa-plandi@malangkab.go.id</li>
+                    </a>
+                </ul>
+            </div>
+            <!-- batas container kontak -->
+        </div>
     </div>
+    <!-- batas container lokasi -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
