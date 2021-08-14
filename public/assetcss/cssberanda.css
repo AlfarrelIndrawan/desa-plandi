@@ -39,6 +39,7 @@
 .umkm,
 .peta {
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 /* batas konten umkm */
 
@@ -68,7 +69,4 @@ ul {
   padding: 0;
 }
 
-h3 {
-  text-align: center;
-}
 /* batas css konten dan lokasi */

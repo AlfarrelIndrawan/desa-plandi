@@ -1,0 +1,11 @@
+.visi,
+.misi,
+.strukturorg {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.visi p,
+.misi p {
+  text-align: center;
+}

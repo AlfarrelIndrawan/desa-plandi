@@ -1,3 +1,7 @@
+<?php
+
+use App\Controllers\Profil_Desa;
+?>
 <!doctype html>
 <html lang="en">
 
@@ -13,7 +17,7 @@
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
-    <title>Beranda</title>
+    <title>Beranda | Desa Plandi</title>
 </head>
 
 <body>
@@ -49,10 +53,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Beranda<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="#">Beranda<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Profil</a>
+                    <a class="nav-link" href="<?= base_url('/Profil_Desa'); ?>">Profil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Potensi</a>
@@ -217,9 +221,10 @@
     </div>
     <!-- batas container lokasi -->
 
-    <div class="container-fluid" style="background-color: #90d26d; height: 50px;">
-
+    <!-- footer -->
+    <div class="container-fluid footer">
     </div>
+    <!-- batas footer -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 

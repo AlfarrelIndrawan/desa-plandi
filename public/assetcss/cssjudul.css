@@ -1,0 +1,17 @@
+.judulkonten {
+  background-color: #90d26d;
+  background-image: url("judul.jpg");
+  padding: 40px 0px;
+  opacity: 0.5;
+  background-position: 0px -70.3185px;
+}
+
+.judulkonten h1 {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15) !important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
