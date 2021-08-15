@@ -115,3 +115,8 @@ h3 {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
+.sticky + script + .judulkonten .container-xl,
+.sticky + script + .carousel {
+  padding-top: 90px;
+}
