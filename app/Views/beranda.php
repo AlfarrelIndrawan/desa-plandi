@@ -136,7 +136,7 @@ use App\Controllers\Profil_Desa;
     <!-- batas carousel berita -->
 
     <!-- Container UMKM -->
-    <div class="container-md umkm">
+    <div class="container-md konten umkm">
         <h3 class=" pb-3 mb-5 border-bottom">
             UMKM
         </h3>
@@ -189,7 +189,7 @@ use App\Controllers\Profil_Desa;
     <!-- batas container UMKM -->
 
     <!-- containe lokasi -->
-    <div class="container-md peta">
+    <div class="container-md konten peta">
         <h3 class=" pb-3 mb-5 border-bottom">
             Lokasi
         </h3>
