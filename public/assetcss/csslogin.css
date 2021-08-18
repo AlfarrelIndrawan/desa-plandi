@@ -1,0 +1,41 @@
+body {
+  background: url("judul.jpg") no-repeat;
+  background-size: cover;
+}
+
+.container-login {
+  max-width: 500px;
+  background-color: #f9f9f9;
+  padding: 30px;
+}
+
+.header-selamat {
+  color: #90d26d;
+  text-align: center;
+}
+
+.logo-malang {
+  text-align: center;
+}
+
+.btnlogin:hover,
+.btnlogin:active,
+.btnlogin:focus {
+  background-color: #90d26d;
+  filter: brightness(85%);
+  outline-color: #90d26d;
+  border: #90d26d;
+}
+
+.btnlogin {
+  border: #90d26d;
+  background-color: #90d26d;
+}
+
+.linkloginalt {
+  font-size: 0.8rem;
+}
+
+.col-md-6.belum {
+  text-align: right;
+}

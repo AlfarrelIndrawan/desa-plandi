@@ -6,6 +6,6 @@ class Beranda extends BaseController
 {
 	public function index()
 	{
-		return view('beranda');
+		return view('login');
 	}
 }

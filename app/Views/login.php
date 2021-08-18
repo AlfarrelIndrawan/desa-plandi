@@ -8,32 +8,46 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="assetcss/csslogin.css">
     <title>Hello, world!</title>
 </head>
 
 <body>
-    <div class="container-xl" style="border:solid 1px red; text-align: center;">
-        <img src="logomalang.png" width="20%" height="20%">
+    <div class=" container-login container-xl my-4 shadow">
+        <h1 class="header-selamat mb-4">Selamat Datang</h1>
+        <div class="logo-malang container mb-4">
+            <img src="logomalang.png" width="50%" height="50%">
+        </div>
         <form>
-            <div class="row my-3">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder="City" aria-label="City">
-                </div>
-                <div class="col-sm-3"></div>
+            <div class="form-group my-3">
+                <!-- <label for="exampleInputEmail1">Email address</label> -->
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
             </div>
-            <div class="row my-3">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder="State" aria-label="State">
-                </div>
-                <div class="col-sm-3"></div>
+            <div class="form-group my-3">
+                <!-- <label for="exampleInputPassword1">Password</label> -->
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-
-    </form>
+            <div class="form-group form-check my-3">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">ingat saya</label>
+            </div>
+            <div class="container mt-5 mb-3">
+                <div class="container">
+                    <div class="container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="submit" class=" btnlogin btn btn-success btn-block">Login</button>
+                                </div>
+                                <div class="col-md-6 mt-3 lupa"><a class="linkloginalt" href="#">Lupa kata sandi</a></div>
+                                <div class="col-md-6 mt-3 belum"><a class="linkloginalt 2" href="#">Belum punya akun ?</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 
 
