@@ -207,7 +207,7 @@ use App\Controllers\Profil_Desa;
                 <h5 class="mb-2 pb-2 border-bottom">
                     Kontak
                 </h5>
-                <ul class="contact-info mb-5" style="">
+                <ul class="contact-info mb-5">
                     <a class="telepon" href="tel:08xx xxxx xxxx">
                         <li><i class="fas fa-comment"></i> &nbsp;08xx xxxx xxxx</li>
                     </a>
