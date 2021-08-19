@@ -13,7 +13,7 @@ use App\Controllers\Profil_Desa;
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assetcss/cssheader.css">
-    <link rel="stylesheet" type="text/css" href="assetcss/cssberanda.css">
+    <link rel=" stylesheet" type="text/css" href="assetcss/cssberanda.css">
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
@@ -59,15 +59,15 @@ use App\Controllers\Profil_Desa;
                     <a class="nav-link" href="<?= base_url('/Profil_Desa'); ?>">Profil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Potensi</a>
+                    <a class="nav-link" href="<?= base_url('/Potensi'); ?>">Potensi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">
+                    <a class="nav-link " href="<?= base_url('/Monografi'); ?>">
                         Monografi
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">
+                    <a class="nav-link " href="<?= base_url('/Berita'); ?>">
                         Berita
                     </a>
                 </li>
@@ -207,7 +207,7 @@ use App\Controllers\Profil_Desa;
                 <h5 class="mb-2 pb-2 border-bottom">
                     Kontak
                 </h5>
-                <ul class="contact-info mb-5">
+                <ul class="contact-info mb-5" style="">
                     <a class="telepon" href="tel:08xx xxxx xxxx">
                         <li><i class="fas fa-comment"></i> &nbsp;08xx xxxx xxxx</li>
                     </a>

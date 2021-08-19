@@ -1,0 +1,13 @@
+a.category {
+  text-decoration: none;
+  color: #90d26d;
+}
+
+ul {
+  list-style: none;
+  padding: none;
+}
+
+h5.category {
+  color: rgba(0, 0, 0, 0.5);
+}

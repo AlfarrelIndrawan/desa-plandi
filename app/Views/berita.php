@@ -1,3 +1,7 @@
+<?php
+
+use Config\Pager;
+?>
 <!doctype html>
 <html lang="en">
 
@@ -10,11 +14,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assetcss/cssheader.css">
     <link rel="stylesheet" type="text/css" href="assetcss/cssjudul.css">
-    <link rel="stylesheet" type="text/css" href="assetcss/cssprofil.css">
+    <link rel="stylesheet" type="text/css" href="assetcss/cssberita.css">
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
-    <title>Profil | Desa Plandi</title>
+    <title>Berita | Desa Plandi</title>
 </head>
 
 <body>
@@ -53,7 +57,7 @@
                     <a class="nav-link" href="<?= base_url('/'); ?>">Beranda<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="<?= base_url('/Profil_Desa'); ?>">Profil</a>
+                    <a class="nav-link" href="<?= base_url('/Profil_Desa'); ?>">Profil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/Potensi'); ?>">Potensi</a>
@@ -64,7 +68,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="<?= base_url('/Berita'); ?>">
+                    <a class="nav-link active" href="<?= base_url('/Berita'); ?>">
                         Berita
                     </a>
                 </li>
@@ -96,60 +100,64 @@
     <!-- judul konten -->
     <div class="container-fluid judulkonten">
         <div class="container-xl">
-            <h1>profil desa</h1>
+            <h1>Berita</h1>
         </div>
     </div>
     <!-- batas judul konten -->
 
-    <!-- visi dan misi desa -->
-    <div class="container-md konten">
-        <h3 class="pb-3 mb-5 border-bottom">
-            Visi
-        </h3>
-        <p>
-            “DENGAN SEMANGAT PERSAUDARAAN, GOTONG ROYONG DAN AKHLAK MULIA GUNA MEWUJUDKAN DESA LANGKAP YANG LUAR BIASA”.
-        </p>
-    </div>
-    <div class="container-md konten">
-        <h3 class="pb-3 mb-5 border-bottom">
-            Misi
-        </h3>
-        <ul style="list-style: decimal;">
-            <li class="item-misi">Mengutamakan pemberdayaan potensi pertanian untuk menunjang sumber pendapatan dan kesejahteraan masyarakat desa sebagai sentra kegiatan pokok.</li>
-            <li class="item-misi">Meningkatkan kualitas Sumber Daya Manusia melalui Program pendidikan dan program kesehatan serta pengamalan ajaran agama kepada masyarakat.</li>
-            <li class="item-misi">Menggali , melestarikan dan mengembangkan nilai - nilai budaya desa</li>
-            <li class="item-misi"> Meningkatkan ketahanan ekonomi dengan menggalakkan usaha ekonomi kerakyatan melalui program strategi dibidang produksi ekonomi pertanian , kerajinan, pariwisata.</li>
-            <li class="item-misi">Meningkatkan partisipasi masyarakat dalam menumbuh kembangkan kesadaran dan kemandirian dalam pembangunan desa yang berkelanjutan.</li>
-            <li class="item-misi">Menciptakan suasana yang aman dan tertib dalam kehidupan bermasyarakat.</li>
-            <li class="item-misi">Meningkatkan pelayanan kepada masyarakat dan kerjasama anat lembaga pemerintahan di desa serta lembaga adat.</li>
-            <li class="item-misi">Memberdayakan masyarakat dengan mengoptimalkan potensi yang ada menuju masyarakat mandiri dan sejahtera.</li>
-        </ul>
-    </div>
-    <!-- batas visi dan misi desa !visi dan misi pada kode ini hanya contoh-->
+    <!-- menampilkan berita-->
+    <div class="container-xl mt-5 konten">
+        <!-- link untuk halaman berita -->
+        <?= $pager->links('berita', 'pagination_custom') ?>
+        <!-- batas link untuk halaman berita -->
+        <div class="row">
+            <div class="col-md-10">
+                <div class="row">
+                    <!-- looping dari database untuk menampilkan berita -->
+                    <?php foreach ($berita as $b) : ?>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow" style=" border-radius: 20px;">
+                                <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                                <div class="card-body">
+                                    <h4 class="card-title"><?php echo $b['judul']; ?></h4>
+                                    <h6 class="card-subtitle my-2 text-muted"><?php echo $b['tanggal']; ?></h6>
+                                    <p class="card-text"><?php echo $b['isi']; ?></p>
+                                    <a class="badge badge-success" style="background-color: #90d26d;" href="https://google.com">Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                    <!-- batas looping berita dari database ("contoh bisa menggunakan db dummy dengan field isi dan judul") -->
+                </div>
+            </div>
+            <!-- kategori berita -->
+            <div class="col-xl-2 border-left">
+                <div class="container">
+                    <h5 class="category">Kategori</h5>
+                    <ul class="mb-5" style="list-style: none; padding: 0;">
+                        <a class="category" href=" #">
+                            <li>&nbsp;Ekonomi</li>
+                        </a>
+                        <a class="category" href="#">
+                            <li>&nbsp;Pendidikan</li>
+                        </a>
+                        <a class="category" href="#">
+                            <li>&nbsp;Sosial</li>
+                        </a>
+                        <a class="category" href="#">
+                            <li>&nbsp;Kesehatan</li>
+                        </a>
+                        <a class="category" href="#">
+                            <li>&nbsp;Lainnya</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- batas kategori berita -->
+        </div>
 
-    <!-- struktur desa -->
-    <div class="container-xl konten">
-        <h3 class="pb-3 mb-5 border-bottom">
-            Struktur Organisasi
-        </h3>
-        <p style="text-align: justify;">Kepala Desa bertugas menyelenggarakan Pemerintahan Desa, melaksanakan pembangunan, pembinaan kemasyarakatan, dan pemberdayaan masyarakat. Untuk melaksanakan tugas Kepala Desa memiliki fungsi-fungsi sebagai berikut:</p>
-        <ol style="text-align: justify;">
-            <li>Menyelenggarakan Pemerintahan Desa, seperti tata praja Pemerintahan, penetapan peraturan di desa, pembinaan masalah pertanahan, pembinaan ketentraman dan ketertiban, melakukan upaya perlindungan masyarakat, administrasi kependudukan, dan penataan dan pengelolaan wilayah.</li>
-            <li>Melaksanakan pembangunan, seperti pembangunan sarana prasarana perdesaan, dan pembangunan bidang pendidikan, kesehatan.</li>
-            <li>Pembinaan kemasyarakatan, seperti pelaksanaan hak dan kewajiban masyarakat, partisipasi masyarakat, sosial budaya masyarakat, keagamaan, dan ketenagakerjaan.</li>
-            <li>Pemberdayaan masyarakat, seperti tugas sosialisasi dan motivasi masyarakat di bidang budaya, ekonomi, politik, lingkungan hidup, pemberdayaan keluarga, pemuda, olahraga, dan karang taruna.</li>
-            <li>Menjaga hubungan kemitraan dengan lembaga masyarakat dan lembaga lainnya.</li>
-        </ol>
-        <p style="text-align: justify;">&nbsp;Sekretaris Desa berkedudukan sebagai unsur pimpinan Sekretariat Desa. Sekretaris Desa bertugas membantu Kepala Desa dalam bidang administrasi pemerintahan. Untuk melaksanakan tugas, Sekretaris Desa mempunyai fungsi:</p>
-        <ol style="text-align: justify;">
-            <li>Melaksanakan urusan ketatausahaan seperti tata naskah, administrasi surat menyurat, arsip, dan ekspedisi.</li>
-            <li>Melaksanakan urusan umum seperti penataan administrasi perangkat desa, penyediaan prasarana perangkat desa dan kantor, penyiapan rapat, pengadministrasian aset, inventarisasi, perjalanan dinas, dan pelayanan umum.</li>
-            <li>Melaksanakan urusan keuangan seperti pengurusan administrasi keuangan, administrasi sumber-sumber pendapatan dan pengeluaran, verifikasi administrasi keuangan, dan admnistrasi penghasilan Kepala Desa, Perangkat Desa, BPD, dan lembaga pemerintahan desa lainnya.</li>
-            <li>Melaksanakan urusan perencanaan seperti menyusun rencana anggaran pendapatan dan belanja desa, menginventarisir data-data dalam rangka pembangunan, melakukan monitoring dan evaluasi program, serta penyusunan laporan.</li>
-        </ol>
     </div>
-    <!-- batas struktur desa -->
-
+    <!-- batas contoh konten -->
     <!-- footer -->
     <div class="container-fluid footer">
         <div class="container-xl">
