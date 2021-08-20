@@ -3,6 +3,11 @@ a.category {
   color: #90d26d;
 }
 
+a.category:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 ul {
   list-style: none;
   padding: none;
@@ -11,3 +16,14 @@ ul {
 h5.category {
   color: rgba(0, 0, 0, 0.5);
 }
+
+/* membatasi isi berita yang ditampilkan di card hanya 2 baris */
+p.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+}
+/* batas css isi berita */

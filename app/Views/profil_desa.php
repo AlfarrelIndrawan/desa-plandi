@@ -52,8 +52,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/'); ?>">Beranda<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="<?= base_url('/Profil_Desa'); ?>">Profil</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profil
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item active" href="<?= base_url('/Profil_Desa'); ?>">Pemerintahan</a>
+                        <a class="dropdown-item" href="#">Sejarah</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/Potensi'); ?>">Potensi</a>

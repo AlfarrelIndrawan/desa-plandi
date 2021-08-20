@@ -100,6 +100,29 @@
 .nav-item {
   margin-inline: 25px;
 }
+
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #90d26d;
+  color: white;
+}
+
+.dropdown-item {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-toggle:active,
+.dropdown-toggle:focus,
+.dropdown-toggle.active {
+  color: #90d26d !important;
+}
+
+.dropdown-item {
+  margin-top: 5px;
+}
+
 /* batas navbar */
 h3 {
   text-align: center;

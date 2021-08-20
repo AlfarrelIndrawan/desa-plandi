@@ -56,8 +56,14 @@ use Config\Pager;
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/'); ?>">Beranda<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('/Profil_Desa'); ?>">Profil</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profil
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="<?= base_url('/Profil_Desa'); ?>">Pemerintahan</a>
+                        <a class="dropdown-item" href="#">Sejarah</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/Potensi'); ?>">Potensi</a>
@@ -130,25 +136,27 @@ use Config\Pager;
                     <!-- batas looping berita dari database ("contoh bisa menggunakan db dummy dengan field isi dan judul") -->
                 </div>
             </div>
+            <div class="col-md-1">
+            </div>
             <!-- kategori berita -->
-            <div class="col-xl-2 border-left">
+            <div class="col-xl-1 border-left">
                 <div class="container">
                     <h5 class="category">Kategori</h5>
                     <ul class="mb-5" style="list-style: none; padding: 0;">
                         <a class="category" href=" #">
-                            <li>&nbsp;Ekonomi</li>
+                            <li>Ekonomi</li>
                         </a>
                         <a class="category" href="#">
-                            <li>&nbsp;Pendidikan</li>
+                            <li>Pendidikan</li>
                         </a>
                         <a class="category" href="#">
-                            <li>&nbsp;Sosial</li>
+                            <li>Sosial</li>
                         </a>
                         <a class="category" href="#">
-                            <li>&nbsp;Kesehatan</li>
+                            <li>Kesehatan</li>
                         </a>
                         <a class="category" href="#">
-                            <li>&nbsp;Lainnya</li>
+                            <li>Lainnya</li>
                         </a>
                     </ul>
                 </div>
