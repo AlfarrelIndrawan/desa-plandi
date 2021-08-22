@@ -141,58 +141,62 @@ use App\Controllers\Profil_Desa;
     </div>
     <!-- batas carousel berita -->
 
+    <!-- paragraf tentang desa plandi -->
+    <div class="container-md konten" style="text-align: center;">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, necessitatibus sequi. Laudantium aut fuga nobis corrupti ullam adipisci, qui molestiae quis, quibusdam facere et fugit necessitatibus rerum atque maxime beatae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus ducimus nostrum officiis nihil! Accusantium maxime maiores assumenda sit ratione, optio possimus molestiae necessitatibus voluptatibus vel, sed quia, totam minima!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum blanditiis iusto error, numquam odio earum debitis! Repudiandae, at ipsum! Voluptatibus obcaecati ratione totam, provident suscipit hic exercitationem odio est amet.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, necessitatibus sequi. Laudantium aut fuga nobis corrupti ullam adipisci, qui molestiae quis, quibusdam facere et fugit necessitatibus rerum atque maxime beatae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus ducimus nostrum officiis nihil! Accusantium maxime maiores assumenda sit ratione, optio possimus molestiae necessitatibus voluptatibus vel, sed quia, totam minima!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum blanditiis iusto error, numquam odio earum debitis! Repudiandae, at ipsum! Voluptatibus obcaecati ratione totam, provident suscipit hic exercitationem odio est amet.
+        </p>
+    </div>
+    <!-- batas paragraf tentang desa plandi -->
+
     <!-- Container UMKM -->
     <div class="container-md konten umkm">
         <h3 class=" pb-3 mb-5 border-bottom">
             UMKM
         </h3>
-        <div class="row mb-2">
-            <!-- item UMKM -->
+        <div class="row">
             <div class="col-md-6">
-                <div class="card mb-4 shadow" style=" border-radius: 20px;">
-                    <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
-                    <div class="card-body">
-                        <h5 class="card-title">UMKM 1</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="https://google.com">Selengkapnya</a>
-                    </div>
-                </div>
+                <img src="survei.jpg" alt="..." style=" object-fit: contain; max-width: 550px;">
             </div>
-            <!-- batas item UMKM -->
-            <div class="col-md-6">
-                <div class="card mb-4 shadow" style=" border-radius: 20px;">
-                    <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
-                    <div class="card-body">
-                        <h5 class="card-title">UMKM 2</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="https://google.com">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card mb-4 shadow" style=" border-radius: 20px;">
-                    <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
-                    <div class="card-body">
-                        <h5 class="card-title">UMKM 3</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="https://google.com">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card mb-4 shadow" style=" border-radius: 20px;">
-                    <img src="umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
-                    <div class="card-body">
-                        <h5 class="card-title">UMKM 4</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="https://google.com">Selengkapnya</a>
-                    </div>
-                </div>
+            <div class="col-md-6 text-justify">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maiores non architecto, aut molestias repudiandae ipsa, quaerat minima laudantium voluptates, hic minus cupiditate eaque. Quod qui voluptates repellat ut ipsa?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic iure ducimus et eum dolore odit eveniet, unde aliquid quaerat excepturi esse, alias impedit, voluptatum earum magnam? Nesciunt reprehenderit quasi numquam.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, reprehenderit? Voluptates dolores officiis ratione hic minus vitae delectus velit necessitatibus voluptate, repudiandae excepturi laudantium quia quo ut recusandae quidem! Nesciunt?
+                </p>
             </div>
         </div>
-        <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="https://google.com">UMKM Lainnya -></a></p>
+        <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="https://google.com">Lainnya -></a></p>
     </div>
     <!-- batas container UMKM -->
+
+    <!-- container potensi -->
+    <div class="container-md konten umkm">
+        <h3 class=" pb-3 mb-5 border-bottom">
+            Potensi
+        </h3>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="umkm.jpeg" alt="..." style=" object-fit: contain; max-width: 550px;">
+            </div>
+            <div class="col-md-6 text-justify">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maiores non architecto, aut molestias repudiandae ipsa, quaerat minima laudantium voluptates, hic minus cupiditate eaque. Quod qui voluptates repellat ut ipsa?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic iure ducimus et eum dolore odit eveniet, unde aliquid quaerat excepturi esse, alias impedit, voluptatum earum magnam? Nesciunt reprehenderit quasi numquam.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, reprehenderit? Voluptates dolores officiis ratione hic minus vitae delectus velit necessitatibus voluptate, repudiandae excepturi laudantium quia quo ut recusandae quidem! Nesciunt?
+                </p>
+            </div>
+        </div>
+        <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="https://google.com">Lainnya -></a></p>
+    </div>
+    <!-- batas container potensi -->
 
     <!-- containe lokasi -->
     <div class="container-md konten peta">
