@@ -1,5 +1,5 @@
 <?php $pager->setSurroundCount(2) ?>
-<link rel="stylesheet" type="text/css" href="assetcss/csspagination.css">
+<link rel="stylesheet" type="text/css" href="css/csspagination.css">
 <nav class="mb-5" aria-label="Page navigation example">
     <ul class="pagination">
         <?php if ($pager->hasPrevious()) : ?>

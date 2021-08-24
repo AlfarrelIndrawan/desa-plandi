@@ -12,8 +12,8 @@ use App\Controllers\Profil_Desa;
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assetcss/cssheader.css">
-    <link rel=" stylesheet" type="text/css" href="assetcss/cssberanda.css">
+    <link rel="stylesheet" type="text/css" href="css/cssheader.css">
+    <link rel=" stylesheet" type="text/css" href="css/cssberanda.css">
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
@@ -28,7 +28,7 @@ use App\Controllers\Profil_Desa;
 
             <!-- Nama dan Logo Kabupaten Malang -->
             <div class="col desa">
-                <img class="logomalang" src="logomalang.png" width="74px" height="90px"></img>
+                <img class="logomalang" src="img/logomalang.png" width="74px" height="90px"></img>
                 <p class="pdesa">
                     Desa Plandi - Wonosari
                 </p>
@@ -37,7 +37,7 @@ use App\Controllers\Profil_Desa;
 
             <!-- Email Desa -->
             <div class="col email">
-                <img class="logoemail" src="logosurat.png" alt="email" width="47px" height="49px">
+                <img class="logoemail" src="img/logosurat.png" alt="email" width="47px" height="49px">
                 <p class="pemail">desa-plandi@malangkab.go.id</p>
             </div>
             <!-- batas Email Desa -->
@@ -106,14 +106,14 @@ use App\Controllers\Profil_Desa;
     <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="carousel1.jpg" class="d-block w-100" alt="...">
+                <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>ini merupakan caption dari berita carousel yang ada di web desa plandi</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="carousel2.jpg" class="d-block w-100" alt="...">
+                <img src="img/carousel2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Contoh Caption Untuk Carousel untuk KKN Desa Plandi 2021 Dengan Judul yang sangat panjang</h5>
                     <p>Some representative placeholder content for the first slide. Lorem ipsum, dolor sit
@@ -123,7 +123,7 @@ use App\Controllers\Profil_Desa;
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="carousel3.jpg" class="d-block w-100" alt="...">
+                <img src="img/carousel3.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Ini Contoh Caption untuk carousel berita yang diletakkan setelah navbar</h5>
                     <p>Some representative placeholder content for the first slide.</p>
@@ -163,7 +163,7 @@ use App\Controllers\Profil_Desa;
         </h3>
         <div class="row">
             <div class="col-md-6">
-                <img src="survei.jpg" alt="..." style=" object-fit: contain; max-width: 550px;">
+                <img src="img/survei.jpg" alt="..." style=" object-fit: contain; max-width: 550px;">
             </div>
             <div class="col-md-6 text-justify">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
@@ -184,7 +184,7 @@ use App\Controllers\Profil_Desa;
         </h3>
         <div class="row">
             <div class="col-md-6">
-                <img src="umkm.jpeg" alt="..." style=" object-fit: contain; max-width: 550px;">
+                <img src="img/umkm.jpeg" alt="..." style=" object-fit: contain; max-width: 550px;">
             </div>
             <div class="col-md-6 text-justify">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.

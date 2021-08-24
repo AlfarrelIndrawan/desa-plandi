@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assetcss/csslogin.css">
+    <link rel="stylesheet" type="text/css" href="css/csslogin.css">
     <title>Hello, world!</title>
 </head>
 
@@ -16,7 +16,7 @@
     <div class=" container-login container-xl my-4 shadow">
         <h1 class="header-selamat mb-4">Selamat Datang</h1>
         <div class="logo-malang container mb-4">
-            <img src="logomalang.png" width="50%" height="50%">
+            <img src="img/logomalang.png" width="50%" height="50%">
         </div>
         <form>
             <div class="form-group my-3">
