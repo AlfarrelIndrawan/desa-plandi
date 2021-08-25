@@ -8,9 +8,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assetcss/cssheader.css">
-    <link rel="stylesheet" type="text/css" href="assetcss/cssjudul.css">
-    <link rel="stylesheet" type="text/css" href="assetcss/cssprofil.css">
+    <link rel="stylesheet" type="text/css" href="css/cssheader.css">
+    <link rel="stylesheet" type="text/css" href="css/cssjudul.css">
+    <link rel="stylesheet" type="text/css" href="css/cssprofil.css">
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
@@ -25,7 +25,7 @@
 
             <!-- Nama dan Logo Kabupaten Malang -->
             <div class="col desa">
-                <img class="logomalang" src="logomalang.png" width="74px" height="90px"></img>
+                <img class="logomalang" src="img/logomalang.png" width="74px" height="90px"></img>
                 <p class="pdesa">
                     Desa Plandi - Wonosari
                 </p>
@@ -34,7 +34,7 @@
 
             <!-- Email Desa -->
             <div class="col email">
-                <img class="logoemail" src="logosurat.png" alt="email" width="47px" height="49px">
+                <img class="logoemail" src="img/logosurat.png" alt="email" width="47px" height="49px">
                 <p class="pemail">desa-plandi@malangkab.go.id</p>
             </div>
             <!-- batas Email Desa -->
@@ -139,7 +139,7 @@
             Struktur Organisasi
         </h3>
         <div class="container" style="text-align: center;">
-            <img src="strukturorg.jpeg">
+            <img src="img/strukturorg.jpeg">
         </div>
     </div>
     <!-- batas struktur desa -->

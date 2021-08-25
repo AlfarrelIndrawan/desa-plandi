@@ -61,4 +61,8 @@ ul {
   padding: 0;
 }
 
+p.lead.mb-0 a {
+  color: #90d26d !important;
+}
+
 /* batas css konten dan lokasi */
