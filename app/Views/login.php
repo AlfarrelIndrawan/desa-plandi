@@ -16,7 +16,7 @@
     <div class=" container-login container-xl my-4 shadow">
         <h1 class="header-selamat mb-4">Selamat Datang</h1>
         <div class="logo-malang container mb-4">
-            <img src="img/logomalang.png" width="50%" height="50%">
+            <img src="<?= base_url('img/logomalang.png') ?>" width="50%" height="50%">
         </div>
         <form>
             <div class="form-group my-3">

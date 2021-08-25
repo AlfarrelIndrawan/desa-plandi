@@ -126,7 +126,7 @@ use Config\Pager;
                                 <div class="card-body">
                                     <h4 class="card-title"><?php echo $b['judul']; ?></h4>
                                     <h6 class="card-subtitle my-2 text-muted"><?php echo $b['tanggal']; ?></h6>
-                                    <p class="card-text"><?php echo $b['isi']; ?></p>
+                                    <p class="card-text"><?php echo $b['berita']; ?></p>
                                     <a class="badge badge-success" style="background-color: #90d26d;" href="https://google.com">Selengkapnya</a>
                                 </div>
                             </div>

@@ -1,7 +1,3 @@
-<?php
-
-use App\Controllers\Profil_Desa;
-?>
 <!doctype html>
 <html lang="en">
 
@@ -12,12 +8,13 @@ use App\Controllers\Profil_Desa;
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/cssheader.css">
-    <link rel=" stylesheet" type="text/css" href="css/cssberanda.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('css/cssheader.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('css/cssjudul.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('css/cssberanda.css'); ?>">
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
-    <title>Beranda | Desa Plandi</title>
+    <title>Potensi | Desa Plandi</title>
 </head>
 
 <body>
@@ -28,7 +25,7 @@ use App\Controllers\Profil_Desa;
 
             <!-- Nama dan Logo Kabupaten Malang -->
             <div class="col desa">
-                <img class="logomalang" src="img/logomalang.png" width="74px" height="90px"></img>
+                <img class="logomalang" src="<?= base_url('img/logomalang.png'); ?>" width="74px" height="90px"></img>
                 <p class="pdesa">
                     Desa Plandi - Wonosari
                 </p>
@@ -37,7 +34,7 @@ use App\Controllers\Profil_Desa;
 
             <!-- Email Desa -->
             <div class="col email">
-                <img class="logoemail" src="img/logosurat.png" alt="email" width="47px" height="49px">
+                <img class="logoemail" src="<?= base_url('img/logosurat.png'); ?>" alt="email" width="47px" height="49px">
                 <p class="pemail">desa-plandi@malangkab.go.id</p>
             </div>
             <!-- batas Email Desa -->
@@ -53,7 +50,7 @@ use App\Controllers\Profil_Desa;
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Beranda<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="<?= base_url('/') ?>">Beranda<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
