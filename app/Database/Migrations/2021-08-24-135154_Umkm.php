@@ -18,7 +18,7 @@ class Umkm extends Migration
                 'type'           => 'VARCHAR',
                 'constraint'     => '100',
             ],
-            'nama_umkm'       => [
+            'nama_pemilik'       => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '100',
             ],
@@ -36,7 +36,7 @@ class Umkm extends Migration
 			'foto'			=> [
 				'type'			=> 'VARCHAR',
 				'constraint'	=> '256',
-				'null'			=> 'true',
+				'null'			=> true,
 			]
         ]);
         $this->forge->addPrimaryKey('id_umkm');

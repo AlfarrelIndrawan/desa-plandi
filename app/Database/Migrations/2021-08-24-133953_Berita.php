@@ -35,7 +35,7 @@ class Berita extends Migration
 			'foto'			=> [
 				'type'			=> 'VARCHAR',
 				'constraint'	=> '256',
-				'null'			=> 'true',
+				'null'			=> true,
 			]
         ]);
         $this->forge->addPrimaryKey('id_berita');
