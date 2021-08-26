@@ -299,13 +299,6 @@
                     </div>
                     <form>
                         <div class="modal-body">
-
-                            <div class="form-group row">
-                                <label for="staticid" class="col-sm-2 col-form-label">ID</label>
-                                <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" id="staticid" value="<?= $b['id_berita'] ?>">
-                                </div>
-                            </div>
                             <div class="form-group row">
                                 <label for="inputjudul" class="col-sm-2 col-form-label">Judul</label>
                                 <div class="col-sm-10">
