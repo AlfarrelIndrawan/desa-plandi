@@ -114,7 +114,7 @@
         <?= $pager->links('umkm', 'pagination_custom') ?>
         <!-- batas link untuk halaman berita -->
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <!-- looping dari database untuk menampilkan berita -->
                 <?php foreach ($umkm as $u) : ?>
                     <div class="card mb-3">
@@ -135,8 +135,6 @@
                     </div>
                 <?php endforeach; ?>
                 <!-- batas looping berita dari database ("contoh bisa menggunakan db dummy dengan field isi dan judul") -->
-            </div>
-            <div class="col-md-1">
             </div>
         </div>
 
