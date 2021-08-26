@@ -153,14 +153,14 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <div class="card shadow mb-4">
+                    <div class="card border-left-success shadow mb-4">
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col-md-6">
                                     <h3 class="m-0 font-weight-bold text-success">UMKM</h3>
                                 </div>
                                 <div class="col-md-6" style="text-align: right;">
-                                    <button type="button" class="btn btn-outline-success">Tambah UMKM</button>
+                                    <a data-toggle="modal" data-target="#ModalTambah" type="button" class="btn btn-outline-success">Tambah UMKM</a>
                                 </div>
                             </div>
                         </div>
@@ -192,17 +192,17 @@
                                     <tbody>
                                         <?php foreach ($umkm as $u) : ?>
                                             <tr>
-                                                <td class="isi"><?= $b['id_umkm'] ?></td>
-                                                <td class="isi"><?= $b['nama_umkm'] ?></td>
-                                                <td class="isi"><?= $b['deskripsi'] ?></td>
-                                                <td class="isi"><?= $b['lokasi'] ?></td>
-                                                <td class="isi"><?= $b['kontak'] ?></td>
-                                                <td class="isi"><?= $b['foto'] ?></td>
+                                                <td class="isi"><?= $u['id_umkm'] ?></td>
+                                                <td class="isi"><?= $u['nama_umkm'] ?></td>
+                                                <td class="isi"><?= $u['deskripsi'] ?></td>
+                                                <td class="isi"><?= $u['lokasi'] ?></td>
+                                                <td class="isi"><?= $u['kontak'] ?></td>
+                                                <td class="isi"><?= $u['foto'] ?></td>
                                                 <td class="isi">
-                                                    <a href="#" class="btn btn-danger btn-circle">
+                                                    <a data-toggle="modal" data-target="#ModalDelete<?= $u['id_umkm'] ?>" href="#" class="btn btn-danger btn-circle">
                                                         <i class="fas fa-trash"></i>
                                                     </a>
-                                                    <a href="#" class="btn btn-warning btn-circle">
+                                                    <a data-toggle="modal" data-target="#ModalEdit<?= $u['id_umkm'] ?>" href="#" class="btn btn-warning btn-circle">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
                                                 </td>
@@ -258,6 +258,140 @@
             </div>
         </div>
     </div>
+    <!-- batas modal logout -->
+
+    <!-- modal delete -->
+    <?php foreach ($umkm as $u) : ?>
+        <div class="modal fade" id="ModalDelete<?= $u['id_umkm'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <form>
+                <input type="hidden" value="<?= $u['id_umkm'] ?>"></input>
+                <div class="modal-dialog " role="document">
+                    <div class="modal-content border-left-danger">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Yakin Menghapus ?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Pilih tombol "Hapus" dibawah jika anda yakin untuk menghapus umkm dengan nama "<?= $u['nama_umkm'] ?>"</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-danger">Hapus</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    <?php endforeach; ?>
+    <!-- batas modal delete -->
+
+    <!-- Modal Edit-->
+    <?php foreach ($umkm as $u) : ?>
+        <div class="modal fade" data-backdrop="static" id="ModalEdit<?= $u['id_umkm'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel" style="font-weight: bold; ">Edit UMKM</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <div class="form-group row">
+                                <label for="inputnama" class="col-sm-2 col-form-label">Nama</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputnama" value="<?= $u['nama_umkm'] ?>" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputdeskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="inputdeskripsi" rows="10" required><?= $u['deskripsi'] ?></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputlokasi" class="col-sm-2 col-form-label">Lokasi</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputlokasi" value="<?= $u['lokasi'] ?>" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputkontak" class="col-sm-2 col-form-label">kontak</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputkontak" value="<?= $u['kontak'] ?>" required>
+                                </div>
+                            </div>
+                            <div class=" form-group row">
+                                <label for="inputfoto" class="col-sm-2 col-form-label">Foto</label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control-file" id="inputfoto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+    <!-- batas modal edit -->
+
+    <!-- Modal Tambah-->
+    <div class="modal fade" data-backdrop="static" id="ModalTambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel" style="font-weight: bold; ">Tambah UMKM</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label for="inputnama" class="col-sm-2 col-form-label">Nama</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputnama" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputdeskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="inputdeskripsi" rows="10" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputlokasi" class="col-sm-2 col-form-label">Lokasi</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputlokasi" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputkontak" class="col-sm-2 col-form-label">kontak</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputkontak" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputfoto" class="col-sm-2 col-form-label">Foto</label>
+                            <div class="col-sm-10">
+                                <input type="file" class="form-control-file" id="inputfoto" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- batas modal tambah -->
 
     <!-- Bootstrap core JavaScript-->
     <script src="<?= base_url('asset/jquery/jquery.min.js') ?>"></script>
