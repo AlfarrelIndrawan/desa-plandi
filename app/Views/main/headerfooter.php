@@ -1,5 +1,4 @@
 <?php
-
 use Config\Pager;
 ?>
 <!doctype html>
@@ -14,11 +13,10 @@ use Config\Pager;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/cssheader.css">
     <link rel="stylesheet" type="text/css" href="css/cssjudul.css">
-    <link rel="stylesheet" type="text/css" href="css/cssberita.css">
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
-    <title>Berita | Desa Plandi</title>
+    <title><?=$judul?> | Desa Plandi</title>
 </head>
 
 <body>
@@ -54,30 +52,30 @@ use Config\Pager;
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('/'); ?>">Beranda<span class="sr-only">(current)</span></a>
+                    <a class="nav-link <?php if($url =='') { echo 'active'; } ?>" href="<?= base_url('/') ?>">Beranda<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Profil
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?= base_url('/Profil_Desa'); ?>">Pemerintahan</a>
+                        <a class="dropdown-item" href="<?= base_url('/profil_desa'); ?>">Pemerintahan</a>
                         <a class="dropdown-item" href="#">Sejarah</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('/Potensi'); ?>">Potensi</a>
+                    <a class="nav-link <?php if($url =='potensi') { echo 'active'; } ?>" href="<?= base_url('/potensi'); ?>">Potensi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('/Umkm'); ?>">UMKM</a>
+                    <a class="nav-link <?php if($url =='umkm') { echo 'active'; } ?>" href="<?= base_url('/umkm'); ?>">UMKM</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="<?= base_url('/Monografi'); ?>">
+                    <a class="nav-link <?php if($url =='monografi') { echo 'active'; } ?>" href="<?= base_url('/monografi'); ?>">
                         Monografi
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="<?= base_url('/Berita'); ?>">
+                    <a class="nav-link <?php if($url =='berita') { echo 'active'; } ?>" href="<?= base_url('/berita'); ?>">
                         Berita
                     </a>
                 </li>
@@ -88,6 +86,7 @@ use Config\Pager;
 
     <!-- js untuk navbar -->
     <script>
+        // js untuk navbar
         window.onscroll = function() {
             myFunction()
         };
@@ -104,70 +103,8 @@ use Config\Pager;
         }
     </script>
     <!-- batas js untuk navbar -->
+    <?= $this->renderSection('konten'); ?>
 
-    <!-- judul konten -->
-    <div class="container-fluid judulkonten">
-        <div class="container-xl">
-            <h1>Berita</h1>
-        </div>
-    </div>
-    <!-- batas judul konten -->
-
-    <!-- menampilkan berita-->
-    <div class="container-xl mt-5 konten">
-        <!-- link untuk halaman berita -->
-        <?= $pager->links('berita', 'pagination_custom') ?>
-        <!-- batas link untuk halaman berita -->
-        <div class="row">
-            <div class="col-md-10">
-                <div class="row">
-                    <!-- looping dari database untuk menampilkan berita -->
-                    <?php foreach ($berita as $b) : ?>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow" style=" border-radius: 20px;">
-                                <img src="img/umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
-                                <div class="card-body">
-                                    <h4 class="card-title"><?php echo $b['judul']; ?></h4>
-                                    <h6 class="card-subtitle my-2 text-muted"><?php echo $b['tanggal']; ?></h6>
-                                    <p class="card-text"><?php echo $b['berita']; ?></p>
-                                    <a class="badge badge-success" style="background-color: #90d26d;" href="https://google.com">Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                    <!-- batas looping berita dari database ("contoh bisa menggunakan db dummy dengan field isi dan judul") -->
-                </div>
-            </div>
-            <div class="col-md-1">
-            </div>
-            <!-- kategori berita -->
-            <div class="col-xl-1 border-left">
-                <div class="container">
-                    <h5 class="category">Kategori</h5>
-                    <ul class="mb-5" style="list-style: none; padding: 0;">
-                        <a class="category" href=" #">
-                            <li>Ekonomi</li>
-                        </a>
-                        <a class="category" href="#">
-                            <li>Pendidikan</li>
-                        </a>
-                        <a class="category" href="#">
-                            <li>Sosial</li>
-                        </a>
-                        <a class="category" href="#">
-                            <li>Kesehatan</li>
-                        </a>
-                        <a class="category" href="#">
-                            <li>Lainnya</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-            <!-- batas kategori berita -->
-        </div>
-
-    </div>
-    <!-- batas contoh konten -->
     <!-- footer -->
     <div class="container-fluid footer">
         <div class="container-xl">

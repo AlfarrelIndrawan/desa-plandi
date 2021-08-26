@@ -18,7 +18,7 @@ class Admin extends BaseController
 
     public function index()
     {
-        return view('admin');
+        return view('admin/admin');
     }
 
     public function berita()
@@ -27,7 +27,7 @@ class Admin extends BaseController
             'berita' => $this->beritaModel->findAll()
         ];
 
-        return view('admin_berita', $data);
+        return view('admin/admin_berita', $data);
     }
 
     public function umkm()
@@ -36,6 +36,6 @@ class Admin extends BaseController
             'umkm' => $this->umkmModel->findAll()
         ];
 
-        return view('admin_umkm', $data);
+        return view('admin/admin_umkm', $data);
     }
 }
