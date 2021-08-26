@@ -14,7 +14,7 @@
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
-    <title>Potensi | Desa Plandi</title>
+    <title>Beranda | Desa Plandi</title>
 </head>
 
 <body>

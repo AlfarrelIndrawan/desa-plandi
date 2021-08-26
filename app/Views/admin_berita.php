@@ -160,7 +160,7 @@
                                     <h3 class="font-weight-bold text-success">Berita</h3>
                                 </div>
                                 <div class="col-md-6" style="text-align: right;">
-                                    <a data-toggle="modal" data-target="#ModalTambah" class="btn btn-outline-success">Tambah Berita</a>
+                                    <a data-toggle="modal" data-target="#ModalTambah" class="btn btn-success">Tambah Berita</a>
                                 </div>
                             </div>
                         </div>
@@ -203,11 +203,11 @@
                                                     <?= $b['foto'] ?>
                                                 </td>
                                                 <td class="isi">
-                                                    <a href="#" data-toggle="modal" data-target="#ModalDelete<?= $b['id_berita'] ?>" class="btn btn-danger btn-circle">
-                                                        <i class="fas fa-trash"></i>
-                                                    </a>
                                                     <a href="#" data-toggle="modal" data-target="#ModalEdit<?= $b['id_berita'] ?>" class="btn btn-warning btn-circle">
                                                         <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <a href="#" data-toggle="modal" data-target="#ModalDelete<?= $b['id_berita'] ?>" class="btn btn-danger btn-circle">
+                                                        <i class="fas fa-trash"></i>
                                                     </a>
                                                 </td>
                                             </tr>

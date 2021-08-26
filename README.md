@@ -9,7 +9,7 @@
 5. Masukkan command: php spark migrate
 6. Masukkan command: php spark db:seed SeederUtama
 
-## Jika mengubah struktur database atau seeder
+## Jika mengubah atau terdapat perubahan pada struktur database atau seeder
 
 1. Masukkan command: php spark migrate:refresh
 2. Masukkan command: php spark db:seed SeederUtama

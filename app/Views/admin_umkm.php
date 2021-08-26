@@ -160,7 +160,7 @@
                                     <h3 class="m-0 font-weight-bold text-success">UMKM</h3>
                                 </div>
                                 <div class="col-md-6" style="text-align: right;">
-                                    <a data-toggle="modal" data-target="#ModalTambah" type="button" class="btn btn-outline-success">Tambah UMKM</a>
+                                    <a data-toggle="modal" data-target="#ModalTambah" type="button" class="btn btn-success">Tambah UMKM</a>
                                 </div>
                             </div>
                         </div>
@@ -199,11 +199,11 @@
                                                 <td class="isi"><?= $u['kontak'] ?></td>
                                                 <td class="isi"><?= $u['foto'] ?></td>
                                                 <td class="isi">
-                                                    <a data-toggle="modal" data-target="#ModalDelete<?= $u['id_umkm'] ?>" href="#" class="btn btn-danger btn-circle">
-                                                        <i class="fas fa-trash"></i>
-                                                    </a>
-                                                    <a data-toggle="modal" data-target="#ModalEdit<?= $u['id_umkm'] ?>" href="#" class="btn btn-warning btn-circle">
+                                                <a href="#" data-toggle="modal" data-target="#ModalEdit<?= $u['id_umkm'] ?>" class="btn btn-warning btn-circle">
                                                         <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    <a href="#" data-toggle="modal" data-target="#ModalDelete<?= $u['id_umkm'] ?>" class="btn btn-danger btn-circle">
+                                                        <i class="fas fa-trash"></i>
                                                     </a>
                                                 </td>
                                             </tr>
