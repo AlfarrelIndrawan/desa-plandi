@@ -182,7 +182,7 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Nama</th>
-                                            <th>Deskripsi</th>
+                                            <th>Pemilik</th>
                                             <th>Lokasi</th>
                                             <th>Kontak</th>
                                             <th>Foto</th>
@@ -194,7 +194,7 @@
                                             <tr>
                                                 <td class="isi"><?= $u['id_umkm'] ?></td>
                                                 <td class="isi"><?= $u['nama_umkm'] ?></td>
-                                                <td class="isi"><?= $u['deskripsi'] ?></td>
+                                                <td class="isi"><?= $u['nama_pemilik'] ?></td>
                                                 <td class="isi"><?= $u['lokasi'] ?></td>
                                                 <td class="isi"><?= $u['kontak'] ?></td>
                                                 <td class="isi"><?= $u['foto'] ?></td>
@@ -305,6 +305,12 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label for="inputpemilik" class="col-sm-2 col-form-label">Pemilik</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputpemilik" value="<?= $u['nama_pemilik'] ?>" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label for="inputdeskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                                 <div class="col-sm-10">
                                     <textarea class="form-control" id="inputdeskripsi" rows="10" required><?= $u['deskripsi'] ?></textarea>
@@ -359,6 +365,12 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="inputpemilik" class="col-sm-2 col-form-label">Pemilik</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputpemilik" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="inputdeskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                             <div class="col-sm-10">
                                 <textarea class="form-control" id="inputdeskripsi" rows="10" required></textarea>
@@ -379,7 +391,7 @@
                         <div class="form-group row">
                             <label for="inputfoto" class="col-sm-2 col-form-label">Foto</label>
                             <div class="col-sm-10">
-                                <input type="file" class="form-control-file" id="inputfoto" required>
+                                <input type="file" class="form-control-file" id="inputfoto">
                             </div>
                         </div>
                     </div>

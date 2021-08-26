@@ -65,6 +65,9 @@
                     <a class="nav-link" href="<?= base_url('/Potensi'); ?>">Potensi</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('/Umkm'); ?>">UMKM</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link " href="<?= base_url('/Monografi'); ?>">
                         Monografi
                     </a>
@@ -160,7 +163,7 @@
         </h3>
         <div class="row">
             <div class="col-md-6">
-                <img src="img/survei.jpg" alt="..." style=" object-fit: contain; max-width: 550px;">
+                <img class="img-fluid" src="img/survei.jpg" alt="...">
             </div>
             <div class="col-md-6 text-justify">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
@@ -170,7 +173,7 @@
                 </p>
             </div>
         </div>
-        <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="https://google.com">Lainnya -></a></p>
+        <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="<?= base_url('/Umkm') ?>">Lainnya -></a></p>
     </div>
     <!-- batas container UMKM -->
 
@@ -181,7 +184,7 @@
         </h3>
         <div class="row">
             <div class="col-md-6">
-                <img src="img/umkm.jpeg" alt="..." style=" object-fit: contain; max-width: 550px;">
+                <img src="img/umkm.jpeg" alt="..." class="img-fluid align-middle">
             </div>
             <div class="col-md-6 text-justify">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
@@ -191,7 +194,7 @@
                 </p>
             </div>
         </div>
-        <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="https://google.com">Lainnya -></a></p>
+        <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="<?= base_url('/Potensi') ?>">Lainnya -></a></p>
     </div>
     <!-- batas container potensi -->
 

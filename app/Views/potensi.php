@@ -64,6 +64,9 @@
                     <a class="nav-link active" href="<?= base_url('/Potensi'); ?>">Potensi</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('/Umkm'); ?>">UMKM</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link " href="<?= base_url('/Monografi'); ?>">
                         Monografi
                     </a>
@@ -110,10 +113,10 @@
     <div class="container-md konten">
         <div class="card mb-3">
             <div class="row no-gutters">
-                <div class="col-md-6">
-                    <img src="<?= base_url('img/survei.jpg'); ?>" alt="..." style=" object-fit: contain; max-width: 550px;">
+                <div class="col-md-5">
+                    <img src="<?= base_url('img/survei.jpg'); ?>" alt="..." class="img-fluid">
                 </div>
-                <div class=" col-md-6">
+                <div class=" col-md-7">
                     <div class="card-body">
                         <h5 class="card-title">Potensi 1</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -124,12 +127,12 @@
         </div>
         <div class="card mb-3">
             <div class="row no-gutters">
-                <div class="col-md-6">
-                    <img src="<?= base_url('img/carousel1.jpg'); ?>" alt="..." style=" object-fit: contain; max-width: 550px;">
+                <div class="col-md-5">
+                    <img src="<?= base_url('img/survei.jpg'); ?>" class="img-fluid" alt="...">
                 </div>
-                <div class=" col-md-6">
+                <div class="col-md-7">
                     <div class="card-body">
-                        <h5 class="card-title">Potensi 2</h5>
+                        <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
