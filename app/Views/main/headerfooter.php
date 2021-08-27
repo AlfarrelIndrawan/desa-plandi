@@ -1,4 +1,5 @@
 <?php
+
 use Config\Pager;
 ?>
 <!doctype html>
@@ -11,12 +12,12 @@ use Config\Pager;
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/cssheader.css">
-    <link rel="stylesheet" type="text/css" href="css/cssjudul.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('css/cssheader.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('css/cssjudul.css') ?>">
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
-    <title><?=$judul?> | Desa Plandi</title>
+    <title><?= $judul ?> | Desa Plandi</title>
 </head>
 
 <body>
@@ -27,7 +28,7 @@ use Config\Pager;
 
             <!-- Nama dan Logo Kabupaten Malang -->
             <div class="col desa">
-                <img class="logomalang" src="img/logomalang.png" width="74px" height="90px"></img>
+                <img class="logomalang" src="<?= base_url('img/logomalang.png') ?>" width="74px" height="90px"></img>
                 <p class="pdesa">
                     Desa Plandi - Wonosari
                 </p>
@@ -36,7 +37,7 @@ use Config\Pager;
 
             <!-- Email Desa -->
             <div class="col email">
-                <img class="logoemail" src="img/logosurat.png" alt="email" width="47px" height="49px">
+                <img class="logoemail" src="<?= base_url('img/logosurat.png') ?>" alt="email" width="47px" height="49px">
                 <p class="pemail">desa-plandi@malangkab.go.id</p>
             </div>
             <!-- batas Email Desa -->
@@ -52,30 +53,40 @@ use Config\Pager;
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link <?php if($url =='') { echo 'active'; } ?>" href="<?= base_url('/') ?>">Beranda<span class="sr-only">(current)</span></a>
+                    <a class="nav-link <?php if ($url == '') {
+                                            echo 'active';
+                                        } ?>" href="<?= base_url('/') ?>">Beranda<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Profil
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?= base_url('/profil_desa'); ?>">Pemerintahan</a>
+                        <a class="dropdown-item" href="<?= base_url('beranda/profil'); ?>">Pemerintahan</a>
                         <a class="dropdown-item" href="#">Sejarah</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if($url =='potensi') { echo 'active'; } ?>" href="<?= base_url('/potensi'); ?>">Potensi</a>
+                    <a class="nav-link <?php if ($url == 'potensi') {
+                                            echo 'active';
+                                        } ?>" href="<?= base_url('/potensi'); ?>">Potensi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if($url =='umkm') { echo 'active'; } ?>" href="<?= base_url('/umkm'); ?>">UMKM</a>
+                    <a class="nav-link <?php if ($url == 'umkm') {
+                                            echo 'active';
+                                        } ?>" href="<?= base_url('/umkm'); ?>">UMKM</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if($url =='monografi') { echo 'active'; } ?>" href="<?= base_url('/monografi'); ?>">
+                    <a class="nav-link <?php if ($url == 'monografi') {
+                                            echo 'active';
+                                        } ?>" href="<?= base_url('/monografi'); ?>">
                         Monografi
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if($url =='berita') { echo 'active'; } ?>" href="<?= base_url('/berita'); ?>">
+                    <a class="nav-link <?php if ($url == 'berita') {
+                                            echo 'active';
+                                        } ?>" href="<?= base_url('/berita'); ?>">
                         Berita
                     </a>
                 </li>

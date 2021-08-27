@@ -14,7 +14,7 @@
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
-    <title>Potensi | Desa Plandi</title>
+    <title>Profil | Desa Plandi</title>
 </head>
 
 <body>
@@ -62,18 +62,18 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('/Potensi'); ?>">Potensi</a>
+                    <a class="nav-link" href="<?= base_url('beranda/potensi'); ?>">Potensi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('/Umkm'); ?>">UMKM</a>
+                    <a class="nav-link" href="<?= base_url('beranda/umkm'); ?>">UMKM</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="<?= base_url('/Monografi'); ?>">
+                    <a class="nav-link " href="<?= base_url('beranda/monografi'); ?>">
                         Monografi
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="<?= base_url('/Berita'); ?>">
+                    <a class="nav-link " href="<?= base_url('beranda/berita'); ?>">
                         Berita
                     </a>
                 </li>
