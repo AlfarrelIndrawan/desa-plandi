@@ -15,30 +15,25 @@
     <?= $pager->links('umkm', 'pagination_custom') ?>
     <!-- batas link untuk halaman berita -->
     <div class="row">
-        <div class="col-md-12">
-            <!-- looping dari database untuk menampilkan berita -->
-            <?php foreach ($umkm as $u) : ?>
-                <div class="card mb-3">
-                    <div class="row no-gutters">
-                        <div class="col-md-5">
-                            <img src="<?= base_url('img/survei.jpg'); ?>" alt="..." class="img-fluid">
-                        </div>
-                        <div class=" col-md-7">
-                            <div class="card-body">
-                                <h5 class="card-title my-1"><?= $u['nama_umkm'] ?></h5>
-                                <p class="card-text my-0"><small class="text-muted">Pemilik : <?= $u['nama_pemilik'] ?></small></p>
-                                <p class="card-text my-0"><small class="text-muted">Kontak : <?= $u['kontak'] ?></small></p>
-                                <p class="card-text my-0"><small class="text-muted">Lokasi : <?= $u['lokasi'] ?></small></p>
-                                <p class="card-text my-2"><?= $u['deskripsi'] ?></p>
-                            </div>
+        <!-- looping dari database untuk menampilkan berita -->
+        <?php foreach ($umkm as $u) : ?>
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <div class="card mb-4 shadow" style=" border-radius: 20px;">
+                        <img src="<?= base_url('img/umkm.jpeg') ?>" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                        <div class="card-body">
+                            <h4 class="card-title"><?php echo $u['nama_umkm']; ?></h4>
+                            <h6 class="card-subtitle my-2 text-muted">Pemilik : <?= $u['nama_pemilik'] ?></h6>
+                            <h6 class="card-subtitle my-2 text-muted">Kontak : <?= $u['kontak'] ?></h6>
+                            <h6 class="card-subtitle my-2 text-muted">Lokasi : <?= $u['lokasi'] ?></h6>
+                            <p class="card-text"><?php echo $u['deskripsi']; ?></p>
                         </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
-            <!-- batas looping berita dari database ("contoh bisa menggunakan db dummy dengan field isi dan judul") -->
-        </div>
+            </div>
+        <?php endforeach; ?>
+        <!-- batas looping berita dari database ("contoh bisa menggunakan db dummy dengan field isi dan judul") -->
     </div>
-
 </div>
 
 <?= $this->endSection(); ?>
