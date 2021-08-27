@@ -63,7 +63,7 @@
     </h3>
     <div class="row">
         <div class="col-md-6">
-            <img class="img-fluid" src="img/survei.jpg" alt="...">
+            <img class="img-fluid" src="<?= base_url('img/survei.jpg') ?>" alt="...">
         </div>
         <div class="col-md-6 text-justify">
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
@@ -73,7 +73,7 @@
             </p>
         </div>
     </div>
-    <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="<?= base_url('/Umkm') ?>">Lainnya -></a></p>
+    <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="<?= base_url('beranda/umkm') ?>">Lainnya -></a></p>
 </div>
 <!-- batas container UMKM -->
 
@@ -84,7 +84,7 @@
     </h3>
     <div class="row">
         <div class="col-md-6">
-            <img src="img/umkm.jpeg" alt="..." class="img-fluid align-middle">
+            <img src="<?= base_url('img/umkm.jpeg') ?>" alt="..." class="img-fluid align-middle">
         </div>
         <div class="col-md-6 text-justify">
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
@@ -94,7 +94,7 @@
             </p>
         </div>
     </div>
-    <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="<?= base_url('/Potensi') ?>">Lainnya -></a></p>
+    <p class="lead mb-0" style="font-weight: bold; text-align: right;"><a href="<?= base_url('beranda/potensi') ?>">Lainnya -></a></p>
 </div>
 <!-- batas container potensi -->
 
