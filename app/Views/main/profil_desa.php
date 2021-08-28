@@ -111,33 +111,35 @@
     <!-- batas judul konten -->
 
     <!-- visi dan misi desa -->
-    <div class="container-md konten">
-        <h3 class="pb-3 mb-5 border-bottom">
-            Visi
-        </h3>
-        <p>
-            “DENGAN SEMANGAT PERSAUDARAAN, GOTONG ROYONG DAN AKHLAK MULIA GUNA MEWUJUDKAN DESA LANGKAP YANG LUAR BIASA”.
-        </p>
-    </div>
-    <div class="container-md konten">
-        <h3 class="pb-3 mb-5 border-bottom">
-            Misi
-        </h3>
-        <ul style="list-style: decimal;">
-            <li class="item-misi">Mengutamakan pemberdayaan potensi pertanian untuk menunjang sumber pendapatan dan kesejahteraan masyarakat desa sebagai sentra kegiatan pokok.</li>
-            <li class="item-misi">Meningkatkan kualitas Sumber Daya Manusia melalui Program pendidikan dan program kesehatan serta pengamalan ajaran agama kepada masyarakat.</li>
-            <li class="item-misi">Menggali , melestarikan dan mengembangkan nilai - nilai budaya desa</li>
-            <li class="item-misi"> Meningkatkan ketahanan ekonomi dengan menggalakkan usaha ekonomi kerakyatan melalui program strategi dibidang produksi ekonomi pertanian , kerajinan, pariwisata.</li>
-            <li class="item-misi">Meningkatkan partisipasi masyarakat dalam menumbuh kembangkan kesadaran dan kemandirian dalam pembangunan desa yang berkelanjutan.</li>
-            <li class="item-misi">Menciptakan suasana yang aman dan tertib dalam kehidupan bermasyarakat.</li>
-            <li class="item-misi">Meningkatkan pelayanan kepada masyarakat dan kerjasama anat lembaga pemerintahan di desa serta lembaga adat.</li>
-            <li class="item-misi">Memberdayakan masyarakat dengan mengoptimalkan potensi yang ada menuju masyarakat mandiri dan sejahtera.</li>
-        </ul>
+    <div class="container shadow">
+        <div class="container-md pt-4 konten">
+            <h3 class="pb-3 mb-5 border-bottom">
+                Visi
+            </h3>
+            <p>
+                “DENGAN SEMANGAT PERSAUDARAAN, GOTONG ROYONG DAN AKHLAK MULIA GUNA MEWUJUDKAN DESA LANGKAP YANG LUAR BIASA”.
+            </p>
+        </div>
+        <div class="container-md pb-5 konten">
+            <h3 class="pb-3 mb-5 border-bottom">
+                Misi
+            </h3>
+            <ul style="list-style: decimal;">
+                <li class="item-misi">Mengutamakan pemberdayaan potensi pertanian untuk menunjang sumber pendapatan dan kesejahteraan masyarakat desa sebagai sentra kegiatan pokok.</li>
+                <li class="item-misi">Meningkatkan kualitas Sumber Daya Manusia melalui Program pendidikan dan program kesehatan serta pengamalan ajaran agama kepada masyarakat.</li>
+                <li class="item-misi">Menggali , melestarikan dan mengembangkan nilai - nilai budaya desa</li>
+                <li class="item-misi"> Meningkatkan ketahanan ekonomi dengan menggalakkan usaha ekonomi kerakyatan melalui program strategi dibidang produksi ekonomi pertanian , kerajinan, pariwisata.</li>
+                <li class="item-misi">Meningkatkan partisipasi masyarakat dalam menumbuh kembangkan kesadaran dan kemandirian dalam pembangunan desa yang berkelanjutan.</li>
+                <li class="item-misi">Menciptakan suasana yang aman dan tertib dalam kehidupan bermasyarakat.</li>
+                <li class="item-misi">Meningkatkan pelayanan kepada masyarakat dan kerjasama anat lembaga pemerintahan di desa serta lembaga adat.</li>
+                <li class="item-misi">Memberdayakan masyarakat dengan mengoptimalkan potensi yang ada menuju masyarakat mandiri dan sejahtera.</li>
+            </ul>
+        </div>
     </div>
     <!-- batas visi dan misi desa !visi dan misi pada kode ini hanya contoh-->
 
     <!-- struktur desa -->
-    <div class="container-xl konten">
+    <div class="container-xl pt-4 konten shadow">
         <h3 class="pb-3 mb-5 border-bottom">
             Struktur Organisasi
         </h3>

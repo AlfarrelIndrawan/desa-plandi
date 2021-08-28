@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\BeritaModel;
 use App\Models\UmkmModel;
 
@@ -17,34 +18,35 @@ class Beranda extends BaseController
         $this->beritaModel = new BeritaModel();
     }
 
-	public function index()
-	{
+    public function index()
+    {
+        $data['berita'] = $this->beritaModel->findAll();
         $data['judul'] = "Beranda";
         $data['url'] = $this->request->uri->getSegment(1);
-		return view('main/beranda',$data);
-	}
+        return view('main/beranda', $data);
+    }
 
-	public function login()
+    public function login()
     {
         $data['judul'] = "Login";
         $data['url'] = $this->uri->getSegment(1);
-        return view('main/login',$data);
+        return view('main/login', $data);
     }
 
-	public function potensi()
+    public function potensi()
     {
         $data['judul'] = "Potensi";
         $data['url'] = $this->request->uri->getSegment(1);
-        return view('main/potensi',$data);
+        return view('main/potensi', $data);
     }
 
-	public function profil()
+    public function profil()
     {
         $data['judul'] = "Profil";
-        return view('main/profil_desa',$data);
+        return view('main/profil_desa', $data);
     }
 
-	public function umkm()
+    public function umkm()
     {
         $data = [
             // 'berita' => $this->beritaModel->findAll()
@@ -74,6 +76,6 @@ class Beranda extends BaseController
     {
         $data['url'] = $this->request->uri->getSegment(1);
         $data['judul'] = "Monografi";
-        return view("main/monografi",$data);
+        return view("main/monografi", $data);
     }
 }
