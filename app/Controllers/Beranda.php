@@ -70,6 +70,19 @@ class Beranda extends BaseController
         echo view('main/berita', $data);
     }
 
+    public function detail_berita($id)
+    {
+        $berita = $this->beritaModel->find($id);
+        $data = [
+            'berita' => $berita,
+            'judul' => $berita['judul'],
+            'url' => $this->request->uri->getSegment(1)
+
+        ];
+
+        echo view('main/detail_berita', $data);
+    }
+
     public function monografi()
     {
         $data['url'] = $this->request->uri->getSegment(1);

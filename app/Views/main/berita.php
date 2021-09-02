@@ -18,7 +18,7 @@
         <div class="col-md-10">
             <div class="row">
                 <!-- looping dari database untuk menampilkan berita -->
-                <?php foreach ($berita as $b) : ?>
+                <?php foreach ($berita as $b) { ?>
                     <div class="col-md-4">
                         <div class="card mb-4 shadow" style=" border-radius: 20px;">
                             <img src="img/umkm.jpeg" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
@@ -26,11 +26,11 @@
                                 <h4 class="card-title"><?php echo $b['judul']; ?></h4>
                                 <h6 class="card-subtitle my-2 text-muted"><?php echo $b['tanggal']; ?></h6>
                                 <p class="card-text"><?php echo $b['berita']; ?></p>
-                                <a class="badge badge-success" style="background-color: #90d26d;" href="https://google.com">Selengkapnya</a>
+                                <a class="badge badge-success" style="background-color: #90d26d;" href="<?= route_to('detail_berita', $b['id_berita'])?>">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                <?php } ?>
                 <!-- batas looping berita dari database ("contoh bisa menggunakan db dummy dengan field isi dan judul") -->
             </div>
         </div>

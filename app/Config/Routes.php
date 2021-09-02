@@ -36,6 +36,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Beranda::index');
 $routes->get('/potensi', 'Beranda::potensi');
 $routes->get('/berita', 'Beranda::berita');
+$routes->get('/detail_berita/(:num)', 'Beranda::detail_berita/$1', ['as' => 'detail_berita']);
 $routes->get('/umkm', 'Beranda::umkm');
 $routes->get('/profil','Beranda::profil');
 $routes->get('/monografi','Beranda::monografi');
