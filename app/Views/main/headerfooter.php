@@ -90,6 +90,13 @@ use Config\Pager;
                         Berita
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link <?php if ($url == 'layanan') {
+                                            echo 'active';
+                                        } ?>" href="<?= base_url('/layanan'); ?>">
+                        Layanan
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>

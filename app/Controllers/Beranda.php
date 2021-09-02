@@ -91,4 +91,11 @@ class Beranda extends BaseController
         $data['judul'] = "Monografi";
         return view("main/monografi", $data);
     }
+    
+    public function layanan()
+    {
+        $data['url'] = $this->request->uri->getSegment(1);
+        $data['judul'] = "Layanan";
+        return view("main/layanan", $data);
+    }
 }
