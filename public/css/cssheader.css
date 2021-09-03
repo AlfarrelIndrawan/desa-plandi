@@ -140,6 +140,6 @@ h3 {
 }
 
 .sticky + script + .judulkonten .container-xl,
-.sticky + script + .carousel {
+.sticky + script + link + .carousel {
   padding-top: 90px;
 }

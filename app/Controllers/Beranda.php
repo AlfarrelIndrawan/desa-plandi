@@ -46,6 +46,12 @@ class Beranda extends BaseController
         return view('main/profil_desa', $data);
     }
 
+    public function sejarah()
+    {
+        $data['judul'] = "Sejarah";
+        return view('main/sejarah', $data);
+    }
+
     public function umkm()
     {
         $data = [
@@ -91,7 +97,7 @@ class Beranda extends BaseController
         $data['judul'] = "Monografi";
         return view("main/monografi", $data);
     }
-    
+
     public function layanan()
     {
         $data['url'] = $this->request->uri->getSegment(1);

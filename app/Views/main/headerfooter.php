@@ -64,7 +64,7 @@ use Config\Pager;
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?= base_url('beranda/profil'); ?>">Pemerintahan</a>
-                        <a class="dropdown-item" href="#">Sejarah</a>
+                        <a class="dropdown-item" href="<?= base_url('beranda/sejarah'); ?>">Sejarah</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -125,10 +125,12 @@ use Config\Pager;
     <?= $this->renderSection('konten'); ?>
 
     <!-- footer -->
-    <div class="container-fluid footer">
-        <div class="container-xl">
+    <footer>
+        <div class="container-fluid footer">
+            <div class="container-xl">
+            </div>
         </div>
-    </div>
+    </footer>
     <!-- batas footer -->
 
     <!-- batas visi dan misi desa -->

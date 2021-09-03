@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url('css/cssheader.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('css/cssjudul.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('css/cssprofil.css'); ?>">
+    <link rel="shortcut icon" href="<?= base_url('img/logomalang.png') ?>" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
 
 
@@ -18,7 +19,6 @@
 </head>
 
 <body>
-
     <!-- header -->
     <div class="container-xl header">
         <div class="row">
@@ -57,8 +57,8 @@
                         Profil
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?= base_url('/Profil_Desa'); ?>">Pemerintahan</a>
-                        <a class="dropdown-item" href="#">Sejarah</a>
+                        <a class="dropdown-item" href="<?= base_url('beranda/profil'); ?>">Pemerintahan</a>
+                        <a class="dropdown-item" href="<?= base_url('beranda/sejarah'); ?>">Sejarah</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -75,6 +75,11 @@
                 <li class="nav-item">
                     <a class="nav-link " href="<?= base_url('beranda/berita'); ?>">
                         Berita
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="<?= base_url('beranda/layanan'); ?>">
+                        Layanan
                     </a>
                 </li>
             </ul>
@@ -111,7 +116,7 @@
     <!-- batas judul konten -->
 
     <!-- visi dan misi desa -->
-    <div class="container shadow">
+    <div class="container shadow-sm">
         <div class="container-md pt-4 konten">
             <h3 class="pb-3 mb-5 border-bottom">
                 Visi
@@ -139,7 +144,7 @@
     <!-- batas visi dan misi desa !visi dan misi pada kode ini hanya contoh-->
 
     <!-- struktur desa -->
-    <div class="container-xl pt-4 konten shadow">
+    <div class="container-xl pt-4 konten shadow-sm">
         <h3 class="pb-3 mb-5 border-bottom">
             Struktur Organisasi
         </h3>

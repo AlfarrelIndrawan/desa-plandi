@@ -15,7 +15,7 @@
     <div class="card mb-3 shadow">
         <div class="row no-gutters">
             <div class="col-md-5">
-                <img src="<?= base_url('img/survei.jpg'); ?>" alt="..." class="img-fluid">
+                <img src="<?= base_url('img/Pohon_Jati.jpg'); ?>" alt="..." class="img-fluid">
             </div>
             <div class=" col-md-7">
                 <div class="card-body">
@@ -29,7 +29,7 @@
     <div class="card mb-3 shadow">
         <div class="row no-gutters">
             <div class="col-md-5">
-                <img src="<?= base_url('img/survei.jpg'); ?>" class="img-fluid" alt="...">
+                <img src="<?= base_url('img/Pohon_Jati.jpg'); ?>" class="img-fluid" alt="...">
             </div>
             <div class="col-md-7">
                 <div class="card-body">

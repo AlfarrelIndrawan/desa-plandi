@@ -5,30 +5,32 @@
 <!-- carousel berita -->
 <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>ini merupakan caption dari berita carousel yang ada di web desa plandi</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="img/carousel2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Contoh Caption Untuk Carousel untuk KKN Desa Plandi 2021 Dengan Judul yang sangat panjang</h5>
-                <p>Some representative placeholder content for the first slide. Lorem ipsum, dolor sit
-                    amet consectetur adipisicing elit. Dicta saepe fuga eum repellat quos tempora quod
-                    veritatis ipsum assumenda. Inventore pariatur similique tempore hic sint eius voluptatum
-                    facere dicta deserunt. </p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="img/carousel3.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Ini Contoh Caption untuk carousel berita yang diletakkan setelah navbar</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-            </div>
-        </div>
+        <?php
+        $count = 0;
+        foreach ($berita as $b) {
+
+            if ($count == 0) { ?>
+                <div class="carousel-item active">
+                    <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption my-5 d-none d-md-block">
+                        <h5><?= $b['judul'] ?></h5>
+                        <h6 class="card-subtitle my-4 text-muted"><?php echo $b['tanggal']; ?></h6>
+                        <p><?= $b['berita'] ?></p>
+                    </div>
+                </div>
+            <?php } else { ?>
+                <div class="carousel-item">
+                    <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption my-5 d-none d-md-block">
+                        <h5><?= $b['judul'] ?></h5>
+                        <h6 class="card-subtitle my-4 text-muted"><?php echo $b['tanggal']; ?></h6>
+                        <p><?= $b['berita'] ?></p>
+                    </div>
+                </div>
+            <?php } ?>
+        <?php
+            $count++;
+        } ?>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -42,7 +44,7 @@
 <!-- batas carousel berita -->
 
 <!-- paragraf tentang desa plandi -->
-<div class="container-md konten" style="text-align: center;">
+<!-- <div class="container-md konten" style="text-align: center;">
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, necessitatibus sequi. Laudantium aut fuga nobis corrupti ullam adipisci, qui molestiae quis, quibusdam facere et fugit necessitatibus rerum atque maxime beatae.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus ducimus nostrum officiis nihil! Accusantium maxime maiores assumenda sit ratione, optio possimus molestiae necessitatibus voluptatibus vel, sed quia, totam minima!
@@ -53,7 +55,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus ducimus nostrum officiis nihil! Accusantium maxime maiores assumenda sit ratione, optio possimus molestiae necessitatibus voluptatibus vel, sed quia, totam minima!
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum blanditiis iusto error, numquam odio earum debitis! Repudiandae, at ipsum! Voluptatibus obcaecati ratione totam, provident suscipit hic exercitationem odio est amet.
     </p>
-</div>
+</div> -->
 <!-- batas paragraf tentang desa plandi -->
 
 <!-- Container UMKM -->
@@ -63,13 +65,15 @@
     </h3>
     <div class="row">
         <div class="col-md-6">
-            <img class="img-fluid" src="<?= base_url('img/survei.jpg') ?>" alt="...">
+            <img class="img-fluid" src="<?= base_url('img/umkm.jpeg') ?>" alt="...">
         </div>
         <div class="col-md-6 text-justify">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maiores non architecto, aut molestias repudiandae ipsa, quaerat minima laudantium voluptates, hic minus cupiditate eaque. Quod qui voluptates repellat ut ipsa?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic iure ducimus et eum dolore odit eveniet, unde aliquid quaerat excepturi esse, alias impedit, voluptatum earum magnam? Nesciunt reprehenderit quasi numquam.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, reprehenderit? Voluptates dolores officiis ratione hic minus vitae delectus velit necessitatibus voluptate, repudiandae excepturi laudantium quia quo ut recusandae quidem! Nesciunt?
+            <p class="card-text">
+                <b>UMKM</b> adalah istilah umum dalam khazanah ekonomi yang merujuk kepada usaha ekonomi produktif yang dimiliki perorangan maupun badan usaha sesuai
+                dengan kriteria yang ditetapkan oleh Undang-undang No. 20 tahun 2008. UMKM artinya bisnis yang dijalankan individu, rumah tangga, atau badan usaha ukuran
+                kecil. Penggolongan UMKM didasarkan batasan omzet pendapatan per tahun, jumlah kekayaan aset, serta jumlah pegawai. Desa Plandi memiliki beberapa UMKM yang
+                cukup terkenal diantaranya adalah kerajinan anyaman dan usaha pengupasan kulit singkong, selain itu ada banyak lagi UMKM yang ada di Desa Plandi yang dapat
+                menunjang perekonomian warga Desa Plandi
             </p>
         </div>
     </div>
@@ -80,17 +84,21 @@
 <!-- container potensi -->
 <div class="container-md konten umkm">
     <h3 class=" pb-3 mb-5 border-bottom">
-        Potensi
+        POTENSI
     </h3>
     <div class="row">
         <div class="col-md-6">
-            <img src="<?= base_url('img/umkm.jpeg') ?>" alt="..." class="img-fluid align-middle">
+            <img src="<?= base_url('img/Pohon_Jati.jpg') ?>" alt="..." class="img-fluid align-middle">
         </div>
         <div class="col-md-6 text-justify">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maiores non architecto, aut molestias repudiandae ipsa, quaerat minima laudantium voluptates, hic minus cupiditate eaque. Quod qui voluptates repellat ut ipsa?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic iure ducimus et eum dolore odit eveniet, unde aliquid quaerat excepturi esse, alias impedit, voluptatum earum magnam? Nesciunt reprehenderit quasi numquam.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, reprehenderit? Voluptates dolores officiis ratione hic minus vitae delectus velit necessitatibus voluptate, repudiandae excepturi laudantium quia quo ut recusandae quidem! Nesciunt?
+            <p class="card-text">
+                <b>Potensi Desa</b> adalah kemampuan, kekuatan atau sumber daya (fisik dan non fisik) yang
+                dimiliki oleh suatu daerah namun belum sepenuhnya terlihat atau dipergunakan
+                secara maksimal yang terbingkai dalam suatu kesatuan masyarakat hukum
+                berdasarkan pada adat istiadat dan tradisi atau kebiasaan masyarakat setempat serta
+                mempunyai hak untuk mengatur rumah tangga sendiri, selanjutnya secara
+                administratif berada di lingkup pemerintahan Kabupaten/Kota, yang diakui dan
+                dihormati dalam sistem pemerintahan Negara Kesatuan Republik Indonesia.
             </p>
         </div>
     </div>
@@ -101,7 +109,7 @@
 <!-- containe lokasi -->
 <div class="container-md konten peta">
     <h3 class=" pb-3 mb-5 border-bottom">
-        Lokasi
+        LOKASI
     </h3>
     <div class="row mb-2">
         <!-- container peta dan alamat -->
