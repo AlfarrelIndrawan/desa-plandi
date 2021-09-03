@@ -45,9 +45,12 @@ $routes->get('/layanan','Beranda::layanan');
 
 // Admin
 $routes->get('/admin','Admin::index');
-$routes->get('/admin/berita','Admin::berita');
-$routes->get('/admin/umkm','Admin::umkm');
 
+$routes->get('/admin/berita','Admin::berita');
+
+$routes->get('/admin/umkm','Admin::umkm');
+$routes->get('/admin/umkm/tambahdata','Admin::viewAddUMKM');
+$routes->post('/admin/umkm/tambah','Admin::tambahUMKM');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

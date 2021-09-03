@@ -38,4 +38,33 @@ class Admin extends BaseController
 
         return view('admin/admin_umkm', $data);
     }
+
+    public function viewAddUMKM()
+    {
+        return view('admin/tambah_umkm');
+    }
+
+    public function tambahUMKM()
+    {
+        $foto = $this->request->getFile('foto');
+        if($foto->getError()==4){
+            $namaFoto='umkm.jpeg';
+        }
+        else{
+            $ext = $foto->getClientExtension();
+            $namaFoto = $this->request->getVar('nama'). '.' .$ext;
+            $foto->move('img/umkm',$namaFoto);
+        }
+
+        $this->umkmModel->insert([
+            'nama_umkm'=> $this->request->getVar('nama'),
+            'nama_pemilik'=> $this->request->getVar('pemilik'),
+            'deskripsi'=> $this->request->getVar('deskripsi'),
+            'kontak'=> $this->request->getVar('kontak'),
+            'lokasi'=> $this->request->getVar('lokasi'),
+            'foto'=>$namaFoto
+        ]);
+
+        return redirect()->to('admin/umkm');
+    }
 }

@@ -11,7 +11,7 @@
                             <h3 class="m-0 font-weight-bold text-success">UMKM</h3>
                         </div>
                         <div class="col-md-6" style="text-align: right;">
-                            <a data-toggle="modal" data-target="#ModalTambah" type="button" class="btn btn-outline-success">Tambah UMKM</a>
+                            <a href="<?= base_url('admin/umkm/tambahdata')?>" type="button" class="btn btn-outline-success">Tambah UMKM</a>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                                         <td class="isi"><?= $u['nama_pemilik'] ?></td>
                                         <td class="isi"><?= $u['lokasi'] ?></td>
                                         <td class="isi"><?= $u['kontak'] ?></td>
-                                        <td class="isi"><?= $u['foto'] ?></td>
+                                        <td class="isi"><img src="../img/umkm/<?= $u['foto'] ?>" alt="<?= $u['foto'] ?>"></td>
                                         <td class="isi">
                                             <a data-toggle="modal" data-target="#ModalEdit<?= $u['id_umkm'] ?>" href="#" class="btn btn-warning btn-circle">
                                                 <i class="fas fa-edit"></i>
