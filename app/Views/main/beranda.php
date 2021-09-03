@@ -10,23 +10,27 @@
         foreach ($berita as $b) {
 
             if ($count == 0) { ?>
-                <div class="carousel-item active">
-                    <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption my-5 d-none d-md-block">
-                        <h5><?= $b['judul'] ?></h5>
-                        <h6 class="card-subtitle my-4 text-muted"><?php echo $b['tanggal']; ?></h6>
-                        <p><?= $b['berita'] ?></p>
+                <a href="<?= route_to('detail_berita', $b['id_berita']) ?>">
+                    <div class="carousel-item active">
+                        <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption my-5 d-none d-md-block">
+                            <h5><?= $b['judul'] ?></h5>
+                            <h6 class="card-subtitle my-4 text-muted"><?php echo $b['tanggal']; ?></h6>
+                            <p><?= $b['berita'] ?></p>
+                        </div>
                     </div>
-                </div>
+                </a>
             <?php } else { ?>
-                <div class="carousel-item">
-                    <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption my-5 d-none d-md-block">
-                        <h5><?= $b['judul'] ?></h5>
-                        <h6 class="card-subtitle my-4 text-muted"><?php echo $b['tanggal']; ?></h6>
-                        <p><?= $b['berita'] ?></p>
+                <a href="<?= route_to('detail_berita', $b['id_berita']) ?>">
+                    <div class="carousel-item">
+                        <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption my-5 d-none d-md-block">
+                            <h5><?= $b['judul'] ?></h5>
+                            <h6 class="card-subtitle my-4 text-muted"><?php echo $b['tanggal']; ?></h6>
+                            <p><?= $b['berita'] ?></p>
+                        </div>
                     </div>
-                </div>
+                </a>
             <?php } ?>
         <?php
             $count++;
