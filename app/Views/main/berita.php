@@ -41,20 +41,14 @@
             <div class="container">
                 <h5 class="category">Kategori</h5>
                 <ul class="mb-5" style="list-style: none; padding: 0;">
-                    <a class="category" href=" #">
-                        <li>Ekonomi</li>
+                    <a class="category" href="<?= route_to('berita') ?>">
+                        <li>Semua</li>
                     </a>
-                    <a class="category" href="#">
-                        <li>Pendidikan</li>
+                    <a class="category" href="<?= route_to('berita_kategori', 'desa') ?>">
+                        <li>Desa</li>
                     </a>
-                    <a class="category" href="#">
-                        <li>Sosial</li>
-                    </a>
-                    <a class="category" href="#">
-                        <li>Kesehatan</li>
-                    </a>
-                    <a class="category" href="#">
-                        <li>Lainnya</li>
+                    <a class="category" href="<?= route_to('berita_kategori', 'umkm') ?>">
+                        <li>UMKM</li>
                     </a>
                 </ul>
             </div>

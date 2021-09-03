@@ -30,7 +30,7 @@ class Berita extends Migration
 			],
 			'kategori'		=> [
 				'type'			=> 'ENUM',
-				'constraint'	=> "'desa', 'umkm'",
+				'constraint'	=> "'Desa', 'Umkm'",
 			],
 			'foto'			=> [
 				'type'			=> 'VARCHAR',

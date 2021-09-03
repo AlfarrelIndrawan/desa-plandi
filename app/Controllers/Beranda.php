@@ -65,17 +65,31 @@ class Beranda extends BaseController
         echo view('main/umkm', $data);
     }
 
-    public function berita()
+    public function berita_kategori($kategori)
     {
-        $data = [
-            // 'berita' => $this->beritaModel->findAll()
-            'berita' => $this->beritaModel->paginate(9, 'berita'),
-            'pager' => $this->beritaModel->pager,
-            'url' => $this->request->uri->getSegment(1),
-            'judul' => "Berita"
-        ];
+        $result = $this->beritaModel->where('kategori', $kategori)->paginate(9, 'berita');
+        return $result;
+    }
 
-        echo view('main/berita', $data);
+    public function berita($kategori = null)
+    {
+        if(empty($kategori)) {
+            $data = [
+                'berita' => $this->beritaModel->paginate(9, 'berita'),
+                'pager' => $this->beritaModel->pager,
+                'url' => $this->request->uri->getSegment(1),
+                'judul' => "Berita"
+            ];   
+            echo view('main/berita', $data);
+        } else {
+            $data = [
+                'berita' => $this->berita_kategori($kategori),
+                'pager' => $this->beritaModel->pager,
+                'url' => $this->request->uri->getSegment(1),
+                'judul' => "Berita ", $kategori
+            ];
+            echo view('main/berita', $data);
+        }
     }
 
     public function detail_berita($id)
