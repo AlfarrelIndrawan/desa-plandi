@@ -40,6 +40,7 @@ $routes->get('/detail_berita/(:num)', 'Beranda::detail_berita/$1', ['as' => 'det
 $routes->get('/umkm', 'Beranda::umkm');
 $routes->get('/profil','Beranda::profil');
 $routes->get('/monografi','Beranda::monografi');
+$routes->get('/layanan','Beranda::layanan');
 
 // Admin
 $routes->get('/admin','Admin::index');
