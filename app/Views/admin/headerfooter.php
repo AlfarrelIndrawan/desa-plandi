@@ -16,7 +16,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<?= base_url('css/sb-admin-2.min.css') ?>" rel="stylesheet">
+    <link href=" <?= base_url('css/sb-admin-2.min.css') ?>" rel="stylesheet">
+    <script src="https://cdn.tiny.cloud/1/nz2me6bgf32zikfzbdlxn0fe87znyqu4uas02ss9llwo6gu6/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <link href="<?= base_url('asset/datatables/dataTables.bootstrap4.min.css') ?>" rel="stylesheet">
 
 </head>
 
@@ -147,24 +149,31 @@
 
                 </nav>
                 <!-- End of Topbar -->
-    <?=$this->renderSection('konten');?>
+                <?= $this->renderSection('konten'); ?>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?= base_url('asset/jquery/jquery.min.js') ?>"></script>
-    <script src="<?= base_url('asset/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+                <!-- Bootstrap core JavaScript-->
+                <script src="<?= base_url('asset/jquery/jquery.min.js') ?>"></script>
+                <script src="<?= base_url('asset/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?= base_url('asset/jquery-easing/jquery.easing.min.js') ?>"></script>
+                <!-- Core plugin JavaScript-->
+                <script src="<?= base_url('asset/jquery-easing/jquery.easing.min.js') ?>"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="<?= base_url('js/sb-admin-2.min.js') ?>"></script>
+                <!-- Custom scripts for all pages-->
+                <script src="<?= base_url('js/sb-admin-2.min.js') ?>"></script>
 
-    <!-- Page level plugins -->
-    <script src="<?= base_url('asset/chart.js/Chart.min.js') ?>"></script>
+                <!-- Page level plugins -->
+                <script src="<?= base_url('asset/chart.js/Chart.min.js') ?>"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="<?= base_url('js/demo/chart-area-demo.js') ?>"></script>
-    <script src="<?= base_url('js/demo/chart-pie-demo.js') ?>"></script>
+                <!-- Page level custom scripts -->
+                <script src="<?= base_url('js/demo/chart-area-demo.js') ?>"></script>
+                <script src="<?= base_url('js/demo/chart-pie-demo.js') ?>"></script>
+
+                <!-- Page level plugins -->
+                <script src="<?= base_url('asset/datatables/jquery.dataTables.min.js') ?>"></script>
+                <script src="<?= base_url('asset/datatables/dataTables.bootstrap4.min.js') ?>"></script>
+
+                <!-- Page level custom scripts -->
+                <script src="<?= base_url('js/demo/datatables-demo.js') ?>"></script>
 
 </body>
 
