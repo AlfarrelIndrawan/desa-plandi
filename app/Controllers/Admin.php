@@ -67,4 +67,45 @@ class Admin extends BaseController
 
         return redirect()->to('admin/umkm');
     }
+
+    public function viewEditUMKM($id)
+    {
+        $data=[
+            'umkm' => $this->umkmModel->find($id)
+        ];
+
+        return view('admin/edit_umkm',$data);
+    }
+
+    public function editUMKM($id)
+    {
+        $ambil = $this->umkmModel->where('id_umkm',$id)->first();
+        $foto = $this->request->getFile('foto');
+        if (!$foto->getError() == 4) {
+            unlink('img/umkm/' . $ambil['foto']);
+            $namaFoto = $ambil['foto'];
+            $foto->move('img/umkm', $namaFoto);
+        };
+        $update = ([
+            'nama_umkm' => $this->request->getVar('nama'),
+            'nama_pemilik' => $this->request->getVar('pemilik'),
+            'deskripsi' => $this->request->getVar('deskripsi'),
+            'lokasi' => $this->request->getVar('lokasi'),
+            'kontak' => $this->request->getVar('kontak'),
+        ]);
+        $this->umkmModel->update($id, $update);
+
+        return redirect()->to('admin/umkm');
+    }
+
+    public function hapusUMKM($id)
+    {
+        $ambil = $this->umkmModel->find($id);
+        if ($ambil['foto'] != 'default.jpeg') {
+            unlink('img/umkm/' . $ambil['foto']);
+        }
+        $this->umkmModel->delete($id);
+
+        return redirect()->to('/admin/umkm');
+    }
 }

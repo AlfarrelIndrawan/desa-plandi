@@ -48,9 +48,9 @@
                                         <td class="isi"><?= $u['nama_pemilik'] ?></td>
                                         <td class="isi"><?= $u['lokasi'] ?></td>
                                         <td class="isi"><?= $u['kontak'] ?></td>
-                                        <td class="isi"><img src="../img/umkm/<?= $u['foto'] ?>" alt="<?= $u['foto'] ?>"></td>
+                                        <td class="isi"><img src="<?= base_url('/img/umkm/'.$u['foto'])?>" alt="<?= $u['foto'] ?>"></td>
                                         <td class="isi">
-                                            <a data-toggle="modal" data-target="#ModalEdit<?= $u['id_umkm'] ?>" href="#" class="btn btn-warning btn-circle">
+                                            <a href="<?= base_url('admin/umkm/edit/'.$u['id_umkm'])?>" class="btn btn-warning btn-circle">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                             <a data-toggle="modal" data-target="#ModalDelete<?= $u['id_umkm'] ?>" href="#" class="btn btn-danger btn-circle">
@@ -114,8 +114,7 @@
     <!-- modal delete -->
     <?php foreach ($umkm as $u) : ?>
         <div class="modal fade" id="ModalDelete<?= $u['id_umkm'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <form>
-                <input type="hidden" value="<?= $u['id_umkm'] ?>"></input>
+            <form action="<?= base_url('admin/umkm/delete/'.$u['id_umkm'])?>" method="GET">
                 <div class="modal-dialog " role="document">
                     <div class="modal-content border-left-danger">
                         <div class="modal-header">
@@ -127,7 +126,7 @@
                         <div class="modal-body">Pilih tombol "Hapus" dibawah jika anda yakin untuk menghapus umkm dengan nama "<?= $u['nama_umkm'] ?>"</div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                            <button type="submit" class="btn btn-danger">Hapus</button>
+                            <input type="submit" class="btn btn-danger" value="Hapus">
                         </div>
                     </div>
                 </div>
@@ -136,123 +135,4 @@
     <?php endforeach; ?>
     <!-- batas modal delete -->
 
-    <!-- Modal Edit-->
-    <?php foreach ($umkm as $u) : ?>
-        <div class="modal fade" data-backdrop="static" id="ModalEdit<?= $u['id_umkm'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg ">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="exampleModalLabel" style="font-weight: bold; ">Edit UMKM</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <form>
-                        <div class="modal-body">
-                            <div class="form-group row">
-                                <label for="inputnama" class="col-sm-2 col-form-label">Nama</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputnama" value="<?= $u['nama_umkm'] ?>" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputpemilik" class="col-sm-2 col-form-label">Pemilik</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputpemilik" value="<?= $u['nama_pemilik'] ?>" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputdeskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
-                                <div class="col-sm-10">
-                                    <textarea class="form-control" id="inputdeskripsi" rows="10" required><?= $u['deskripsi'] ?></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputlokasi" class="col-sm-2 col-form-label">Lokasi</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputlokasi" value="<?= $u['lokasi'] ?>" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="inputkontak" class="col-sm-2 col-form-label">kontak</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputkontak" value="<?= $u['kontak'] ?>" required>
-                                </div>
-                            </div>
-                            <div class=" form-group row">
-                                <label for="inputfoto" class="col-sm-2 col-form-label">Foto</label>
-                                <div class="col-sm-10">
-                                    <input type="file" class="form-control-file" id="inputfoto">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    <?php endforeach; ?>
-    <!-- batas modal edit -->
-
-    <!-- Modal Tambah-->
-    <div class="modal fade" data-backdrop="static" id="ModalTambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel" style="font-weight: bold; ">Tambah UMKM</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <div class="form-group row">
-                            <label for="inputnama" class="col-sm-2 col-form-label">Nama</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputnama" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputpemilik" class="col-sm-2 col-form-label">Pemilik</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputpemilik" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputdeskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" id="inputdeskripsi" rows="10" required></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputlokasi" class="col-sm-2 col-form-label">Lokasi</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputlokasi" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputkontak" class="col-sm-2 col-form-label">kontak</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputkontak" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputfoto" class="col-sm-2 col-form-label">Foto</label>
-                            <div class="col-sm-10">
-                                <input type="file" class="form-control-file" id="inputfoto">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- batas modal tambah -->
 <?= $this->endSection();?>
