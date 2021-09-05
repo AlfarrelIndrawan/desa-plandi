@@ -29,7 +29,6 @@ class Beranda extends BaseController
     public function login()
     {
         $data['judul'] = "Login";
-        $data['url'] = $this->uri->getSegment(1);
         return view('main/login', $data);
     }
 
@@ -73,13 +72,13 @@ class Beranda extends BaseController
 
     public function berita($kategori = null)
     {
-        if(empty($kategori)) {
+        if (empty($kategori)) {
             $data = [
                 'berita' => $this->beritaModel->paginate(9, 'berita'),
                 'pager' => $this->beritaModel->pager,
                 'url' => $this->request->uri->getSegment(1),
                 'judul' => "Berita"
-            ];   
+            ];
             echo view('main/berita', $data);
         } else {
             $data = [

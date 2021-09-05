@@ -1,9 +1,8 @@
 <?php
-    $this->extend('admin/headerfooter');
-    $this->section('konten');
+$this->extend('admin/headerfooter');
+$this->section('konten');
 ?>
 <div class="container-fluid">
-
     <div class="card border-left-success shadow mb-4">
         <div class="card-header py-3">
             <div class="row">
@@ -13,8 +12,8 @@
             </div>
         </div>
         <div class="card-body">
-            <div class="table-responsive">
-                <form action="<?= base_url('admin/umkm/tambah')?>" method="POST" enctype="multipart/form-data">
+            <div class="container-fluid">
+                <form action="<?= base_url('Admin/tambahUMKM') ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nama">Nama UMKM</label>
                         <input type="text" class="form-control" id="nama" name="nama">
@@ -37,10 +36,19 @@
                     </div>
                     <div class="form-group">
                         <label for="foto">Foto UMKM</label><br>
-                        <input type="file" id="foto" name="foto" onchange="readImg(this);"><br>
-                        <img id="hasil" src="#" alt="">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="foto" name="foto" onchange="readImg(this);">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                        <div class="container my-3" style="text-align: center;">
+                            <img id="hasil" src="#" alt="" height="300px">
+                        </div>
                     </div>
-                    <input type="submit" class="btn btn-outline-success">
+                    <div class="row" style="text-align: right;">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-outline-success btn-block">
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -49,22 +57,22 @@
 <!-- /.container-fluid -->
 <!-- Show image preview -->
 <script>
-    function readImg(input){
-        if(input.files && input.files[0]){
+    function readImg(input) {
+        if (input.files && input.files[0]) {
             var reader = new FileReader();
 
-            reader.onload = function (e) {
+            reader.onload = function(e) {
                 $('#hasil')
-                .attr('src', e.target.result);
-        };
-        reader.readAsDataURL(input.files[0]);
+                    .attr('src', e.target.result);
+            };
+            reader.readAsDataURL(input.files[0]);
         }
     }
 
-    $(function () {
-        $('#foto').on('change', function () {
+    $(function() {
+        $('#foto').on('change', function() {
             readURL(input);
         });
     });
 </script>
-<?= $this->endSection();?>
+<?= $this->endSection(); ?>

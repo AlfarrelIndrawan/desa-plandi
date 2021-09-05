@@ -47,22 +47,21 @@ class Admin extends BaseController
     public function tambahUMKM()
     {
         $foto = $this->request->getFile('foto');
-        if($foto->getError()==4){
-            $namaFoto='umkm.jpeg';
-        }
-        else{
+        if ($foto->getError() == 4) {
+            $namaFoto = 'default.jpeg';
+        } else {
             $ext = $foto->getClientExtension();
-            $namaFoto = $this->request->getVar('nama'). '.' .$ext;
-            $foto->move('img/umkm',$namaFoto);
+            $namaFoto = $this->request->getVar('nama') . '.' . $ext;
+            $foto->move('img/umkm', $namaFoto);
         }
 
-        $this->umkmModel->insert([
-            'nama_umkm'=> $this->request->getVar('nama'),
-            'nama_pemilik'=> $this->request->getVar('pemilik'),
-            'deskripsi'=> $this->request->getVar('deskripsi'),
-            'kontak'=> $this->request->getVar('kontak'),
-            'lokasi'=> $this->request->getVar('lokasi'),
-            'foto'=>$namaFoto
+        $this->umkmModel->save([
+            'nama_umkm' => $this->request->getVar('nama'),
+            'nama_pemilik' => $this->request->getVar('pemilik'),
+            'deskripsi' => $this->request->getVar('deskripsi'),
+            'kontak' => $this->request->getVar('kontak'),
+            'lokasi' => $this->request->getVar('lokasi'),
+            'foto' => $namaFoto
         ]);
 
         return redirect()->to('admin/umkm');
@@ -70,16 +69,16 @@ class Admin extends BaseController
 
     public function viewEditUMKM($id)
     {
-        $data=[
+        $data = [
             'umkm' => $this->umkmModel->find($id)
         ];
 
-        return view('admin/edit_umkm',$data);
+        return view('admin/edit_umkm', $data);
     }
 
     public function editUMKM($id)
     {
-        $ambil = $this->umkmModel->where('id_umkm',$id)->first();
+        $ambil = $this->umkmModel->where('id_umkm', $id)->first();
         $foto = $this->request->getFile('foto');
         if (!$foto->getError() == 4) {
             unlink('img/umkm/' . $ambil['foto']);
