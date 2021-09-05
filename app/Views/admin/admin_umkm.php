@@ -1,19 +1,14 @@
-<?=$this->extend('admin/headerfooter')?>
-<?=$this->section('konten')?>
+<?= $this->extend('admin/headerfooter') ?>
+<?= $this->section('konten') ?>
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-            <div class="card border-left-success shadow mb-4">
-                <div class="card-header py-3">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3 class="m-0 font-weight-bold text-success">UMKM</h3>
-                        </div>
-                        <div class="col-md-6" style="text-align: right;">
-                            <a href="<?= base_url('admin/umkm/tambahdata')?>" type="button" class="btn btn-outline-success">Tambah UMKM</a>
-                        </div>
-                    </div>
+    <div class="card border-left-success shadow mb-4">
+        <div class="card-header py-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="m-0 font-weight-bold text-success">UMKM</h3>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -65,47 +60,96 @@
                 </div>
             </div>
         </div>
-        <!-- /.container-fluid -->
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <style>
+                        table {
+                            text-align: center;
+                        }
 
-    </div>
-    <!-- End of Main Content -->
-
-    <!-- Footer -->
-    <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-                <span>Copyright &copy; Your Website 2021</span>
+                        td.isi,
+                        td.isi p {
+                            padding: 5px;
+                            vertical-align: middle;
+                        }
+                    </style>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama</th>
+                            <th>Pemilik</th>
+                            <th>Lokasi</th>
+                            <th>Kontak</th>
+                            <th>Foto</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($umkm as $u) : ?>
+                            <tr>
+                                <td class="isi"><?= $u['id_umkm'] ?></td>
+                                <td class="isi"><?= $u['nama_umkm'] ?></td>
+                                <td class="isi"><?= $u['nama_pemilik'] ?></td>
+                                <td class="isi"><?= $u['lokasi'] ?></td>
+                                <td class="isi"><?= $u['kontak'] ?></td>
+                                <td class="isi"><img src="../img/umkm/<?= $u['foto'] ?>" alt="<?= $u['foto'] ?>" height="100px"></td>
+                                <td class="isi">
+                                    <a data-toggle="modal" data-target="#ModalEdit<?= $u['id_umkm'] ?>" href="#" class="btn btn-warning btn-circle">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a data-toggle="modal" data-target="#ModalDelete<?= $u['id_umkm'] ?>" href="#" class="btn btn-danger btn-circle">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </footer>
-    <!-- End of Footer -->
+    </div>
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2021</span>
+        </div>
+    </div>
+</footer>
+<!-- End of Footer -->
 
 </div>
 <!-- End of Content Wrapper -->
 
-    </div>
-    <!-- End of Page Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="login.html">Logout</a>
             </div>
         </div>
     </div>

@@ -20,7 +20,7 @@
             <div class="col-md-6">
                 <div class="col-md-12">
                     <div class="card mb-4 shadow" style=" border-radius: 20px;">
-                        <img src="<?= base_url('img/umkm/'.$u['foto']) ?>" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                        <img src="<?= base_url('img/umkm/' . $u['foto']) ?>" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
                         <div class="card-body">
                             <h4 class="card-title"><?php echo $u['nama_umkm']; ?></h4>
                             <h6 class="card-subtitle my-2 text-muted">Pemilik : <?= $u['nama_pemilik'] ?></h6>
