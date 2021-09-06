@@ -41,11 +41,43 @@ class Admin extends BaseController
 
     public function viewAddUMKM()
     {
-        return view('admin/tambah_umkm');
+        session();
+        $data = [
+            'validation' => \config\Services::validation()
+        ];
+        return view('admin/tambah_umkm', $data);
     }
 
     public function tambahUMKM()
     {
+
+        //validasi input
+        if (!$this->validate([
+            'nama' => [
+                'rules' => 'required|is_unique[umkm.nama_umkm]',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                    'is_unique' => '{field} sudah terdaftar'
+                ]
+            ],
+            'pemilik' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'kontak' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ]
+        ])) {
+            $validation = \config\Services::validation();
+            return redirect()->to(base_url('Admin/viewAddUMKM'))->withInput()->with('validation', $validation);
+        }
+        // batas validasi
+
         $foto = $this->request->getFile('foto');
         if ($foto->getError() == 4) {
             $namaFoto = 'default.jpeg';
@@ -69,8 +101,10 @@ class Admin extends BaseController
 
     public function viewEditUMKM($id)
     {
+        session();
         $data = [
-            'umkm' => $this->umkmModel->find($id)
+            'umkm' => $this->umkmModel->find($id),
+            'validation' => \config\Services::validation()
         ];
 
         return view('admin/edit_umkm', $data);
@@ -78,12 +112,48 @@ class Admin extends BaseController
 
     public function editUMKM($id)
     {
+
+        //validasi input
+        if (!$this->validate([
+            'nama' => [
+                'rules' => 'required|is_unique[umkm.nama_umkm,id_umkm,' . $id . ']',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                    'is_unique' => '{field} sudah terdaftar'
+                ]
+            ],
+            'pemilik' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'kontak' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ]
+        ])) {
+            $validation = \config\Services::validation();
+            return redirect()->to(base_url('Admin/viewEditUMKM/' . $id))->withInput()->with('validation', $validation);
+        }
+        // batas validasi
+
         $ambil = $this->umkmModel->where('id_umkm', $id)->first();
         $foto = $this->request->getFile('foto');
         if (!$foto->getError() == 4) {
-            unlink('img/umkm/' . $ambil['foto']);
+            if ($ambil['foto'] != 'default.jpeg') {
+                unlink('img/umkm/' . $ambil['foto']);
+                $namaFoto = $ambil['foto'];
+                $foto->move('img/umkm', $namaFoto);
+            } else {
+                $ext = $foto->getClientExtension();
+                $namaFoto = $this->request->getVar('nama') . '.' . $ext;
+                $foto->move('img/umkm', $namaFoto);
+            }
+        } else {
             $namaFoto = $ambil['foto'];
-            $foto->move('img/umkm', $namaFoto);
         };
         $update = ([
             'nama_umkm' => $this->request->getVar('nama'),
@@ -91,7 +161,9 @@ class Admin extends BaseController
             'deskripsi' => $this->request->getVar('deskripsi'),
             'lokasi' => $this->request->getVar('lokasi'),
             'kontak' => $this->request->getVar('kontak'),
+            'foto' => $namaFoto
         ]);
+
         $this->umkmModel->update($id, $update);
 
         return redirect()->to('admin/umkm');

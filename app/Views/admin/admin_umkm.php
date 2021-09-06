@@ -42,9 +42,10 @@
                     </thead>
                     <tbody>
                         <?php
+                        $count = 1;
                         foreach ($umkm as $u) : ?>
                             <tr>
-                                <td class="isi"><?= $u['id_umkm'] ?></td>
+                                <td class="isi"><?= $count ?></td>
                                 <td class="isi"><?= $u['nama_umkm'] ?></td>
                                 <td class="isi"><?= $u['nama_pemilik'] ?></td>
                                 <td class="isi"><?= $u['lokasi'] ?></td>
@@ -59,7 +60,9 @@
                                     </a>
                                 </td>
                             </tr>
-                        <?php endforeach; ?>
+                        <?php
+                            $count++;
+                        endforeach; ?>
                     </tbody>
                 </table>
             </div>
