@@ -20,6 +20,8 @@
     <script src="https://cdn.tiny.cloud/1/nz2me6bgf32zikfzbdlxn0fe87znyqu4uas02ss9llwo6gu6/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <link href="<?= base_url('asset/datatables/dataTables.bootstrap4.min.css') ?>" rel="stylesheet">
 
+    <link rel="shortcut icon" href="<?= base_url('img/logomalang.png') ?>" type="image/x-icon">
+
 </head>
 
 <body id="page-top">
@@ -62,7 +64,6 @@
                     <i class="fas fa-user"></i>
                     <span>Penduduk</span>
                 </a>
-
             </li>
 
             <!-- Nav Item - Tables -->

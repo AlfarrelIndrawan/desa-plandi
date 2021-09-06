@@ -68,6 +68,13 @@ use Config\Pager;
                     </div>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link <?php if ($url == 'berita') {
+                                            echo 'active';
+                                        } ?>" href="<?= base_url('/berita'); ?>">
+                        Berita
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?php if ($url == 'potensi') {
                                             echo 'active';
                                         } ?>" href="<?= base_url('/potensi'); ?>">Potensi</a>
@@ -82,13 +89,6 @@ use Config\Pager;
                                             echo 'active';
                                         } ?>" href="<?= base_url('/monografi'); ?>">
                         Monografi
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php if ($url == 'berita') {
-                                            echo 'active';
-                                        } ?>" href="<?= base_url('/berita'); ?>">
-                        Berita
                     </a>
                 </li>
                 <li class="nav-item">
