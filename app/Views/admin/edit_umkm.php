@@ -46,7 +46,10 @@ $this->section('konten');
                     <div class="form-group">
                         <label for="foto">Foto UMKM</label><br>
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="foto" name="foto" onchange="readImg(this);">
+                            <input type="file" class="custom-file-input <?= ($validation->hasError('foto')) ? 'is-invalid' : ''; ?>" id="foto" name="foto" onchange="readImg(this);">
+                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                <?= $validation->getError('foto'); ?>
+                            </div>
                             <label class="custom-file-label" for="customFile"><?= $umkm['foto'] ?></label>
                         </div>
                         <div class="container my-3" style="text-align: center;">

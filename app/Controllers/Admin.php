@@ -71,10 +71,17 @@ class Admin extends BaseController
                 'errors' => [
                     'required' => '{field} harus diisi',
                 ]
+            ],
+            'foto' => [
+                'rules' => 'is_image[foto]|mime_in[foto,image/jpg,image/png,image/jpeg]',
+                'errors' => [
+                    'is_image' => 'Data yang diisikan harus {field}',
+                    'mime_in' => 'Data yang diisikan harus {field}'
+                ]
             ]
         ])) {
-            $validation = \config\Services::validation();
-            return redirect()->to(base_url('Admin/viewAddUMKM'))->withInput()->with('validation', $validation);
+            // $validation = \config\Services::validation();
+            return redirect()->to(base_url('Admin/viewAddUMKM'))->withInput();
         }
         // batas validasi
 
@@ -133,10 +140,17 @@ class Admin extends BaseController
                 'errors' => [
                     'required' => '{field} harus diisi',
                 ]
+            ],
+            'foto' => [
+                'rules' => 'is_image[foto]|mime_in[foto,image/jpg,image/png,image/jpeg]',
+                'errors' => [
+                    'is_image' => 'Data yang diisikan harus {field}',
+                    'mime_in' => 'Data yang diisikan harus {field}'
+                ]
             ]
         ])) {
-            $validation = \config\Services::validation();
-            return redirect()->to(base_url('Admin/viewEditUMKM/' . $id))->withInput()->with('validation', $validation);
+            // $validation = \config\Services::validation();
+            return redirect()->to(base_url('Admin/viewEditUMKM/' . $id))->withInput();
         }
         // batas validasi
 
