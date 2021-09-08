@@ -8,6 +8,5 @@ class UmkmModel extends Model
 {
     protected $table = 'umkm';
     protected $primaryKey = 'id_umkm';
-    protected $allowedFields = ['id_umkm','nama_umkm','nama_pemilik','deskripsi','lokasi','kontak','foto'];
-
+    protected $allowedFields = ['nama_umkm', 'nama_pemilik', 'deskripsi', 'lokasi', 'kontak', 'foto'];
 }
