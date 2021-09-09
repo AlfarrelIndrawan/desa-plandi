@@ -4,16 +4,19 @@ namespace App\Controllers;
 
 use App\models\BeritaModel;
 use App\models\UmkmModel;
+use App\models\PendudukModel;
 
 class Admin extends BaseController
 {
     protected $beritaModel;
     protected $umkmModel;
+    protected $pendudukModel;
 
     public function __construct()
     {
         $this->beritaModel = new BeritaModel();
         $this->umkmModel = new UmkmModel();
+        $this->pendudukModel = new PendudukModel();
     }
 
     public function index()
@@ -28,6 +31,17 @@ class Admin extends BaseController
         ];
 
         return view('admin/admin_berita', $data);
+    }
+
+    public function penduduk()
+    {
+        $data = [
+            // 'penduduk' => $this->pendudukModel->findAll()
+            'penduduk' => $this->pendudukModel->paginate(1000, 'penduduk'),
+            'pager' => $this->pendudukModel->pager
+        ];
+
+        return view('admin/penduduk', $data);
     }
 
     public function umkm()

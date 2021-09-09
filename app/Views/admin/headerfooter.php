@@ -60,7 +60,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="<?= base_url('/admin/penduduk') ?>">
                     <i class="fas fa-user"></i>
                     <span>Penduduk</span>
                 </a>
