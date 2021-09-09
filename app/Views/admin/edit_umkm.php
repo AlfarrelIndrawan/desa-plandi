@@ -16,32 +16,32 @@ $this->section('konten');
                 <form action="<?= base_url('admin/umkm/update/' . $umkm['id_umkm']) ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nama">Nama UMKM</label>
-                        <input type="text" class="form-control  <?= ($validation->hasError('nama')) ? 'is-invalid' : ''; ?>" id="nama" name="nama" value="<?= $umkm['nama_umkm'] ?>">
+                        <input type="text" class="form-control  <?= ($validation->hasError('nama')) ? 'is-invalid' : ''; ?>" id="nama" name="nama" value="<?= old('nama', $umkm['nama_umkm']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
                             <?= $validation->getError('nama'); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="pemilik">Pemilik</label>
-                        <input type="text" class="form-control  <?= ($validation->hasError('pemilik')) ? 'is-invalid' : ''; ?>" id="pemilik" name="pemilik" value="<?= $umkm['nama_pemilik'] ?>">
+                        <input type="text" class="form-control  <?= ($validation->hasError('pemilik')) ? 'is-invalid' : ''; ?>" id="pemilik" name="pemilik" value="<?= old('pemilik', $umkm['nama_pemilik']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
                             <?= $validation->getError('pemilik'); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="kontak">Kontak</label>
-                        <input type="text" class="form-control  <?= ($validation->hasError('kontak')) ? 'is-invalid' : ''; ?>" id="kontak" name="kontak" value="<?= $umkm['kontak'] ?>">
+                        <input type="text" class="form-control  <?= ($validation->hasError('kontak')) ? 'is-invalid' : ''; ?>" id="kontak" name="kontak" value="<?= old('kontak', $umkm['kontak']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
                             <?= $validation->getError('kontak'); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="deskripsi">Deskripsi</label>
-                        <input type="text" class="form-control" id="deskripsi" name="deskripsi" value="<?= $umkm['deskripsi'] ?>">
+                        <input type="text" class="form-control" id="deskripsi" name="deskripsi" value="<?= old('deskripsi', $umkm['deskripsi']) ?>">
                     </div>
                     <div class="form-group">
                         <label for="lokasi">Lokasi</label>
-                        <input type="text" class="form-control" id="lokasi" name="lokasi" value="<?= $umkm['lokasi'] ?>">
+                        <input type="text" class="form-control" id="lokasi" name="lokasi" value="<?= old('lokasi', $umkm['lokasi']) ?>">
                     </div>
                     <div class="form-group">
                         <label for="foto">Foto UMKM</label><br>

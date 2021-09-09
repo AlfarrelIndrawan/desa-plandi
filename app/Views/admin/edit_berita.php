@@ -16,14 +16,14 @@ $this->section('konten');
                 <form action="<?= base_url('admin/editBerita/' . $berita['id_berita']) ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="judul">Judul Berita</label>
-                        <input value="<?= $berita['judul'] ?>" type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" id="judul" name="judul">
+                        <input value="<?= old('judul', $berita['judul']) ?>" type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" id="judul" name="judul">
                         <div id="validationServer03Feedback" class="invalid-feedback">
                             <?= $validation->getError('judul'); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="berita">Isi Berita</label>
-                        <textarea class="form-control <?= ($validation->hasError('berita')) ? 'is-invalid' : ''; ?>" rows="10" id="berita" name="berita"><?= $berita['berita'] ?></textarea>
+                        <textarea class="form-control <?= ($validation->hasError('berita')) ? 'is-invalid' : ''; ?>" rows="10" id="berita" name="berita"><?= old('berita', $berita['berita']) ?></textarea>
                         <div id="validationServer03Feedback" class="invalid-feedback">
                             <?= $validation->getError('berita'); ?>
                         </div>
@@ -31,7 +31,7 @@ $this->section('konten');
                     <div class="form-group">
                         <label for="kategori">Kategori</label>
                         <select class="form-control" id="kategori" name="kategori">
-                            <?php if ($berita['kategori'] == 'umkm') { ?>
+                            <?php if (old('berita', $berita['berita']) == 'umkm') { ?>
                                 <option value="umkm" ?="selected = 'selected'" ?>UMKM</option>
                                 <option value="desa">Desa</option>
                             <?php } else { ?>
