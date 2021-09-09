@@ -169,7 +169,7 @@
                                     <select class="form-control" id="inputkelamin" value="<?= $p['jk'] ?>">
                                         <?php if ($p['jk'] == 'L') { ?>
                                             <option value="L" ?="selected = 'selected'" ?>L</option>
-                                            <option value="P">Desa</option>
+                                            <option value="P">P</option>
                                         <?php } else { ?>
                                             <option value="P" ?="selected = 'selected'" ?>P</option>
                                             <option value="L"></option>

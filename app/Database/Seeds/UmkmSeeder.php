@@ -22,7 +22,28 @@ class UmkmSeeder extends Seeder
 				'deskripsi'		=> 'Membuat kerajinan kayu dengan kayu mahoni',
 				'lokasi'		=> 'Dusun Tambak Rejo',
 				'kontak'		=> '081235010466'
-			]
+			],
+			[
+				'nama_umkm'		=> 'Anyaman Bapak M.Arwani',
+				'nama_pemilik'	=> 'Pak Arwani',
+				'deskripsi'		=> 'Membuat anyaman yang dijual di desa tradisional',
+				'lokasi'		=> '',
+				'kontak'		=> '081342041379'
+			],
+			[
+				'nama_umkm'		=> 'Anyaman Ibu Sri',
+				'nama_pemilik'	=> 'Ibu Sri Wahyuning',
+				'deskripsi'		=> 'Membuat anyaman yang dijual di desa tradisional',
+				'lokasi'		=> '',
+				'kontak'		=> '085607691556'
+			],
+			[
+				'nama_umkm'		=> 'Keripik Singkong Ardido',
+				'nama_pemilik'	=> 'Ibu Siti Khofifah',
+				'deskripsi'		=> 'Membuat keripik singkong yang dijual di pasar tradisional',
+				'lokasi'		=> '',
+				'kontak'		=> '081358352240'
+			],
 		];
 		$this->db->table('umkm')->insertBatch($data);
 	}

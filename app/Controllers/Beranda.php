@@ -20,7 +20,7 @@ class Beranda extends BaseController
 
     public function index()
     {
-        $data['berita'] = $this->beritaModel->findAll();
+        $data['berita'] = $this->beritaModel->orderBy('id_berita', 'desc')->findAll(3);
         $data['judul'] = "Beranda";
         $data['url'] = $this->request->uri->getSegment(1);
         return view('main/beranda', $data);

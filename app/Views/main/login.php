@@ -6,10 +6,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="shortcut icon" href="<?= base_url('img/logomalang.png') ?>" type="image/x-icon">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?= base_url('css/csslogin.css') ?>">
-    <title>Hello, world!</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -21,16 +23,12 @@
         <form>
             <div class="form-group my-3">
                 <!-- <label for="exampleInputEmail1">Email address</label> -->
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                <input type="text" class="form-control" id="user" placeholder="Username">
                 <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
             </div>
             <div class="form-group my-3">
                 <!-- <label for="exampleInputPassword1">Password</label> -->
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
-            </div>
-            <div class="form-group form-check my-3">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">ingat saya</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="container mt-5 mb-3">
                 <div class="container">
@@ -40,8 +38,6 @@
                                 <div class="col-md-12">
                                     <button type="submit" class=" btnlogin btn btn-success btn-block">Login</button>
                                 </div>
-                                <div class="col-md-6 mt-3 lupa"><a class="linkloginalt" href="#">Lupa kata sandi</a></div>
-                                <div class="col-md-6 mt-3 belum"><a class="linkloginalt 2" href="#">Belum punya akun ?</a></div>
                             </div>
                         </div>
                     </div>

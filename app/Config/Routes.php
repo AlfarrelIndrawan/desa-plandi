@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 
 // Main Website
 $routes->get('/', 'Beranda::index');
+$routes->get('/login', 'Beranda::login');
 $routes->get('/potensi', 'Beranda::potensi');
 $routes->get('/berita', 'Beranda::berita');
 $routes->get('/berita/(:alpha)', 'Beranda::berita/$1', ['as' => 'berita_kategori']);

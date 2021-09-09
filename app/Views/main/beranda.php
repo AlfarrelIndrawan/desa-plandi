@@ -8,7 +8,6 @@
         <?php
         $count = 0;
         foreach ($berita as $b) {
-
             if ($count == 0) { ?>
                 <a href="<?= route_to('detail_berita', $b['id_berita']) ?>">
                     <div class="carousel-item active">
