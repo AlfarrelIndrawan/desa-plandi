@@ -37,6 +37,17 @@ class Admin extends BaseController
     }
     // batas menampilkan halaman berita admin
 
+    public function penduduk()
+    {
+        $data = [
+            // 'penduduk' => $this->pendudukModel->findAll()
+            'penduduk' => $this->pendudukModel->paginate(1000, 'penduduk'),
+            'pager' => $this->pendudukModel->pager
+        ];
+
+        return view('admin/penduduk', $data);
+    }
+
     // menampilkan halaman admin umkm dan mengambil data umkm di database
     public function umkm()
     {
