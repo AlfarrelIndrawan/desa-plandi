@@ -4,16 +4,19 @@ namespace App\Controllers;
 
 use App\models\BeritaModel;
 use App\models\UmkmModel;
+use App\models\PendudukModel;
 
 class Admin extends BaseController
 {
     protected $beritaModel;
     protected $umkmModel;
+    protected $pendudukModel;
 
     public function __construct()
     {
         $this->beritaModel = new BeritaModel();
         $this->umkmModel = new UmkmModel();
+        $this->pendudukModel = new PendudukModel();
     }
 
     // menampilkan dashboard admin

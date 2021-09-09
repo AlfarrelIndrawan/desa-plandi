@@ -97,8 +97,8 @@ class Beranda extends BaseController
         $data = [
             'berita' => $berita,
             'judul' => $berita['judul'],
-            'url' => $this->request->uri->getSegment(1)
-
+            'url' => $this->request->uri->getSegment(1),
+            'beritas' => $this->beritaModel->orderBy('id_berita', 'desc')->findAll(3)
         ];
 
         echo view('main/detail_berita', $data);

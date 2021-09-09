@@ -47,6 +47,8 @@ $routes->get('/layanan','Beranda::layanan');
 $routes->get('/admin','Admin::index');
 
 $routes->get('/admin/berita','Admin::berita');
+$routes->get('/admin/penduduk','Admin::penduduk');
+
 
 // Admin UMKM
 $routes->get('/admin/umkm','Admin::umkm');
