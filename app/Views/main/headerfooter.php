@@ -126,9 +126,7 @@ use Config\Pager;
 
     <!-- footer -->
     <footer>
-        <div class="container-fluid footer">
-            <div class="container-xl">
-            </div>
+        <div class="footer">
         </div>
     </footer>
     <!-- batas footer -->
