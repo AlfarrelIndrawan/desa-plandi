@@ -50,7 +50,7 @@ $this->section('konten');
                             <div id="validationServer03Feedback" class="invalid-feedback">
                                 <?= $validation->getError('foto'); ?>
                             </div>
-                            <label class="custom-file-label" for="customFile">Pilih Foto...</label>
+                            <label class="custom-file-label" for="customFile">Pilih Gambar...</label>
                         </div>
                         <div class="container my-3" style="text-align: center;">
                             <img id="hasil" src="#" alt="" class="img-thumbnail" style="max-height: 400px;">
@@ -58,7 +58,7 @@ $this->section('konten');
                     </div>
                     <div class="row" style="text-align: right;">
                         <div class="col-md-6 p-2">
-                            <a href="<?= base_url('admin/umkm') ?>" class="btn btn-outline-danger btn-block"> Batal</a>
+                            <a href="<?= base_url('admin/umkm') ?>" class="btn btn-outline-danger btn-block">Batal</a>
                         </div>
                         <div class="col-md-6 p-2">
                             <input type="submit" class="btn btn-outline-success btn-block">

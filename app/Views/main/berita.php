@@ -21,7 +21,7 @@
                 <?php foreach ($berita as $b) { ?>
                     <div class="col-md-4">
                         <div class="card mb-4 shadow" style=" border-radius: 20px;">
-                            <img src="<?= base_url('img/umkm.jpeg') ?>" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                            <img src="<?= base_url('img/berita/' . $b['foto']) ?>" class="card-img-top" alt="..." style=" object-fit: cover; border-top-right-radius: 20px; border-top-left-radius: 20px;">
                             <div class="card-body">
                                 <h4 class="card-title"><?php echo $b['judul']; ?></h4>
                                 <h6 class="card-subtitle my-2 text-muted"><?php echo $b['tanggal']; ?></h6>

@@ -50,10 +50,27 @@ $this->section('konten');
                             <div id="validationServer03Feedback" class="invalid-feedback">
                                 <?= $validation->getError('foto'); ?>
                             </div>
-                            <label class="custom-file-label" for="customFile"><?= $umkm['foto'] ?></label>
+                            <?php
+                            if ($umkm['foto'] == 'default.jpeg') {
+                            ?>
+                                <label class="custom-file-label" for="customFile">Pilih Gambar...</label>
+
+                            <?php } else { ?>
+                                <label class="custom-file-label" for="customFile"><?= $umkm['foto'] ?></label>
+                            <?php }
+                            ?>
+
                         </div>
                         <div class="container my-3" style="text-align: center;">
-                            <img id="hasil" src="<?= base_url('/img/umkm/' . $umkm['foto']) ?>" alt="" class="img-thumbnail" style="max-height: 400px;">
+                            <?php
+                            if ($umkm['foto'] == 'default.jpeg') {
+                            ?>
+                                <img id="hasil" src="" alt="" class="img-thumbnail" style="max-height: 400px;">
+
+                            <?php } else { ?>
+                                <img id="hasil" src="<?= base_url('/img/umkm/' . $umkm['foto']) ?>" alt="" class="img-thumbnail" style="max-height: 400px;">
+                            <?php }
+                            ?>
                         </div>
                     </div>
                     <div class="row" style="text-align: right;">
@@ -71,26 +88,4 @@ $this->section('konten');
 </div>
 <!-- /.container-fluid -->
 <!-- Show image preview -->
-<script>
-    function readImg(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            const labelfoto = document.querySelector('.custom-file-label');
-            labelfoto.textContent = input.files[0].name;
-
-            reader.onload = function(e) {
-                $('#hasil')
-                    .attr('src', e.target.result);
-            };
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    $(function() {
-        $('#foto').on('change', function() {
-            readURL(input);
-        });
-    });
-</script>
 <?= $this->endSection(); ?>
