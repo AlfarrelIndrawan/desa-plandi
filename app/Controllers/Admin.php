@@ -26,28 +26,6 @@ class Admin extends BaseController
     }
     // batas menampilkan halaman dashboard admin
 
-    // menampilkan halaman berita dan mengambil data berita di database
-    public function berita()
-    {
-        $data = [
-            'berita' => $this->beritaModel->findAll()
-        ];
-
-        return view('admin/admin_berita', $data);
-    }
-    // batas menampilkan halaman berita admin
-
-    public function penduduk()
-    {
-        $data = [
-            // 'penduduk' => $this->pendudukModel->findAll()
-            'penduduk' => $this->pendudukModel->paginate(1000, 'penduduk'),
-            'pager' => $this->pendudukModel->pager
-        ];
-
-        return view('admin/penduduk', $data);
-    }
-
     // menampilkan halaman admin umkm dan mengambil data umkm di database
     public function umkm()
     {
@@ -230,6 +208,17 @@ class Admin extends BaseController
 
     // CONTROLLER ADMIN BERITA
 
+    // menampilkan halaman berita dan mengambil data berita di database
+    public function berita()
+    {
+        $data = [
+            'berita' => $this->beritaModel->findAll()
+        ];
+
+        return view('admin/admin_berita', $data);
+    }
+    // batas menampilkan halaman berita admin
+
     // menampilkan halaman tambah berita
     public function viewAddBerita()
     {
@@ -386,4 +375,194 @@ class Admin extends BaseController
     // batas proses hapus berita
 
     // BATAS CONTROLLER ADMIN BERITA
+
+    // Controller Admin Penduduk
+
+    // menampilkan halaman berita dan mengambil data berita di database
+    public function penduduk()
+    {
+        $data = [
+            // 'penduduk' => $this->pendudukModel->findAll()
+            'penduduk' => $this->pendudukModel->paginate(1000, 'penduduk'),
+            'pager' => $this->pendudukModel->pager
+        ];
+
+        return view('admin/penduduk', $data);
+    }
+
+    // menampilkan halaman tambah penduduk
+    public function viewAddPenduduk()
+    {
+        session();
+        $data = [
+            'validation' => \config\Services::validation()
+        ];
+        return view('admin/tambah_penduduk', $data);
+    }
+    // batas menampilkan halaman tambah penduduk
+
+    // proses tambah penduduk
+    public function tambahPenduduk()
+    {
+        //validasi input
+        if (!$this->validate([
+            'nik' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                    'is_unique' => '{field} sudah terdaftar',
+                ]
+            ],
+            'nama' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'jk' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'tgl_lahir' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'agama' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'status' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'pendidikan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'pekerjaan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ]
+        ])) {
+            return redirect()->to(base_url('Admin/viewAddPenduduk'))->withInput();
+        }
+        // batas validasi input
+        
+        $this->pendudukModel->insert([
+            'nik' => $this->request->getVar('nik'),
+            'nama' => $this->request->getVar('nama'),
+            'jk' => $this->request->getVar('jk'),
+            'tgl_lahir' => $this->request->getVar('tgl_lahir'),
+            'agama' => $this->request->getVar('agama'),
+            'status' => $this->request->getVar('status'),
+            'pendidikan' => $this->request->getVar('pendidikan'),
+            'pekerjaan' => $this->request->getVar('pekerjaan')
+        ]);
+
+        return redirect()->to('Admin/penduduk');
+    }
+    // batas proses tambah penduduk
+
+    // menampilkan view edit penduduk
+    public function viewEditPenduduk($id)
+    {
+        session();
+        $data = [
+            'penduduk' => $this->pendudukModel->find($id),
+            'validation' => \config\Services::validation()
+        ];
+
+        return view('admin/edit_penduduk', $data);
+    }
+    // batas menampilkan view edit penduduk
+
+    // proses edit berita
+    public function editPenduduk($id)
+    {
+        //validasi input
+        if (!$this->validate([
+            'nama' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'jk' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'tgl_lahir' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'agama' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'status' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'pendidikan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'pekerjaan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ]
+        ])) {
+            return redirect()->to(base_url('Admin/viewEditPenduduk/' . $id))->withInput();
+        }
+        // batas validasi input
+
+        $update = ([
+            'nama' => $this->request->getVar('nama'),
+            'jk' => $this->request->getVar('jk'),
+            'tgl_lahir' => $this->request->getVar('tgl_lahir'),
+            'agama' => $this->request->getVar('agama'),
+            'status' => $this->request->getVar('status'),
+            'pendidikan' => $this->request->getVar('pendidikan'),
+            'pekerjaan' => $this->request->getVar('pekerjaan')
+        ]);
+
+        $this->pendudukModel->update($id, $update);
+
+        return redirect()->to('admin/penduduk');
+    }
+    // batas proses edit penduduk
+
+    // proses hapus penduduk
+    public function hapusPenduduk($id)
+    {
+        $ambil = $this->pendudukModel->find($id);
+        $this->pendudukModel->delete($id);
+
+        return redirect()->to('/admin/penduduk');
+    }
+    // batas proses hapus penduduk
 }
