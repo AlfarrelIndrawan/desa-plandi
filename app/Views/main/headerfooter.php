@@ -91,12 +91,14 @@ use Config\Pager;
                         Monografi
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php if ($url == 'layanan') {
-                                            echo 'active';
-                                        } ?>" href="<?= base_url('/layanan'); ?>">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Layanan
                     </a>
+                    <div class="dropdown-menu" aria-labelledby="layananDropdown">
+                        <a class="dropdown-item" href="<?= base_url('/layanan'); ?>">Persuratan Internal Desa</a>
+                        <a class="dropdown-item" href="<?= base_url('/layanan'); ?>">Pengurus Desa</a>
+                    </div>
                 </li>
             </ul>
         </div>

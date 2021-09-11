@@ -58,6 +58,9 @@ $routes->post('/admin/umkm/tambah','Admin::tambahUMKM');
 $routes->get('/admin/umkm/edit/(:any)','Admin::viewEditUMKM/$1');
 $routes->post('/admin/umkm/update/(:any)','Admin::editUMKM/$1');
 $routes->get('/admin/umkm/delete/(:any)','Admin::hapusUMKM/$1');
+
+// Layanan
+$routes->get('/layanan/surat/tambah', 'Layanan::tambahSurat');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
