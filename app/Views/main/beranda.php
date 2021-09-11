@@ -9,31 +9,33 @@
         $count = 0;
         foreach ($berita as $b) {
             if ($count == 0) { ?>
-                <a href="<?= route_to('detail_berita', $b['id_berita']) ?>">
-                    <div class="carousel-item active">
-                        <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption my-5 d-none d-md-block">
-                            <h5><?= $b['judul'] ?></h5>
-                            <h6 class="card-subtitle my-4 text-muted"><?php echo $b['tanggal']; ?></h6>
-                            <p><?= $b['berita'] ?></p>
-                        </div>
+                <div class="carousel-item active">
+                    <a href="<?= route_to('detail_berita', $b['id_berita']) ?>">
+                        <img src="<?= base_url('img/berita/' . $b['foto']) ?>" class="d-block w-100" alt="...">
+                    </a>
+                    <div class="carousel-caption my-5 d-none d-md-block">
+                        <h5><?= $b['judul'] ?></h5>
+                        <h6 class="card-subtitle my-4 text-muted"><?php echo $b['tanggal']; ?></h6>
+                        <p><?= $b['berita'] ?></p>
                     </div>
-                </a>
+                </div>
             <?php } else { ?>
-                <a href="<?= route_to('detail_berita', $b['id_berita']) ?>">
-                    <div class="carousel-item">
-                        <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption my-5 d-none d-md-block">
-                            <h5><?= $b['judul'] ?></h5>
-                            <h6 class="card-subtitle my-4 text-muted"><?php echo $b['tanggal']; ?></h6>
-                            <p><?= $b['berita'] ?></p>
-                        </div>
+                <div class="carousel-item">
+                    <a href="<?= route_to('detail_berita', $b['id_berita']) ?>">
+                        <img src="<?= base_url('img/berita/' . $b['foto']) ?>" class="d-block w-100" alt="...">
+                    </a>
+                    <div class="carousel-caption my-5 d-none d-md-block">
+                        <h5><?= $b['judul'] ?></h5>
+                        <h6 class="card-subtitle my-4 text-muted"><?php echo $b['tanggal']; ?></h6>
+                        <p><?= $b['berita'] ?></p>
                     </div>
-                </a>
-            <?php } ?>
+                </div>
+            <?php }
+            $count = $count + 1;
+            ?>
         <?php
-            $count++;
-        } ?>
+        }
+        ?>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

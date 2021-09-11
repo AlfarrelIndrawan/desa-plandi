@@ -21,8 +21,12 @@
     <link href="<?= base_url('asset/datatables/dataTables.bootstrap4.min.css') ?>" rel="stylesheet">
 
     <link rel="shortcut icon" href="<?= base_url('img/logomalang.png') ?>" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('css/csspagination.css') ?>">
+
+
 
 </head>
+
 
 <body id="page-top">
 
