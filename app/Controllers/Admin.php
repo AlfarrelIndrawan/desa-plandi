@@ -376,15 +376,15 @@ class Admin extends BaseController
 
     // BATAS CONTROLLER ADMIN BERITA
 
+    ///////////////////////////////////////////////////////////////
+
     // Controller Admin Penduduk
 
     // menampilkan halaman berita dan mengambil data berita di database
     public function penduduk()
     {
         $data = [
-            // 'penduduk' => $this->pendudukModel->findAll()
-            'penduduk' => $this->pendudukModel->paginate(1000, 'penduduk'),
-            'pager' => $this->pendudukModel->pager
+            'penduduk' => $this->pendudukModel->findAll()
         ];
 
         return view('admin/penduduk', $data);
@@ -459,7 +459,7 @@ class Admin extends BaseController
             return redirect()->to(base_url('Admin/viewAddPenduduk'))->withInput();
         }
         // batas validasi input
-        
+
         $this->pendudukModel->insert([
             'nik' => $this->request->getVar('nik'),
             'nama' => $this->request->getVar('nama'),

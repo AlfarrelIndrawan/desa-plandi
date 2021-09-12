@@ -121,8 +121,10 @@ class Beranda extends BaseController
 
     public function layanan()
     {
+        session();
         $data['url'] = $this->request->uri->getSegment(1);
         $data['judul'] = "Layanan";
+        $data['validation'] = \Config\Services::validation();
         return view("main/layanan", $data);
     }
 }
