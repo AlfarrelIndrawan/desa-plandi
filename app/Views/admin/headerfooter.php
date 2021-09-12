@@ -23,9 +23,12 @@
     <link rel="shortcut icon" href="<?= base_url('img/logomalang.png') ?>" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="<?= base_url('css/csspagination.css') ?>">
 
+    <!-- script editor teks -->
+
 
 
 </head>
+
 
 
 <body id="page-top">

@@ -22,11 +22,74 @@ $this->section('konten');
                         </div>
                     </div>
                     <div class="form-group">
+
                         <label for="berita">Isi Berita</label>
                         <textarea class="form-control <?= ($validation->hasError('berita')) ? 'is-invalid' : ''; ?>" rows="10" id="berita" name="berita"><?= old('berita') ?></textarea>
                         <div id="validationServer03Feedback" class="invalid-feedback">
                             <?= $validation->getError('berita'); ?>
                         </div>
+                        <script src="https://cdn.ckeditor.com/4.16.2/full-all/ckeditor.js"></script>
+                        <script>
+                            CKEDITOR.replace('berita', {
+                                // Define the toolbar groups as it is a more accessible solution.
+                                toolbarGroups: [{
+                                        "name": "document",
+                                        "groups": ["mode", "document", "doctools"]
+                                    },
+                                    {
+                                        "name": "clipboard",
+                                        "groups": ["clipboard", "undo"]
+                                    },
+                                    {
+                                        "name": "editing",
+                                        "groups": ['find', 'selection', 'spellchecker', 'editing']
+                                    },
+                                    {
+                                        'name': 'forms',
+                                        'groups': ['forms']
+                                    },
+                                    {
+                                        'name': 'basicstyles',
+                                        'groups': ['basicstyles', 'cleanup']
+                                    },
+                                    {
+                                        'name': 'paragraph',
+                                        'groups': ['list', 'indent', 'blocks', 'align', 'bidi', 'paragraph']
+                                    },
+                                    {
+                                        'name': 'links',
+                                        'groups': ['links']
+                                    },
+                                    {
+                                        'name': 'styles',
+                                        'groups': ['styles']
+                                    },
+                                    {
+                                        'name': 'insert',
+                                        'groups': ['insert']
+                                    },
+                                    {
+                                        'name': 'colors',
+                                        'groups': ['colors']
+                                    },
+                                    {
+                                        'name': 'tools',
+                                        'groups': ['tools']
+                                    },
+                                    {
+                                        'name': 'others',
+                                        'groups': ['others']
+                                    },
+                                    {
+                                        'name': 'about',
+                                        'groups': ['about']
+                                    }
+                                ],
+
+                                'removeButtons': 'Source,Save,NewPage,ExportPdf,Preview,Print,Templates,Scayt,Form,Checkbox,Radio,TextField,Textarea,Select,Button,ImageButton,HiddenField,CreateDiv,Language,Anchor,Flash,Smiley,PageBreak,Iframe,About'
+                            });
+                        </script>
+
                     </div>
                     <div class="form-group">
                         <label for="kategori">Kategori</label>
