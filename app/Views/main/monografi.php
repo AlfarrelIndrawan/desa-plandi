@@ -361,7 +361,7 @@
                     </tr>
                     <tr>
                         <td style="width: 250px">Pangkalan Ojek, Becak, dan Sejenisnya</td>
-                        <td>: Ada</td>
+                        <td>: Ada Tes</td>
                     </tr>
                 </table>
                 <h6>C. Penanggulangan Kemiskinan</h6>
