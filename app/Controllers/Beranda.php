@@ -4,11 +4,13 @@ namespace App\Controllers;
 
 use App\Models\BeritaModel;
 use App\Models\UmkmModel;
+use App\Models\PendudukModel;
 
 class Beranda extends BaseController
 {
     protected $umkmModel;
     protected $beritaModel;
+    protected $pendudukModel;
 
     public function __construct()
     {
@@ -16,6 +18,7 @@ class Beranda extends BaseController
         $this->request = \Config\Services::request();
         $this->umkmModel = new UmkmModel();
         $this->beritaModel = new BeritaModel();
+        $this->pendudukModel = new PendudukModel();
     }
 
     public function index()
@@ -36,6 +39,7 @@ class Beranda extends BaseController
     {
         $data['judul'] = "Potensi";
         $data['url'] = $this->request->uri->getSegment(1);
+        $data['pekerjaan'] = $this->pendudukModel->findAll();
         return view('main/potensi', $data);
     }
 
@@ -106,8 +110,12 @@ class Beranda extends BaseController
 
     public function monografi()
     {
-        $data['url'] = $this->request->uri->getSegment(1);
-        $data['judul'] = "Monografi";
+        $data = [
+            'url' => $this->request->uri->getSegment(1),
+            'judul' => "Monografi",
+            'pekerjaan' => $this->pendudukModel->get_pekerjaan(),
+            'pendidikan' => $this->pendudukModel->get_pendidikan()
+        ];
         return view("main/monografi", $data);
     }
 
