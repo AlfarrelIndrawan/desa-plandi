@@ -114,7 +114,11 @@ class Beranda extends BaseController
             'url' => $this->request->uri->getSegment(1),
             'judul' => "Monografi",
             'pekerjaan' => $this->pendudukModel->get_pekerjaan(),
-            'pendidikan' => $this->pendudukModel->get_pendidikan()
+            'pendidikan' => $this->pendudukModel->get_pendidikan(),
+            'umur' => $this->pendudukModel->get_umur(),
+            'jk' => $this->pendudukModel->get_jk(),
+            'status' => $this->pendudukModel->get_status(),
+            'agama' => $this->pendudukModel->get_agama()
         ];
         return view("main/monografi", $data);
     }
