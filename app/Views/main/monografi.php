@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-lg-9">
             <!-- <h2 class="text-center mb-7">Monografi Desa Plandi</h2> -->
-            <h5 class="text-left mb-4 pb-2 border-bottom" id="profil">PROFIL DESA</h5>
+            <h4 class="text-left mb-4 pb-2 border-bottom" id="profil">PROFIL DESA</h4>
             <h6>A. Umum</h6>
             <table class="table table-borderless table-sm mb-4">
                 <tr>
@@ -76,7 +76,7 @@
                     <td>: Desa Ngajum</td>
                 </tr>
             </table>
-            <h5 class="text-left mb-4 mt-5 pb-2 border-bottom" id="pemerintahan">BIDANG PEMERINTAHAN</h5>
+            <h4 class="text-left mb-4 mt-5 pb-2 border-bottom" id="pemerintahan">BIDANG PEMERINTAHAN</h4>
             <h6>A. Komponen Pemerintahan Desa dan Perangkat Desa</h6>
             <table class="table table-borderless table-sm">
                 <tr>
@@ -116,7 +116,7 @@
                     <td>: Ada</td>
                 </tr>
             </table>
-            <h5 class="text-left mb-4 mt-5 pb-2 border-bottom" id="teknologi">BASIS TEKNOLOGI INFORMASI / E-GOVERNMENT</h5>
+            <h4 class="text-left mb-4 mt-5 pb-2 border-bottom" id="teknologi">BASIS TEKNOLOGI INFORMASI / E-GOVERNMENT</h4>
             <h6>A. Ketersediaan</h6>
             <table class="table table-borderless table-sm mb-4">
                 <tr>
@@ -155,7 +155,7 @@
                     <td>: Ada</td>
                 </tr>
             </table>
-            <h5 class="text-left mb-4 mt-5 pb-2 border-bottom" id="kemasyarakatan">BIDANG KEMASYARAKATAN</h5>
+            <h4 class="text-left mb-4 mt-5 pb-2 border-bottom" id="kemasyarakatan">BIDANG KEMASYARAKATAN</h4>
             <h6>A. Partisipasi Masyarakat</h6>
             <table class="table table-borderless table-sm mb-4">
                 <tr>
@@ -232,7 +232,7 @@
                     <td>: Tidak Lengkap</td>
                 </tr>
             </table>
-            <h5 class="text-left mb-4 mt-5 pb-2 border-bottom" id="keamanan">KEAMANAN DAN KETERTIBAN</h5>
+            <h4 class="text-left mb-4 mt-5 pb-2 border-bottom" id="keamanan">KEAMANAN DAN KETERTIBAN</h4>
             <h6>A. Pengamanan Lingkungan dan Manusia</h6>
             <table class="table table-borderless table-sm mb-4">
                 <tr>
@@ -321,7 +321,7 @@
                     <td>: Tidak Ada</td>
                 </tr>
             </table>
-            <h5 class="text-left mb-4 mt-5 pb-2 border-bottom" id="pendidikan">BIDANG PENDIDIKAN</h5>
+            <h4 class="text-left mb-4 mt-5 pb-2 border-bottom" id="pendidikan">BIDANG PENDIDIKAN</h4>
             <h6>A. Buta Huruf</h6>
             <table class="table table-borderless table-sm mb-4">
                 <tr>
@@ -347,7 +347,7 @@
                     </tr>
                 <?php } ?>
             </table>
-            <h5 class="text-left mb-4 mt-5 pb-2 border-bottom" id="ekonomi">BIDANG EKONOMI</h5>
+            <h4 class="text-left mb-4 mt-5 pb-2 border-bottom" id="ekonomi">BIDANG EKONOMI</h4>
             <h6>A. Mata Pencaharian</h6>
             <h6>B. Kelembagaan Ekonomi</h6>
             <table class="table table-borderless table-sm mb-4">
@@ -375,7 +375,7 @@
                     <td>: Ada</td>
                 </tr>
             </table>
-            <h5 class="text-left mb-4 mt-5 pb-2 border-bottom" id="kesehatan">BIDANG KESEHATAN</h5>
+            <h4 class="text-left mb-4 mt-5 pb-2 border-bottom" id="kesehatan">BIDANG KESEHATAN</h4>
             <h6>A. Fasilitas Kesehatan Lingkungan</h6>
             <table class="table table-borderless table-sm mb-4">
                 <tr>
@@ -392,10 +392,9 @@
                 </tr>
             </table>
         </div>
-        <div class="col-md-1"></div>
-        <div class="col-xl-2 border-left">
-            <div class="container sticky-top" style="padding-top: 75px;">
-                <h5 class="category">Navigasi</h5>
+        <div class="col-xl-3 border-left">
+            <!-- <div class="container sticky-top" style="padding-top: 75px;">
+                <h4 class="category">Navigasi</h4>
                 <ul class="mb-4" style="list-style: none; padding: 0;">
                     <br>
                     <a class="category" href="#profil">
@@ -430,6 +429,17 @@
                         <li>Bidang Kesehatan</li>
                     </a>
                 </ul>
+            </div> -->
+            <div id="list-example" class="list-group sticky-top" style="top: 90px;">
+                <h4 class="category border-bottom pb-2 mb-3">Navigasi</h4>
+                <a class="list-group-item list-group-item-action" href="#profil">Profil Desa</a>
+                <a class="list-group-item list-group-item-action" href="#pemerintahan">Bidang Pemerintahan</a>
+                <a class="list-group-item list-group-item-action" href="#teknologi">Bidang Teknologi Informasi</a>
+                <a class="list-group-item list-group-item-action" href="#kemasyarakatan">Bidang Kemasyarakatan</a>
+                <a class="list-group-item list-group-item-action" href="#keamanan">Bidang Keamanan</a>
+                <a class="list-group-item list-group-item-action" href="#pendidikan">Bidang Pendidikan</a>
+                <a class="list-group-item list-group-item-action" href="#ekonomi">Bidang Ekonomi</a>
+                <a class="list-group-item list-group-item-action" href="#kesehatan">Bidang Kesehatan</a>
             </div>
         </div>
     </div>
