@@ -276,7 +276,6 @@ class Admin extends BaseController
             'berita' => $this->request->getVar('berita'),
             'kategori' => $this->request->getVar('kategori'),
             'foto' => $namaFoto,
-            'penulis' => 'Admin',
             'tanggal' => $today
         ]);
 
@@ -351,7 +350,6 @@ class Admin extends BaseController
             'berita' => $this->request->getVar('berita'),
             'kategori' => $this->request->getVar('kategori'),
             'foto' => $namaFoto,
-            'penulis' => 'Admin',
             'tanggal' => $today
         ]);
 

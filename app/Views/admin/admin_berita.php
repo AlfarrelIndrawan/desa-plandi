@@ -34,7 +34,6 @@
                             <th>No</th>
                             <th>Judul</th>
                             <th>Tanggal</th>
-                            <th>Penulis</th>
                             <th>Kategori</th>
                             <th>Foto</th>
                             <th>Aksi</th>
@@ -48,7 +47,6 @@
                                 <td class="isi"><?= $count ?></td>
                                 <td class="isi"><?= $b['judul'] ?></td>
                                 <td class="isi"><?= $b['tanggal'] ?></td>
-                                <td class="isi"><?= $b['penulis'] ?></td>
                                 <td class="isi">
                                     <?= $b['kategori'] ?>
                                 </td>
