@@ -17,6 +17,7 @@ use Config\Pager;
     <link rel="stylesheet" type="text/css" href="<?= base_url('css/cssjudul.css') ?>">
     <link rel="shortcut icon" href="<?= base_url('img/logomalang.png') ?>" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3b9659dcfe.js" crossorigin="anonymous"></script>
+    <script src="<?= base_url('asset/chart.js/Chart.min.js') ?>"></script>
 
 
     <title><?= $judul ?> | Desa Plandi</title>
