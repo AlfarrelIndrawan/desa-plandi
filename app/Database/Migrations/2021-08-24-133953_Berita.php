@@ -24,10 +24,6 @@ class Berita extends Migration
 			'berita'		=> [
 				'type'		=> 'TEXT'
 			],
-			'penulis'		=> [
-				'type'			=> 'VARCHAR',
-				'constraint'	=> '50',
-			],
 			'kategori'		=> [
 				'type'			=> 'ENUM',
 				'constraint'	=> "'Desa', 'Umkm'",

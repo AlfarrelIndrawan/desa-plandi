@@ -48,21 +48,6 @@
 </div>
 <!-- batas carousel berita -->
 
-<!-- paragraf tentang desa plandi -->
-<!-- <div class="container-md konten" style="text-align: center;">
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, necessitatibus sequi. Laudantium aut fuga nobis corrupti ullam adipisci, qui molestiae quis, quibusdam facere et fugit necessitatibus rerum atque maxime beatae.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus ducimus nostrum officiis nihil! Accusantium maxime maiores assumenda sit ratione, optio possimus molestiae necessitatibus voluptatibus vel, sed quia, totam minima!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum blanditiis iusto error, numquam odio earum debitis! Repudiandae, at ipsum! Voluptatibus obcaecati ratione totam, provident suscipit hic exercitationem odio est amet.
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, necessitatibus sequi. Laudantium aut fuga nobis corrupti ullam adipisci, qui molestiae quis, quibusdam facere et fugit necessitatibus rerum atque maxime beatae.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit accusamus ducimus nostrum officiis nihil! Accusantium maxime maiores assumenda sit ratione, optio possimus molestiae necessitatibus voluptatibus vel, sed quia, totam minima!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum blanditiis iusto error, numquam odio earum debitis! Repudiandae, at ipsum! Voluptatibus obcaecati ratione totam, provident suscipit hic exercitationem odio est amet.
-    </p>
-</div> -->
-<!-- batas paragraf tentang desa plandi -->
-
 <!-- Container UMKM -->
 <div class="container-md konten umkm">
     <h3 class=" pb-3 mb-5 border-bottom">
