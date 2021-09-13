@@ -33,40 +33,40 @@ $this->section('konten');
                             CKEDITOR.replace('berita', {
                                 // Define the toolbar groups as it is a more accessible solution.
                                 toolbarGroups: [{
-                                        "name": "document",
-                                        "groups": ["mode", "document", "doctools"]
+                                        'name': 'document',
+                                        'groups': ['mode', 'document', 'doctools']
                                     },
                                     {
-                                        "name": "clipboard",
-                                        "groups": ["clipboard", "undo"]
-                                    },
-                                    {
-                                        "name": "editing",
-                                        "groups": ['find', 'selection', 'spellchecker', 'editing']
-                                    },
-                                    {
-                                        'name': 'forms',
-                                        'groups': ['forms']
+                                        'name': 'clipboard',
+                                        'groups': ['clipboard', 'undo']
                                     },
                                     {
                                         'name': 'basicstyles',
-                                        'groups': ['basicstyles', 'cleanup']
+                                        'groups': ['cleanup', 'basicstyles']
                                     },
                                     {
                                         'name': 'paragraph',
                                         'groups': ['list', 'indent', 'blocks', 'align', 'bidi', 'paragraph']
                                     },
                                     {
+                                        'name': 'editing',
+                                        'groups': ['find', 'selection', 'spellchecker', 'editing']
+                                    },
+                                    {
                                         'name': 'links',
                                         'groups': ['links']
                                     },
                                     {
-                                        'name': 'styles',
-                                        'groups': ['styles']
+                                        'name': 'forms',
+                                        'groups': ['forms']
                                     },
                                     {
                                         'name': 'insert',
                                         'groups': ['insert']
+                                    },
+                                    {
+                                        'name': 'styles',
+                                        'groups': ['styles']
                                     },
                                     {
                                         'name': 'colors',
@@ -86,10 +86,9 @@ $this->section('konten');
                                     }
                                 ],
 
-                                'removeButtons': 'Source,Save,NewPage,ExportPdf,Preview,Print,Templates,Scayt,Form,Checkbox,Radio,TextField,Textarea,Select,Button,ImageButton,HiddenField,CreateDiv,Language,Anchor,Flash,Smiley,PageBreak,Iframe,About'
+                                'removeButtons': 'Image,Source,Save,ExportPdf,NewPage,Print,Preview,Templates,Replace,Find,Scayt,Form,Checkbox,Radio,TextField,Textarea,Select,Button,ImageButton,HiddenField,CopyFormatting,RemoveFormat,CreateDiv,Blockquote,BidiRtl,BidiLtr,Language,Anchor,Flash,Smiley,Iframe,PageBreak,Maximize,ShowBlocks,About,BGColor,TextColor,Table'
                             });
                         </script>
-
                     </div>
                     <div class="form-group">
                         <label for="kategori">Kategori</label>

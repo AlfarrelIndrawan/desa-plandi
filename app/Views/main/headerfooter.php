@@ -22,10 +22,10 @@ use Config\Pager;
     <title><?= $judul ?> | Desa Plandi</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#list-example" data-offset="200">
 
     <!-- header -->
-    <div class="container-xl header">
+    <div class=" container-xl header">
         <div class="row">
 
             <!-- Nama dan Logo Kabupaten Malang -->

@@ -11,6 +11,12 @@
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  #list-example {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 350px) {
   .pdesa {
     top: 40px;
@@ -146,4 +152,10 @@ h3 {
 .sticky + script + .judulkonten .container-xl,
 .sticky + script + link + .carousel {
   padding-top: 90px;
+}
+
+.list-group-item.list-group-item-action.active {
+  background-color: #90d26d;
+  color: white;
+  border-color: white;
 }
