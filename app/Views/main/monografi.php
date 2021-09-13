@@ -430,7 +430,7 @@
                     </a>
                 </ul>
             </div> -->
-            <div id="list-example" class="list-group sticky-top" style="top: 90px;">
+            <div id="list-example" class="list-group sticky-top" style="top: 170px;">
                 <h4 class="category border-bottom pb-2 mb-3">Navigasi</h4>
                 <a class="list-group-item list-group-item-action" href="#profil">Profil Desa</a>
                 <a class="list-group-item list-group-item-action" href="#pemerintahan">Bidang Pemerintahan</a>
