@@ -7,6 +7,7 @@
         font-size: 12px;
     }
 </style>
+
 <div class="container-fluid">
     <div class="card border-left-success shadow mb-4">
         <div class="card-header py-3">

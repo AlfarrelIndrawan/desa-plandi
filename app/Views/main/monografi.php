@@ -76,6 +76,125 @@
                         <td>: Desa Ngajum</td>
                     </tr>
                 </table>
+                <h5 id="penduduk">DATA PENDUDUK</h5>
+                <h6>A. Distribusi Umur</h6>
+                <canvas id="umur" class="my-4"></canvas>
+                <script>
+                    var ctxP = document.getElementById("umur").getContext('2d');
+                    var myPieChart = new Chart(ctxP, {
+                        type: 'pie',
+                        data: {
+                            labels: ["<= 20", "> 20 dan <= 40", "> 40 dan <= 60", "> 60"],
+                            datasets: [{
+                                data: [<?= $umur[1]->jumlah?>, <?= $umur[2]->jumlah?>, <?= $umur[3]->jumlah?>, <?= $umur[4]->jumlah?>],
+                                backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1"],
+                                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
+                            }]
+                        },
+                            options: {
+                            responsive: true,
+                        }
+                    });
+                </script>
+                <table class="table table-borderless table-sm">
+                    <tr>
+                        <td style="width: 300px">1. Jangka umur <= 20 tahun</td>
+                        <td>: <?= $umur[1]->jumlah?></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 300px">2. Jangka umur > 20 tahun dan <= 40 tahun</td>
+                        <td>: <?= $umur[2]->jumlah?></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 300px">3. Jangka umur > 40 tahun dan <= 60 tahun</td>
+                        <td>: <?= $umur[3]->jumlah?></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 300px">4. Jangka umur di > 60 tahun</td>
+                        <td>: <?= $umur[4]->jumlah?></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 300px">5. Total penduduk</td>
+                        <td>: <?= $umur[0]->jumlah?></td>
+                    </tr>
+                </table>
+                <h6>B. Distribusi Jenis Kelamin</h6>
+                <canvas id="jk" class="my-4"></canvas>
+                <script>
+                    var ctxP = document.getElementById("jk").getContext('2d');
+                    var myPieChart = new Chart(ctxP, {
+                        type: 'pie',
+                        data: {
+                            labels: ["Laki-laki", "Perempuan"],
+                            datasets: [{
+                                data: [<?= $jk[0]->jumlah?>, <?= $jk[1]->jumlah?>],
+                                backgroundColor: ["#46BFBD", "#F7464A"],
+                                hoverBackgroundColor: ["#5AD3D1", "#FF5A5E"]
+                            }]
+                        },
+                            options: {
+                            responsive: true,
+                        }
+                    });
+                </script>
+                <table class="table table-borderless table-sm">
+                    <tr>
+                        <td style="width: 300px">1. Laki-laki</td>
+                        <td>: <?= $jk[0]->jumlah?></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 300px">2. Perempuan</td>
+                        <td>: <?= $jk[1]->jumlah?></td>
+                    </tr>
+                </table>
+                <h6>C. Distribusi Agama</h6>
+                <table class="table table-borderless table-sm">
+                    <tr>
+                        <td style="width: 300px">1. Islam</td>
+                        <td>: <?= $agama[0]->jumlah?></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 300px">2. Kristen</td>
+                        <td>: <?= $agama[1]->jumlah?></td>
+                    </tr>
+                </table>
+                <h6>D. Distribusi Status Perkawinan</h6>
+                <canvas id="status" class="my-4"></canvas>
+                <script>
+                    var ctxP = document.getElementById("status").getContext('2d');
+                    var myPieChart = new Chart(ctxP, {
+                        type: 'pie',
+                        data: {
+                            labels: ["Belum Kawin", "Cerai Hidup", "Cerai Mati", "Kawin"],
+                            datasets: [{
+                                data: [<?= $status[0]->jumlah?>, <?= $status[1]->jumlah?>, <?= $status[2]->jumlah?>, <?= $status[3]->jumlah?>],
+                                backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1"],
+                                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
+                            }]
+                        },
+                            options: {
+                            responsive: true,
+                        }
+                    });
+                </script>
+                <table class="table table-borderless table-sm">
+                    <tr>
+                        <td style="width: 300px">1. Belum Kawin</td>
+                        <td>: <?= $status[0]->jumlah?></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 300px">2. Cerai Hidup</td>
+                        <td>: <?= $status[1]->jumlah?></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 300px">3. Cerai Mati</td>
+                        <td>: <?= $status[2]->jumlah?></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 300px">4. Kawin</td>
+                        <td>: <?= $status[3]->jumlah?></td>
+                    </tr>
+                </table>
                 <h5 id="pemerintahan">BIDANG PEMERINTAHAN</h5>
                 <h6>A. Komponen Pemerintahan Desa dan Perangkat Desa</h6>
                 <table class="table table-borderless table-sm">
@@ -135,23 +254,23 @@
                 <h6>B. ADMINISTRASI</h6>
                 <table class="table table-borderless table-sm">
                     <tr>
-                        <td style="width: 350px">1. Administrasi Berbasis Teknologi Informasi<br>&emsp;&emsp;Administrasi Umum<br>&emsp;&emsp;Administrasi Kependudukan<br>&emsp;&emsp;Administrasi Keuangan<br>&emsp;&emsp;Administrasi Pembangunan<br>&emsp;&emsp;Administrasi BPD<br>&emsp;&emsp;Administrasi Lainnya</td>
+                        <td style="width: 400px">1. Administrasi Berbasis Teknologi Informasi<br>&emsp;&emsp;Administrasi Umum<br>&emsp;&emsp;Administrasi Kependudukan<br>&emsp;&emsp;Administrasi Keuangan<br>&emsp;&emsp;Administrasi Pembangunan<br>&emsp;&emsp;Administrasi BPD<br>&emsp;&emsp;Administrasi Lainnya</td>
                         <td><br>: Tidak Ada<br>: Tidak Ada<br>: Ada<br>: Tidak Ada<br>: Tidak Ada<br>: Ada</td>
                     </tr>
                     <tr>
-                        <td style="width: 350px">2. Perangkat Pengelola Teknologi Informasi</td>
+                        <td style="width: 400px">2. Perangkat Pengelola Teknologi Informasi</td>
                         <td>: Ada</td>
                     </tr>
                     <tr>
-                        <td style="width: 350px">3. Tokoh Pemuda Teknopreneur di Tingkat RT/RW</td>
+                        <td style="width: 400px">3. Tokoh Pemuda Teknopreneur di Tingkat RT/RW</td>
                         <td>: Ada</td>
                     </tr>
                     <tr>
-                        <td style="width: 350px">Perpustakaan</td>
+                        <td style="width: 400px">Perpustakaan</td>
                         <td>: Tidak Ada</td>
                     </tr>
                     <tr>
-                        <td style="width: 350px">Internet Gratis (Hotspot)</td>
+                        <td style="width: 400px">Internet Gratis (Hotspot)</td>
                         <td>: Ada</td>
                     </tr>
                 </table>
@@ -325,7 +444,7 @@
                 <h6>A. Buta Huruf</h6>
                 <table class="table table-borderless table-sm">
                     <tr>
-                        <td style="width: 250px">Penduduk yang Tidak Bisa Baca Tulis</td>
+                        <td style="width: 300px">Penduduk yang Tidak Bisa Baca Tulis</td>
                         <td>: Ada</td>
                     </tr>
                 </table>
@@ -333,22 +452,58 @@
                 <table class="table table-borderless table-sm">
                     <?php for ($i=0; $i < 2;$i++) { ?>
                         <tr>
-                            <td style="width: 250px">Jumlah <?= $pendidikan[$i]->pendidikan?></td>
+                            <td style="width: 300px">Jumlah <?= $pendidikan[$i]->pendidikan?></td>
                             <td>: <?= $pendidikan[$i]->jumlah?></td>
                         </tr>
                         <?php } ?>
                 </table>
                 <h6>C. Tamat Sekolah</h6>
                 <table class="table table-borderless table-sm">
-                    <?php for ($i=1; $i < 9;$i++) { ?>
+                    <?php for ($i=2; $i < 9;$i++) { ?>
                         <tr>
-                            <td style="width: 250px">Jumlah <?= $pendidikan[$i]->pendidikan?></td>
+                            <td style="width: 300px">Jumlah <?= $pendidikan[$i]->pendidikan?></td>
                             <td>: <?= $pendidikan[$i]->jumlah?></td>
                             </tr>
                         <?php } ?>
                 </table>
                 <h5 id="ekonomi">BIDANG EKONOMI</h5>
                 <h6>A. Mata Pencaharian</h6>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Pekerjaan</th>
+                                        <th scope="col">Jumlah</th>
+                                    </tr>
+                                </thead>
+                                <?php for ($i=0; $i < 20;$i++) { ?>
+                                <tr>
+                                    <td style="width: 300px"><?= $pekerjaan[$i]->pekerjaan?></td>
+                                    <td><?= $pekerjaan[$i]->jumlah?></td>
+                                    </tr>
+                                <?php } ?>
+                            </table>
+                        </div>
+                        <div class="col-sm-6">
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Pekerjaan</th>
+                                        <th scope="col">Jumlah</th>
+                                    </tr>
+                                </thead>
+                                <?php for ($i=20; $i < 39;$i++) { ?>
+                                <tr>
+                                    <td style="width: 300px"><?= $pekerjaan[$i]->pekerjaan?></td>
+                                    <td><?= $pekerjaan[$i]->jumlah?></td>
+                                    </tr>
+                                <?php } ?>
+                            </table>
+                        </div>
+                    </div>
+                </div>
                 <h6>B. Kelembagaan Ekonomi</h6>
                 <table class="table table-borderless table-sm">
                     <tr>
@@ -393,40 +548,44 @@
                 </table>
             </div>
             <div class="col-md-1"></div>
-            <div class="col-xl-2 border-left">
+            <div class="col-xl-2 border-left" style="background-color: #f8f9fa;">
                 <div class="container sticky-top" style="padding-top: 75px;">
                     <h5 class="category">Navigasi</h5>
                     <ul class="mb-5" style="list-style: none; padding: 0;">
                         <br>    
-                        <a class="category" href="#profil">
+                        <a class="category text-dark" href="#profil">
                             <li>Profil Desa</li>
                         </a>
                         <br>
-                        <a class="category" href="#pemerintahan">
+                        <a class="category text-dark" href="#penduduk">
+                            <li>Data Penduduk</li>
+                        </a>
+                        <br>
+                        <a class="category text-dark" href="#pemerintahan">
                             <li>Bidang Pemerintahan</li>
                         </a>
                         <br>
-                        <a class="category" href="#teknologi">
+                        <a class="category text-dark" href="#teknologi">
                             <li>Bidang Teknologi Informasi</li>
                         </a>
                         <br>
-                        <a class="category" href="#kemasyarakatan">
+                        <a class="category text-dark" href="#kemasyarakatan">
                             <li>Bidang Kemasyarakatan</li>
                         </a>
                         <br>
-                        <a class="category" href="#keamanan">
+                        <a class="category text-dark" href="#keamanan">
                             <li>Bidang Keamanan</li>
                         </a>
                         <br>
-                        <a class="category" href="#pendidikan">
+                        <a class="category text-dark" href="#pendidikan">
                             <li>Bidang Pendidikan</li>
                         </a>
                         <br>
-                        <a class="category" href="#ekonomi">
+                        <a class="category text-dark" href="#ekonomi">
                             <li>Bidang Ekonomi</li>
                         </a>
                         <br>
-                        <a class="category" href="#kesehatan">
+                        <a class="category text-dark" href="#kesehatan">
                             <li>Bidang Kesehatan</li>
                         </a>
                     </ul>
