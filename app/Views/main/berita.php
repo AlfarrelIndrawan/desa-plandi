@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 <?php } ?>
-                <!-- batas looping berita dari database ("contoh bisa menggunakan db dummy dengan field isi dan judul") -->
+                <!-- batas looping berita dari database -->
             </div>
         </div>
         <div class="col-md-1">

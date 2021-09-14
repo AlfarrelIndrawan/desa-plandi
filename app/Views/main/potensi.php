@@ -12,7 +12,7 @@
 
 <!-- contoh konten -->
 <div class="container-md konten">
-    <div class="card mb-3 shadow">
+    <!-- <div class="card mb-3 shadow">
         <div class="row no-gutters">
             <div class="col-md-5">
                 <img src="<?= base_url('img/Pohon_Jati.jpg'); ?>" alt="..." class="img-fluid">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="card mb-3 shadow">
         <div class="row no-gutters">
             <div class="col-md-5">
