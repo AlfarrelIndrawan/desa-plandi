@@ -41,7 +41,7 @@ use Config\Pager;
             <!-- Email Desa -->
             <div class="col email">
                 <img class="logoemail" src="<?= base_url('img/logosurat.png') ?>" alt="email" width="47px" height="49px">
-                <p class="pemail">desa-plandi@malangkab.go.id</p>
+                <p class="pemail">suratdesaplandi@gmail.com</p>
             </div>
             <!-- batas Email Desa -->
         </div>

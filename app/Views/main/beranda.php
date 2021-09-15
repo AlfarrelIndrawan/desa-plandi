@@ -117,10 +117,10 @@
             </h5>
             <ul class="contact-info mb-5">
                 <a class="telepon" href="tel:08xx xxxx xxxx">
-                    <li><i class="fas fa-comment"></i> &nbsp;08xx xxxx xxxx</li>
+                    <li><i class="fas fa-comment"></i> &nbsp;081944953101</li>
                 </a>
-                <a class=" mail mailto" href="mailto:desa-plandi@malangkab.go.id">
-                    <li><i class="fas fa-at"></i> &nbsp;desa-plandi@malangkab.go.id</li>
+                <a class=" mail mailto" href="mailto:rohibburhani74@gmail.com">
+                    <li><i class="fas fa-at"></i> &nbsp;rohibburhani74@gmail.com</li>
                 </a>
             </ul>
         </div>

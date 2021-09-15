@@ -200,11 +200,11 @@
             <table class="table table-borderless table-sm mb-5">
                 <tr>
                     <td style="width: 250px">1. Gedung Kantor<br>&emsp;&emsp;Alamat</td>
-                    <td>: Ada<br>: lorem</td>
+                    <td>: Ada<br>: Jl. Juanda No.15 Plandi 65164</td>
                 </tr>
                 <tr>
                     <td style="width: 250px">2. Balai Desa<br>&emsp;&emsp;Alamat</td>
-                    <td>: Ada<br>: lorem</td>
+                    <td>: Ada<br>: Jl. Juanda No.15 Plandi 65164</td>
                 </tr>
                 <tr>
                     <td style="width: 250px">3. Kepala Desa</td>
