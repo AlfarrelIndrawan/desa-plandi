@@ -6,14 +6,14 @@ use App\models\BeritaModel;
 use App\models\UmkmModel;
 use App\models\PendudukModel;
 use App\Models\authModel;
-
-use function PHPUnit\Framework\returnSelf;
+use App\models\LayananModel;
 
 class Admin extends BaseController
 {
     protected $beritaModel;
     protected $umkmModel;
     protected $pendudukModel;
+    protected $layananModel;
 
     public function __construct()
     {
@@ -48,6 +48,7 @@ class Admin extends BaseController
     {
         session_destroy();
         return redirect()->to('login');
+        $this->layananModel = new LayananModel();
     }
 
     // menampilkan dashboard admin
@@ -594,4 +595,46 @@ class Admin extends BaseController
         return redirect()->to('/admin/penduduk');
     }
     // batas proses hapus penduduk
+
+    //Admin Layanan
+    
+    public function layanan()
+    {
+        $data['layanan'] = $this->layananModel->findAll();
+        return view('admin/admin_layanan', $data);
+    }
+
+    public function informasiLengkap($id)
+    {
+        $data['layanan'] = $this->layananModel->find($id);
+        return view('admin/informasi_layanan', $data);
+    }
+
+    public function konfirmasiSurat($id) {
+        $layanan = $this->layananModel->find($id);
+        $status = $layanan['status'];
+        switch($status) {
+            case "Menunggu Konfirmasi RT":
+                $update = (['status' => 'Menunggu Konfirmasi RW']);
+                $this->layananModel->update($id, $update);
+                break;
+            case "Menunggu Konfirmasi RW":
+                $update = (['status' => 'Telah Terkonfirmasi']);
+                $this->layananModel->update($id, $update);
+                break;
+            case "Telah Terkonfirmasi":
+                $update = (['status' => 'Selesai']);
+                $this->layananModel->update($id, $update);
+                break;
+        }
+        return redirect()->to('admin/layanan');
+    }
+
+    public function hapusSurat($id)
+    {
+        $ambil = $this->layananModel->find($id);
+        $this->layananModel->delete($id);
+
+        return redirect()->to('/admin/layanan');
+    }
 }

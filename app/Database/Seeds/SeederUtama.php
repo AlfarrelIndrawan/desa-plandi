@@ -12,5 +12,6 @@ class SeederUtama extends Seeder
 		$this->call('BeritaSeeder');
 		$this->call('PendidikanSeeder');
 		$this->call('UsersSeeder');
+		$this->call('LayananSeeder');
 	}
 }

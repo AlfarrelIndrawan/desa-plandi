@@ -79,6 +79,11 @@
                     <i class="fas fa-shopping-cart"></i>
                     <span>UMKM</span>
                 </a>
+                
+                <a class="nav-link" href="<?= base_url('/admin/layanan') ?>">
+                    <i class="fas fa-envelope"></i>
+                    <span>Layanan Surat</span>
+                </a>
             </li>
             <!-- Logout Modal-->
             <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

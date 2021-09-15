@@ -99,7 +99,7 @@ use Config\Pager;
                     </a>
                     <div class="dropdown-menu" aria-labelledby="layananDropdown">
                         <a class="dropdown-item" href="<?= base_url('/layanan'); ?>">Persuratan Internal Desa</a>
-                        <a class="dropdown-item" href="<?= base_url('/layanan'); ?>">Pengurus Desa</a>
+                        <a class="dropdown-item" href="<?= base_url('/admin/layanan'); ?>">Pengurus Desa</a>
                     </div>
                 </li>
             </ul>
