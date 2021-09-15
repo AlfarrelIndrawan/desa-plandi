@@ -20,15 +20,15 @@
         <div class="logo-malang container mb-4">
             <img src="<?= base_url('img/logomalang.png') ?>" width="50%" height="50%">
         </div>
-        <form>
+        <form action="<?= base_url('/proses_login')?>" method="POST">
             <div class="form-group my-3">
                 <!-- <label for="exampleInputEmail1">Email address</label> -->
-                <input type="text" class="form-control" id="user" placeholder="Username">
+                <input type="text" class="form-control" id="user" name="username" placeholder="Username">
                 <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
             </div>
             <div class="form-group my-3">
                 <!-- <label for="exampleInputPassword1">Password</label> -->
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
             </div>
             <div class="container mt-5 mb-3">
                 <div class="container">

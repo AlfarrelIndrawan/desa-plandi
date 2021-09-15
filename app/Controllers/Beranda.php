@@ -29,12 +29,6 @@ class Beranda extends BaseController
         return view('main/beranda', $data);
     }
 
-    public function login()
-    {
-        $data['judul'] = "Login";
-        return view('main/login', $data);
-    }
-
     public function potensi()
     {
         $data['judul'] = "Potensi";

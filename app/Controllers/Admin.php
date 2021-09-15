@@ -5,6 +5,9 @@ namespace App\Controllers;
 use App\models\BeritaModel;
 use App\models\UmkmModel;
 use App\models\PendudukModel;
+use App\Models\authModel;
+
+use function PHPUnit\Framework\returnSelf;
 
 class Admin extends BaseController
 {
@@ -17,6 +20,34 @@ class Admin extends BaseController
         $this->beritaModel = new BeritaModel();
         $this->umkmModel = new UmkmModel();
         $this->pendudukModel = new PendudukModel();
+        $this->authModel = new authModel();
+    }
+    
+    // Authorization
+    public function loginPage()
+    {
+        $data['judul'] = "Login";
+        return view('main/login', $data);
+    }
+
+    public function login()
+    {
+        $username = $this->request->getVar('username');
+        $pass = $this->request->getVar('password');
+        $logged = $this->authModel->where(['username'=>$username],['password'=>md5($pass)])->first();
+        if ($logged) {
+            $_SESSION['login']=true;
+            $_SESSION['username']=$logged['username'];
+            
+            return redirect()->to('admin');            
+        }
+        
+    }
+
+    public function logout()
+    {
+        session_destroy();
+        return redirect()->to('login');
     }
 
     // menampilkan dashboard admin

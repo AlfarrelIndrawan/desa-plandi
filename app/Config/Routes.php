@@ -34,7 +34,6 @@ $routes->setAutoRoute(true);
 
 // Main Website
 $routes->get('/', 'Beranda::index');
-$routes->get('/login', 'Beranda::login');
 $routes->get('/potensi', 'Beranda::potensi');
 $routes->get('/berita', 'Beranda::berita');
 $routes->get('/berita/(:alpha)', 'Beranda::berita/$1', ['as' => 'berita_kategori']);
@@ -44,20 +43,34 @@ $routes->get('/profil','Beranda::profil');
 $routes->get('/monografi','Beranda::monografi');
 $routes->get('/layanan','Beranda::layanan');
 
+//Auth
+$routes->get('/login', 'Admin::loginPage');
+$routes->post('/proses_login','Admin::login');
+$routes->get('/logout', 'Admin::logout');
+
 // Admin
-$routes->get('/admin','Admin::index');
+$routes->group('admin',['filter' => 'cekLogin'], function($routes){
+	$routes->get('/','Admin::index');
 
-$routes->get('/admin/berita','Admin::berita');
-$routes->get('/admin/penduduk','Admin::penduduk');
+	// Admin Berita
+	$routes->get('berita','Admin::berita');
+	$routes->get('berita/tambahdata','Admin:viewAddBerita');
+	$routes->post('berita/tambah','Admin::tambahBerita');
+	$routes->get('berita/edit/(:any)','Admin::viewEditBerita/$1');
+	$routes->post('berita/update/(:any)','Admin::editBerita/$1');
+	$routes->get('berita/delete/(:any)','Admin::hapusBerita/$1');
 
+	//Admin Penduduk
+	$routes->get('penduduk','Admin::penduduk');
 
-// Admin UMKM
-$routes->get('/admin/umkm','Admin::umkm');
-$routes->get('/admin/umkm/tambahdata','Admin::viewAddUMKM');
-$routes->post('/admin/umkm/tambah','Admin::tambahUMKM');
-$routes->get('/admin/umkm/edit/(:any)','Admin::viewEditUMKM/$1');
-$routes->post('/admin/umkm/update/(:any)','Admin::editUMKM/$1');
-$routes->get('/admin/umkm/delete/(:any)','Admin::hapusUMKM/$1');
+	// Admin UMKM
+	$routes->get('umkm','Admin::umkm');
+	$routes->get('umkm/tambahdata','Admin::viewAddUMKM');
+	$routes->post('umkm/tambah','Admin::tambahUMKM');
+	$routes->get('umkm/edit/(:any)','Admin::viewEditUMKM/$1');
+	$routes->post('umkm/update/(:any)','Admin::editUMKM/$1');
+	$routes->get('umkm/delete/(:any)','Admin::hapusUMKM/$1');
+});
 
 // Layanan
 $routes->get('/layanan/surat/tambah', 'Layanan::tambahSurat');
