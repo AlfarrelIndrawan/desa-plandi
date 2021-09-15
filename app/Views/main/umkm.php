@@ -23,9 +23,9 @@
                         <img src="<?= base_url('img/umkm/' . $u['foto']) ?>" class="card-img-top border-bottom border-dark" alt="..." style=" object-fit: contain; border-top-right-radius: 20px; border-top-left-radius: 20px; height: 286px;">
                         <div class="card-body" style="background-color: #90d26d;">
                             <h4 class="card-title"><?php echo $u['nama_umkm']; ?></h4>
-                            <h6 class="card-subtitle my-2 text-muted">Pemilik : <?= $u['nama_pemilik'] ?></h6>
-                            <h6 class="card-subtitle my-2 text-muted">Kontak : <?= $u['kontak'] ?></h6>
-                            <h6 class="card-subtitle my-2 text-muted">Lokasi : <?= $u['lokasi'] ?></h6>
+                            <h6 class="card-subtitle my-2   ">Pemilik : <?= $u['nama_pemilik'] ?></h6>
+                            <h6 class="card-subtitle my-2">Kontak : <?= $u['kontak'] ?></h6>
+                            <h6 class="card-subtitle my-2">Lokasi : <?= $u['lokasi'] ?></h6>
                             <p class="card-text"><?php echo $u['deskripsi']; ?></p>
                         </div>
                     </div>
