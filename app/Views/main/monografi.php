@@ -215,16 +215,56 @@
                     <td>: Muhammad Ali Imron</td>
                 </tr>
                 <tr>
-                    <td style="width: 250px">5. Kepala Urusan (3 Orang)<br>&emsp;&emsp;Tata Usaha dan Umum<br>&emsp;&emsp;Keuangan<br>&emsp;&emsp;Perencanaan</td>
-                    <td><br>: Suyanto<br>: Marsidik Hendra Kurniawan<br>: Rohib Burhani</td>
+                    <td style="width: 250px">5. Kepala Urusan (3 Orang)</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td style="width: 250px">6. Kepala Seksi (3 orang)<br>&emsp;&emsp;Pemerintahan<br>&emsp;&emsp;Kesejahteraan<br>&emsp;&emsp;Pelayanan</td>
-                    <td><br>: Suprianto<br>: Ahmad Bajuri<br>: Ansori</td>
+                    <td style="width: 250px">&emsp;&emsp;Tata Usaha dan Umum</td>
+                    <td>: Suyanto</td>
                 </tr>
                 <tr>
-                    <td style="width: 250px">7. Kepala Dusun (4 orang)<br>&emsp;&emsp;Dusun Plandi<br>&emsp;&emsp;Dusun Selobekiti<br>&emsp;&emsp;Dusun Pandan Ploso<br>&emsp;&emsp;Dusun Tambakrejo</td>
-                    <td><br>: Choiruroziqin<br>: Juri<br>: Siono<br>: Marsup</td>
+                    <td style="width: 250px">&emsp;&emsp;Keuangan</td>
+                    <td>: Marsidik Hendra Kurniawan</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Perencanaan</td>
+                    <td>: Rohib Burhani</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">6. Kepala Seksi (3 orang)</td>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Pemerintahan</td>
+                    <td>: Suprianto</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Kesejahteraan</td>
+                    <td>: Ahmad Bajuri</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Pelayanan</td>
+                    <td>: Ansori</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">7. Kepala Dusun (4 orang)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Dusun Plandi</td>
+                    <td>: Choiruroziqin</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Dusun Selobekiti</td>
+                    <td>: Juri</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Dusun Pandan Ploso</td>
+                    <td>: Siono</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Dusun Tambakrejo</td>
+                    <td>: Marsup</td>
                 </tr>
                 <tr>
                     <td style="width: 250px">8. Badan Permusyawaratan Desan</td>
@@ -254,9 +294,34 @@
             <h6>B. ADMINISTRASI</h6>
             <table class="table table-borderless table-sm mb-5">
                 <tr>
-                    <td style="width: 400px">1. Administrasi Berbasis Teknologi Informasi<br>&emsp;&emsp;Administrasi Umum<br>&emsp;&emsp;Administrasi Kependudukan<br>&emsp;&emsp;Administrasi Keuangan<br>&emsp;&emsp;Administrasi Pembangunan<br>&emsp;&emsp;Administrasi BPD<br>&emsp;&emsp;Administrasi Lainnya</td>
-                    <td><br>: Tidak Ada<br>: Tidak Ada<br>: Ada<br>: Tidak Ada<br>: Tidak Ada<br>: Ada</td>
+                    <td style="width: 400px">1. Administrasi Berbasis Teknologi Informasi</td>
+                    <td></td>
                 </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Administrasi Umum</td>
+                    <td>: Tidak Ada</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Administrasi Kependudukan</td>
+                    <td>: Tidak Ada</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Administrasi Keuangan</td>
+                    <td>: Ada</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Administrasi Pembangunan</td>
+                    <td>: Tidak Ada</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Administrasi BPD</td>
+                    <td>: Tidak Ada</td>
+                </tr>
+                <tr>
+                    <td style="width: 250px">&emsp;&emsp;Administrasi Lainnya</td>
+                    <td>: Ada</td>
+                </tr>
+                
                 <tr>
                     <td style="width: 400px">2. Perangkat Pengelola Teknologi Informasi</td>
                     <td>: Ada</td>
@@ -548,47 +613,6 @@
             </table>
         </div>
         <div class="col-xl-3 border-left" style="background-color: white;">
-            <!-- <div class="container sticky-top" style="padding-top: 75px;">
-                <h4 class="text-left mb-4 pb-2 border-bottom" class="category">Navigasi</h4>
-                <ul class="mb-5" style="list-style: none; padding: 0;">
-                    <br>
-                    <a class="category text-dark" href="#profil">
-                        <li>Profil Desa</li>
-                    </a>
-                    <br>
-                    <a class="category text-dark" href="#penduduk">
-                        <li>Data Penduduk</li>
-                    </a>
-                    <br>
-                    <a class="category text-dark" href="#pemerintahan">
-                        <li>Bidang Pemerintahan</li>
-                    </a>
-                    <br>
-                    <a class="category text-dark" href="#teknologi">
-                        <li>Bidang Teknologi Informasi</li>
-                    </a>
-                    <br>
-                    <a class="category text-dark" href="#kemasyarakatan">
-                        <li>Bidang Kemasyarakatan</li>
-                    </a>
-                    <br>
-                    <a class="category text-dark" href="#keamanan">
-                        <li>Bidang Keamanan</li>
-                    </a>
-                    <br>
-                    <a class="category text-dark" href="#pendidikan">
-                        <li>Bidang Pendidikan</li>
-                    </a>
-                    <br>
-                    <a class="category text-dark" href="#ekonomi">
-                        <li>Bidang Ekonomi</li>
-                    </a>
-                    <br>
-                    <a class="category text-dark" href="#kesehatan">
-                        <li>Bidang Kesehatan</li>
-                    </a>
-                </ul>
-            </div> -->
             <div id="list-example" class="list-group sticky-top" style="top: 150px;">
                 <h4 class="text-left mb-4 pb-2 border-bottom" class="category border-bottom pb-2 mb-3">Navigasi</h4>
                 <a class="list-group-item list-group-item-action" href="#profil">Profil Desa</a>
