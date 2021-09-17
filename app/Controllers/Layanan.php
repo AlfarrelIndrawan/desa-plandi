@@ -260,7 +260,7 @@ class Layanan extends BaseController
             case "Surat Ijin Keramaian":
                 $today = date("Y-m-d");
                 $data_pengaju = $this->pendudukModel->where('nik', $this->request->getVar('nik_form'))->first();
-                $informasi_pengaju = 'Nama Pengaju : ' . $data_pengaju['nama'] . ';Jenis Kelamin' . $data_pengaju['jk'] . ';Tanggal Lahir : ' . $data_pengaju['tgl_lahir'] . ';Agama : ' . $data_pengaju['agama'] . ';Status : ' . $data_pengaju['status'] . ';Pekerjaan : ' . $data_pengaju['pekerjaan'] . ';Alamat : ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
+                $informasi_pengaju = 'Nama Pengaju : ' . $data_pengaju['nama'] . ';Jenis Kelamin : ' . $data_pengaju['jk'] . ';Tanggal Lahir : ' . $data_pengaju['tgl_lahir'] . ';Agama : ' . $data_pengaju['agama'] . ';Status : ' . $data_pengaju['status'] . ';Pekerjaan : ' . $data_pengaju['pekerjaan'] . ';Alamat : ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
                 $informasi_surat = 'Tanggal Acara : ' . $this->request->getVar('date_form') . ';Waktu Acara : ' . $this->request->getVar('time_form') . ';Hajat Acara : ' . $this->request->getVar('hajat_form') . ';Hiburan Acara : ' . $this->request->getVar('hiburan_form') . ';';
 
                 $this->layananModel->save([
@@ -280,7 +280,7 @@ class Layanan extends BaseController
             case "Surat Keterangan Belum Nikah":
                 $today = date("Y-m-d");
                 $data_pengaju = $this->pendudukModel->where('nik', $this->request->getVar('nik_form'))->first();
-                $informasi_pengaju = 'Nama Pengaju : ' . $data_pengaju['nama'] . ';Jenis Kelamin' . $data_pengaju['jk'] . ';Tanggal Lahir : ' . $data_pengaju['tgl_lahir'] . ';Agama : ' . $data_pengaju['agama'] . ';Status : ' . $data_pengaju['status'] . ';Pekerjaan : ' . $data_pengaju['pekerjaan'] . ';Alamat : ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
+                $informasi_pengaju = 'Nama Pengaju : ' . $data_pengaju['nama'] . ';Jenis Kelamin : ' . $data_pengaju['jk'] . ';Tanggal Lahir : ' . $data_pengaju['tgl_lahir'] . ';Agama : ' . $data_pengaju['agama'] . ';Status : ' . $data_pengaju['status'] . ';Pekerjaan : ' . $data_pengaju['pekerjaan'] . ';Alamat : ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
                 // $informasi_surat = 'Tanggal Acara : ' . $this->request->getVar('date_form') . ';Waktu Acara : ' . $this->request->getVar('time_form') . ';Hajat Acara : ' . $this->request->getVar('hajat_form') . ';Hiburan Acara : ' . $this->request->getVar('hiburan_form') . ';';
 
                 $this->layananModel->save([
@@ -300,7 +300,7 @@ class Layanan extends BaseController
             case "Surat Keterangan Kehilangan":
                 $today = date("Y-m-d");
                 $data_pengaju = $this->pendudukModel->where('nik', $this->request->getVar('nik_form'))->first();
-                $informasi_pengaju = 'Nama Pengaju : ' . $data_pengaju['nama'] . ';Jenis Kelamin' . $data_pengaju['jk'] . ';Tanggal Lahir : ' . $data_pengaju['tgl_lahir'] . ';Agama : ' . $data_pengaju['agama'] . ';Status : ' . $data_pengaju['status'] . ';Pekerjaan : ' . $data_pengaju['pekerjaan'] . ';Alamat : ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
+                $informasi_pengaju = 'Nama Pengaju : ' . $data_pengaju['nama'] . ';Jenis Kelamin : ' . $data_pengaju['jk'] . ';Tanggal Lahir : ' . $data_pengaju['tgl_lahir'] . ';Agama : ' . $data_pengaju['agama'] . ';Status : ' . $data_pengaju['status'] . ';Pekerjaan : ' . $data_pengaju['pekerjaan'] . ';Alamat : ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
                 $informasi_surat = 'Tanggal Kehilangan : ' . $this->request->getVar('date_form') . ';Waktu Kehilangan : ' . $this->request->getVar('time_form') . ';Alasan Kehilangan : ' . $this->request->getVar('alasan_form') . ';';
 
                 $this->layananModel->save([
@@ -310,7 +310,7 @@ class Layanan extends BaseController
                     'rt' => $this->request->getVar('rt_form'),
                     'rw' => $this->request->getVar('rw_form'),
                     'status' => 'Menunggu Konfirmasi RT',
-                    'informasi' => $informasi_pengaju,
+                    'informasi' => $informasi_pengaju . $informasi_surat,
                     'tanggal' => $today
                 ]);
 
@@ -320,9 +320,9 @@ class Layanan extends BaseController
             case "Surat Keterangan Kelahiran":
                 $today = date("Y-m-d");
                 $data_pengaju = $this->pendudukModel->where('nik', $this->request->getVar('nik_form'))->first();
-                $informasi_pengaju = 'Nama Ayah : ' . $data_pengaju['nama'] . ';Jenis Kelamin' . $data_pengaju['jk'] . ';Tanggal Lahir Ayah: ' . $data_pengaju['tgl_lahir'] . ';Agama Ayah: ' . $data_pengaju['agama'] . ';Status Ayah: ' . $data_pengaju['status'] . ';Pekerjaan Ayah: ' . $data_pengaju['pekerjaan'] . ';Alamat Ayah: ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
+                $informasi_pengaju = 'Nama Ayah : ' . $data_pengaju['nama'] . ';Jenis Kelamin : ' . $data_pengaju['jk'] . ';Tanggal Lahir Ayah: ' . $data_pengaju['tgl_lahir'] . ';Agama Ayah: ' . $data_pengaju['agama'] . ';Status Ayah: ' . $data_pengaju['status'] . ';Pekerjaan Ayah: ' . $data_pengaju['pekerjaan'] . ';Alamat Ayah: ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
                 $data_istri_pengaju = $this->pendudukModel->where('nik', $this->request->getVar('nik_ibu_form'))->first();
-                $informasi_istri_pengaju = 'Nama Ibu : ' . $data_istri_pengaju['nama'] . ';Jenis Kelamin' . $data_istri_pengaju['jk'] . ';Tanggal Lahir Ibu: ' . $data_istri_pengaju['tgl_lahir'] . ';Agama Ibu: ' . $data_istri_pengaju['agama'] . ';Status Ibu: ' . $data_istri_pengaju['status'] . ';Pekerjaan Ibu: ' . $data_istri_pengaju['pekerjaan'] . ';Alamat Ibu: ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
+                $informasi_istri_pengaju = 'Nama Ibu : ' . $data_istri_pengaju['nama'] . ';Jenis Kelamin : ' . $data_istri_pengaju['jk'] . ';Tanggal Lahir Ibu: ' . $data_istri_pengaju['tgl_lahir'] . ';Agama Ibu: ' . $data_istri_pengaju['agama'] . ';Status Ibu: ' . $data_istri_pengaju['status'] . ';Pekerjaan Ibu: ' . $data_istri_pengaju['pekerjaan'] . ';Alamat Ibu: ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
                 $informasi_surat = 'Tempat Kelahiran : ' . $this->request->getVar('tempat_form') . ';Tanggal Kelahiran : ' . $this->request->getVar('date_form') . ';Waktu Kelahiran : ' . $this->request->getVar('time_form') . ';Penolong : ' . $this->request->getVar('penolong_form') . ';Panjang Bayi : ' . $this->request->getVar('panjang_bayi_form') . ';Berat Bayi : ' . $this->request->getVar('berat_bayi_form') . ';';
 
                 $this->layananModel->save([
@@ -342,7 +342,7 @@ class Layanan extends BaseController
             case "Surat Keterangan Kematian":
                 $today = date("Y-m-d");
                 $data_pengaju = $this->pendudukModel->where('nik', $this->request->getVar('nik_form'))->first();
-                $informasi_pengaju = 'Nama : ' . $data_pengaju['nama'] . ';Jenis Kelamin' . $data_pengaju['jk'] . ';Tanggal Lahir : ' . $data_pengaju['tgl_lahir'] . ';Agama : ' . $data_pengaju['agama'] . ';Status : ' . $data_pengaju['status'] . ';Pekerjaan : ' . $data_pengaju['pekerjaan'] . ';Alamat : ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
+                $informasi_pengaju = 'Nama : ' . $data_pengaju['nama'] . ';Jenis Kelamin : ' . $data_pengaju['jk'] . ';Tanggal Lahir : ' . $data_pengaju['tgl_lahir'] . ';Agama : ' . $data_pengaju['agama'] . ';Status : ' . $data_pengaju['status'] . ';Pekerjaan : ' . $data_pengaju['pekerjaan'] . ';Alamat : ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
                 $informasi_surat = 'Tempat Kematian : ' . $this->request->getVar('tempat_form') . ';Tanggal Kematian : ' . $this->request->getVar('date_form') . ';Waktu Kematian : ' . $this->request->getVar('time_form') . ';Penyebab Kematian : ' . $this->request->getVar('penyebab_form') . ';';
 
                 $this->layananModel->save([
@@ -362,7 +362,7 @@ class Layanan extends BaseController
             case "Surat Keterangan Tidak_mampu":
                 $today = date("Y-m-d");
                 $data_pengaju = $this->pendudukModel->where('nik', $this->request->getVar('nik_form'))->first();
-                $informasi_pengaju = 'Nama Pengaju : ' . $data_pengaju['nama'] . ';Jenis Kelamin' . $data_pengaju['jk'] . ';Tanggal Lahir : ' . $data_pengaju['tgl_lahir'] . ';Agama : ' . $data_pengaju['agama'] . ';Status : ' . $data_pengaju['status'] . ';Pekerjaan : ' . $data_pengaju['pekerjaan'] . ';Alamat : ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
+                $informasi_pengaju = 'Nama Pengaju : ' . $data_pengaju['nama'] . ';Jenis Kelamin : ' . $data_pengaju['jk'] . ';Tanggal Lahir : ' . $data_pengaju['tgl_lahir'] . ';Agama : ' . $data_pengaju['agama'] . ';Status : ' . $data_pengaju['status'] . ';Pekerjaan : ' . $data_pengaju['pekerjaan'] . ';Alamat : ' . $this->request->getVar('alamat') . ';RT : ' . $this->request->getVar('rt_form') . ';RW : ' . $this->request->getVar('rw_form') . ';';
                 $informasi_surat = 'Kepentingan Pengajuan : ' . $this->request->getVar('kepentingan_form') . ';Nama Warga yang Diajukan : ' . $this->request->getVar('nama_form') . ';';
 
                 $this->layananModel->save([

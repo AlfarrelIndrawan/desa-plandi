@@ -12,7 +12,7 @@
 <!-- konten -->
 <div class="col-md-4 center">
     <label for="surat ">Pilih layanan surat</label>
-    <select class="custom-select custom-select-;g mb-3" id="selectSurat" onchange="myFunction()">
+    <select class="custom-select custom-select-;g mb-3" id="selectSurat" onchange="generateForm()">
       <option>Layanan Surat</option>
       <option value="surat_ijin_keramaian">Surat Ijin Keramaian</option>
       <option value="surat_keterangan_belum_nikah">Surat Keterangan Belum Nikah</option>
@@ -41,7 +41,7 @@
             for (var i=0; i<opts; i++){
                 if (sel.options[i].value == key){
                     sel.options[i].selected = true;
-                    myFunction();
+                    generateForm();
                     break;
                 }
             }
@@ -50,7 +50,7 @@
 
     <?php } ?>
     
-    function myFunction() {
+    function generateForm() {
         
         var sel = document.getElementById("selectSurat");
         var val = sel.value;
