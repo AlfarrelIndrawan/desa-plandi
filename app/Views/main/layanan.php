@@ -10,7 +10,10 @@
 <!-- batas judul konten -->
 
 <!-- konten -->
-<div class="col-md-4 center">
+<h2 class="judulKonten">Layanan Surat Internal Desa Plandi</h2>
+<p class="deskripsiKonten">Selamat datang. Pada halaman ini anda dapat melakukan pelayanan surat menyurat internal desa plandi. Silahkan pilih jenis surat yang telah disediakan dibawah, untuk mengajukan surat pada desa. Isi form yang muncul sesuai dengan data dan kepentingan saudara.</p>
+
+<div class="col-md-4 mx-auto" id="divSelectSurat">
     <label for="surat ">Pilih layanan surat</label>
     <select class="custom-select custom-select-;g mb-3" id="selectSurat" onchange="generateForm()">
       <option>Layanan Surat</option>
@@ -23,9 +26,11 @@
     </select>
 </div>
 
-<form class="col-md-4" method="POST" action="<?= base_url('Layanan/tambahSurat') ?>" id="form_surat"> </form>
+<form class="col-md-4 mx-auto" method="POST" action="<?= base_url('Layanan/tambahSurat') ?>" id="form_surat"> </form>
 
 <!-- batas konten -->
+
+<link rel="stylesheet" type="text/css" href="<?= base_url('css/csslayanan.css') ?>">
 
 <!-- script -->
 <script>
