@@ -94,7 +94,9 @@ use Config\Pager;
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle <?php if ($url == 'layanan') {
+                                            echo 'active';
+                                        } ?>" href="#" id="layananDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Layanan
                     </a>
                     <div class="dropdown-menu" aria-labelledby="layananDropdown">

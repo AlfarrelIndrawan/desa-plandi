@@ -20,6 +20,7 @@ class Admin extends BaseController
         $this->beritaModel = new BeritaModel();
         $this->umkmModel = new UmkmModel();
         $this->pendudukModel = new PendudukModel();
+        $this->layananModel = new LayananModel();
         $this->authModel = new authModel();
     }
     
