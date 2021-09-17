@@ -67,6 +67,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
+                <?php if($user == "ad") { ?>
                 <a class="nav-link" href="<?= base_url('/admin/penduduk') ?>">
                     <i class="fas fa-user"></i>
                     <span>Penduduk</span>
@@ -79,7 +80,7 @@
                     <i class="fas fa-shopping-cart"></i>
                     <span>UMKM</span>
                 </a>
-                
+                <?php } ?>
                 <a class="nav-link" href="<?= base_url('/admin/layanan') ?>">
                     <i class="fas fa-envelope"></i>
                     <span>Layanan Surat</span>

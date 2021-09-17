@@ -70,7 +70,16 @@ $routes->group('admin',['filter' => 'cekLogin'], function($routes){
 	$routes->get('umkm/edit/(:any)','Admin::viewEditUMKM/$1');
 	$routes->post('umkm/update/(:any)','Admin::editUMKM/$1');
 	$routes->get('umkm/delete/(:any)','Admin::hapusUMKM/$1');
+
+	// Admin Layanan
+	$routes->get('layanan', 'Admin::layanan');
+	$routes->get('layanan/info', 'Admin::informasiLengkap');
+	$routes->get('layanan/konfirmasi/(:any)', 'Admin::konfirmasiSurat/$1');
+	$routes->get('layanan/delete/(:any)', 'Admin::hapusSurat/$i');
 });
+
+// Bukan Admin
+$routes->get('bukanadmin', 'Admin::bukan_admin');
 
 // Layanan
 $routes->get('/layanan/surat/tambah', 'Layanan::tambahSurat');

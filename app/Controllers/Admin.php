@@ -45,17 +45,22 @@ class Admin extends BaseController
         
     }
 
+    public function bukan_admin()
+    {
+        return view('admin/bukan_admin');
+    }
+
     public function logout()
     {
         session_destroy();
         return redirect()->to('login');
-        $this->layananModel = new LayananModel();
     }
 
     // menampilkan dashboard admin
     public function index()
     {
-        return view('admin/admin');
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        return view('admin/admin', $data);
     }
     // batas menampilkan halaman dashboard admin
 
@@ -63,9 +68,13 @@ class Admin extends BaseController
     public function umkm()
     {
         $data = [
-            'umkm' => $this->umkmModel->findAll()
+            'umkm' => $this->umkmModel->findAll(),
         ];
-
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        if($data['user'] != "ad") {
+            return view('admin/bukan_admin');
+        }
+        
         return view('admin/admin_umkm', $data);
     }
     // batas menampilkan halaman umkm
@@ -77,6 +86,10 @@ class Admin extends BaseController
         $data = [
             'validation' => \config\Services::validation()
         ];
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        if($data['user'] != "ad") {
+            return view('admin/bukan_admin');
+        }
         return view('admin/tambah_umkm', $data);
     }
     //batas view halaman umkm
@@ -150,6 +163,10 @@ class Admin extends BaseController
             'umkm' => $this->umkmModel->find($id),
             'validation' => \config\Services::validation()
         ];
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        if($data['user'] != "ad") {
+            return view('admin/bukan_admin');
+        }
 
         return view('admin/edit_umkm', $data);
     }
@@ -247,6 +264,10 @@ class Admin extends BaseController
         $data = [
             'berita' => $this->beritaModel->findAll()
         ];
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        if($data['user'] != "ad") {
+            return view('admin/bukan_admin');
+        }
 
         return view('admin/admin_berita', $data);
     }
@@ -259,6 +280,11 @@ class Admin extends BaseController
         $data = [
             'validation' => \config\Services::validation()
         ];
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        if($data['user'] != "ad") {
+            return view('admin/bukan_admin');
+        }
+
         return view('admin/tambah_berita', $data);
     }
     // batas menampilkan halaman tambah berita
@@ -324,6 +350,10 @@ class Admin extends BaseController
             'berita' => $this->beritaModel->find($id),
             'validation' => \config\Services::validation()
         ];
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        if($data['user'] != "ad") {
+            return view('admin/bukan_admin');
+        }
 
         return view('admin/edit_berita', $data);
     }
@@ -417,6 +447,10 @@ class Admin extends BaseController
         $data = [
             'penduduk' => $this->pendudukModel->findAll()
         ];
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        if($data['user'] != "ad") {
+            return view('admin/bukan_admin');
+        }
 
         return view('admin/penduduk', $data);
     }
@@ -428,6 +462,11 @@ class Admin extends BaseController
         $data = [
             'validation' => \config\Services::validation()
         ];
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        if($data['user'] != "ad") {
+            return view('admin/bukan_admin');
+        }
+
         return view('admin/tambah_penduduk', $data);
     }
     // batas menampilkan halaman tambah penduduk
@@ -514,6 +553,10 @@ class Admin extends BaseController
             'penduduk' => $this->pendudukModel->find($id),
             'validation' => \config\Services::validation()
         ];
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        if($data['user'] != "ad") {
+            return view('admin/bukan_admin');
+        }
 
         return view('admin/edit_penduduk', $data);
     }
@@ -601,13 +644,23 @@ class Admin extends BaseController
     
     public function layanan()
     {
-        $data['layanan'] = $this->layananModel->findAll();
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        $angka = substr($_SESSION['username'], 2, 4);
+        if($data['user'] == "rt") {
+            $data['layanan'] = $this->layananModel->where('rt', $angka)->findAll();
+        } else if($data['user'] == "rw") {
+            $data['layanan'] = $this->layananModel->where('rw', $angka)->findAll();    
+        } else {
+            $data['layanan'] = $this->layananModel->findAll();
+        }
         return view('admin/admin_layanan', $data);
     }
 
     public function informasiLengkap($id)
     {
         $data['layanan'] = $this->layananModel->find($id);
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+
         return view('admin/informasi_layanan', $data);
     }
 

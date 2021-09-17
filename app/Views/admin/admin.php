@@ -11,6 +11,7 @@
     <!-- Content Row -->
         <!-- Area Chart -->
     <div class="col-xl-11 col-lg-9">
+        <?php if($user == "ad") { ?>
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -51,6 +52,18 @@
                 <p>Pada tabel UMKM digunakan untuk UMKM yang terjadi di Desa Plandi dan dimunculkan pada halaman UMKM website. Terdiri dari data nama UMKM, pemilik desa, lokasi desa, dan foto. Jika UMKM tidak mempunyai foto, maka secara otomatis terdapat foto bawaan di website.</p>
             </div>
         </div>
+        <?php } ?>
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Dashboard Layanan</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <p>Pada halaman layanan surat, terdapat surat yang dikirim oleh penduduk desa Plandi. Terdapat tipe surat, nama pengaju surat, kontak pengaju surat, tanggal pengajuan, dan status pengajuan. Pada status pengajuan ketua RT bisa menyutujui surat yang menunggu persetujuan RT dan ketua RW bisa menyutujui surat yang menunggu persetujuan RW. Admin bisa mengkonfirmasi apakah surat sudah selesai atau belum.</p>
+            </div>
+        </div>
+        
     </div>
 </div>
 <!-- /.container-fluid -->
