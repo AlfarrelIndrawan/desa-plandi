@@ -15,7 +15,7 @@ class UmkmSeeder extends Seeder
 				'deskripsi'		=> 'Memanen sendiri kopi',
 				'lokasi'		=> 'Dusun Pandan Ploso',
 				'kontak'		=> '083871884137',
-				'foto' 			=> 'default.jpeg'
+				'foto' 			=> 'default.png'
 			],
 			[
 				'nama_umkm'		=> 'Kerajinan Kayu Pak Joko',
@@ -23,7 +23,7 @@ class UmkmSeeder extends Seeder
 				'deskripsi'		=> 'Membuat kerajinan kayu dengan kayu mahoni',
 				'lokasi'		=> 'Dusun Tambak Rejo',
 				'kontak'		=> '081235010466',
-				'foto' 			=> 'default.jpeg'
+				'foto' 			=> 'default.png'
 			],
 			[
 				'nama_umkm'		=> 'Anyaman Bapak M.Arwani',
@@ -39,7 +39,7 @@ class UmkmSeeder extends Seeder
 				'deskripsi'		=> 'Membuat anyaman yang dijual di desa tradisional',
 				'lokasi'		=> 'Desa Plandi',
 				'kontak'		=> '085607691556',
-				'foto' 			=> 'default.jpeg'
+				'foto' 			=> 'default.png'
 			],
 			[
 				'nama_umkm'		=> 'Keripik Singkong Ardido',
