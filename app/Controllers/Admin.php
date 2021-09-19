@@ -308,8 +308,9 @@ class Admin extends BaseController
                 ]
             ],
             'foto' => [
-                'rules' => 'is_image[foto]|mime_in[foto,image/jpg,image/png,image/jpeg]',
+                'rules' => 'required|is_image[foto]|mime_in[foto,image/jpg,image/png,image/jpeg]',
                 'errors' => [
+                    'required' => '{field} harus diisi',
                     'is_image' => 'Data yang diisikan harus {field}',
                     'mime_in' => 'Data yang diisikan harus {field}'
                 ]
@@ -379,8 +380,9 @@ class Admin extends BaseController
                 ]
             ],
             'foto' => [
-                'rules' => 'is_image[foto]|mime_in[foto,image/jpg,image/png,image/jpeg]',
+                'rules' => 'required|is_image[foto]|mime_in[foto,image/jpg,image/png,image/jpeg]',
                 'errors' => [
+                    'required' => '{field} harus diisi',
                     'is_image' => 'Data yang diisikan harus {field}',
                     'mime_in' => 'Data yang diisikan harus {field}'
                 ]
