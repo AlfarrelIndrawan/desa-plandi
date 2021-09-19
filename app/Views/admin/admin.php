@@ -19,7 +19,7 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <p>Halaman ini digunakan oleh admin untuk mengatur data pada penduduk, UMKM, dan berita. Di sebelah kiri terdapat beberapa pilihan untuk ke halaman pengaturan masing-masing. Semua data berada pada database, admin bisa menambah, mengubah, dan menghapus data di masing-masing halaman pengaturan. Pada aksi terdapat edit dengan tombol berwarna kuning dan hapus dengan tombol berwarna merah. Terdapat tombol "Tambah" di atas tabel untuk menambah data pada tabel tersebut. Admin juga bisa menekan salah satu kolom untuk mengurutkan dari tertinggi ke terendah atau sebaliknya.<br>Admin bisa melakukan pencarian data pada kolom search. Show entries digunakan untuk berapa banyak data yang ingin ditampilkan dalam 1 halaman.</p>
+                <p>Halaman ini digunakan oleh admin untuk mengatur data penduduk, UMKM, dan berita. Pengaturan untuk masing-masing data bisa dilakukan dengan memilih opsi yang tersedia di sebelah kiri.<br>Semua data berada pada database. Admin bisa menambah, mengubah, dan menghapus data di masing-masing halaman pengaturan. Pada setiap baris data, terdapat dua tombol yang digunakan untuk melakukan pengaturan data tersebut. Tombol kuning digunakan untuk mengubah data, dan tombol merah digunakan untul menghapus data. Kemudian untuk menambah data, tekan tombol "Tambah" yang tertera pada tabel. Admin juga bisa menekan salah satu kolom untuk mengurutkan data. Data bisa diurutkan dari yang tertinggi ke yang terendah atau sebaliknya.<br>Admin bisa melakukan pencarian data pada kolom search. Tombol "Show Entries" digunakan untuk memilih berapa banyak data yang ingin ditampilkan dalam 1 halaman.</p>
             </div>
         </div>
         <div class="card shadow mb-4">
@@ -29,7 +29,7 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <p>Pada tabel penduduk terdapat data penduduk di Desa Plandi. Terdiri dari data NIK, nama, jenis kelamin, tanggal lahir, agama, status perkawinan, pendidikan, dan pekerjaan. Data penduduk ini ditampilkan di halaman monografi desa dan juga dipakai untuk halaman layanan</p>
+                <p>Tabel penduduk digunakan untuk menampilkan data penduduk di Desa Plandi. Setiap baris tabel terdiri atas data NIK, nama, jenis kelamin, tanggal lahir, agama, status perkawinan, pendidikan, dan pekerjaan. Data penduduk ini ditampilkan di halaman monografi dan layanan desa</p>
             </div>
         </div>
         <div class="card shadow mb-4">
@@ -39,7 +39,7 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <p>Pada tabel berita digunakan untuk berita yang terjadi di Desa Plandi dan dimunculkan pada halaman beranda dan berita website. Terdiri dari data judul, tanggal masuk data, kategori yang terdiri dari desa dan umkm, dan foto. Tanggal otomatis diperbarukan saat data berita dimasukkan. Jika berita tidak mempunyai foto, maka secara otomatis terdapat foto bawaan di website.</p>
+                <p>Tabel berita digunakan untuk memasukkan berita mengenai hal yang terjadi di Desa Plandi. Berita ini dimunculkan pada halaman beranda dan berita website. Setiap baris tabel terdiri atas data judul, tanggal masuk data, kategori (yang terdiri dari desa dan UMKM), dan foto. Bagian tanggal akan otomatis melakukan pembaruan saat data berita dimasukkan. Jika berita tidak mempunyai foto, secara otomatis sistem akan memasukkan foto bawaan pada website.</p>
             </div>
         </div>
         <div class="card shadow mb-4">
@@ -49,7 +49,7 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <p>Pada tabel UMKM digunakan untuk UMKM yang terjadi di Desa Plandi dan dimunculkan pada halaman UMKM website. Terdiri dari data nama UMKM, pemilik desa, lokasi desa, dan foto. Jika UMKM tidak mempunyai foto, maka secara otomatis terdapat foto bawaan di website.</p>
+                <p>Tabel UMKM digunakan untuk menampilkan UMKM yang ada di Desa Plandi dan dimunculkan pada halaman UMKM website. Setiap baris tabel terdiri atas data nama UMKM, pemilik desa, lokasi desa, dan foto. Jika UMKM tidak mempunyai foto, secara otomatis sistem akan memasukkan foto bawaan pada website.</p>
             </div>
         </div>
         <?php } ?>
@@ -60,7 +60,7 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <p>Pada halaman layanan surat, terdapat surat yang dikirim oleh penduduk desa Plandi. Terdapat tipe surat, nama pengaju surat, kontak pengaju surat, tanggal pengajuan, dan status pengajuan. Pada status pengajuan ketua RT bisa menyutujui surat yang menunggu persetujuan RT dan ketua RW bisa menyutujui surat yang menunggu persetujuan RW. Admin bisa mengkonfirmasi apakah surat sudah selesai atau belum.</p>
+                <p>Tabel layanan surat digunakan untuk menampilkan data surat yang dikirim oleh penduduk desa Plandi. Setiap baris tabel terdiri atas tipe surat, nama pengaju surat, kontak pengaju surat, tanggal pengajuan, dan status pengajuan. Pada status pengajuan, ketua RT bisa menyetujui surat yang menunggu persetujuan RT dan ketua RW bisa menyetujui surat yang menunggu persetujuan RW. Admin bisa mengonfirmasi apakah surat sudah disetujui atau belum.</p>
             </div>
         </div>
         
