@@ -11,7 +11,43 @@
 
 <!-- konten -->
 <h2 class="judulKonten">Layanan Surat Internal Desa Plandi</h2>
-<p class="deskripsiKonten">Selamat datang. Pada halaman ini anda dapat melakukan pelayanan surat menyurat internal desa plandi. Silahkan pilih jenis surat yang telah disediakan dibawah, untuk mengajukan surat pada desa. Isi form yang muncul sesuai dengan data dan kepentingan saudara.</p>
+<p class="deskripsiKonten">Selamat datang di Halaman Layanan Surat Internal Desa Plandi. Silahkan pilih jenis surat yang telah disediakan di bawah, kemudian mengisi form yang muncul sesuai dengan data dan kepentingan anda. Pastikan data yang diisi pada setiap bagian sudah benar sebelum dikirimkan.</p>
+
+<?php if (isset($_SESSION['success_msg'])) { ?>
+    <div class="alert alert-success alert-dismissible fade show col-md-4 mx-auto" role="alert">
+        <?php echo $_SESSION['success_msg'];?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<?php } ?>
+
+<?php if (isset($_SESSION['alert_msg'])) { ?>
+    <div class="alert alert-danger alert-dismissible fade show col-md-4 mx-auto" role="alert">
+        <?php echo $_SESSION['alert_msg'];?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<?php } ?>
+
+<?php if (isset($_SESSION['alert_msg_ibu'])) { ?>
+    <div class="alert alert-danger alert-dismissible fade show col-md-4 mx-auto" role="alert">
+        <?php echo $_SESSION['alert_msg_ibu'];?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<?php } ?>
+
+<?php if (isset($_SESSION['warning_msg'])) { ?>
+    <div class="alert alert-warning alert-dismissible fade show col-md-4 mx-auto" role="alert">
+        <?php echo $_SESSION['warning_msg'];?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<?php } ?>
 
 <div class="col-md-4 mx-auto" id="divSelectSurat">
     <label for="surat ">Pilih layanan surat</label>
@@ -47,6 +83,34 @@
                 if (sel.options[i].value == key){
                     sel.options[i].selected = true;
                     generateForm();
+                    
+                    <?php if (!empty(old('rw_form'))) { ?>
+
+                        var rwForm = document.getElementById("rw_form");
+                        var rwKey = <?= old('rw_form') ?>;
+                        var rwOpts = rwForm.options.length;
+                        
+                        for (var k=0; k<rwOpts; k++) {
+                            if (rwForm.options[k].value == rwKey) {
+                                rwForm.options[k].selected = true;
+                                generateRT();
+
+                                var rtForm = document.getElementById("rt_form");
+                                var rtOpts = rtForm.options.length;
+                                var rtKey = <?= old('rt_form') ?>;
+
+                                for (var l=0; l<rtOpts; l++) {
+                                    if (rtForm.options[l].value == rtKey) {
+                                        rtForm.options[l].selected = true;
+                                    }
+                                }
+                            
+                            }
+                        }
+
+                    <?php } ?>
+
+
                     break;
                 }
             }
@@ -54,6 +118,76 @@
     }
 
     <?php } ?>
+    
+    function generateRT() {
+        var sel = document.getElementById("rw_form");
+        var val = sel.value;
+        var target = document.getElementById("rt_form");
+        var rw = {
+            "01": ["01", "02", "03", "04", "05", "06"],
+            "02": ["07", "08", "09", "10", "11", "12", "31"],
+            "03": ["15", "16", "17", "19"],
+            "04": ["18", "20", "21", "22", "23", "24"],
+            "05": ["25", "26", "27", "28", "29", "30"]
+        }
+
+        switch (val) {
+            
+            //rw 01
+            case "01":
+                var catOptions = "<option selected></option>";
+
+                for (rt in rw["01"]) {
+                    catOptions += '<option value="' + rw["01"][rt] + '">' + rw["01"][rt] + "</option>";
+                }
+                target.innerHTML = catOptions;
+                break;
+            
+            //rw 02
+            case "02":
+                var catOptions = "<option selected></option>";
+
+                for (rt in rw["02"]) {
+                    catOptions += '<option value="' + rw["02"][rt] + '">' + rw["02"][rt] + "</option>";
+                }
+                target.innerHTML = catOptions;
+                break;
+            
+            //rw 03
+            case "03":
+                var catOptions = "<option selected></option>";
+
+                for (rt in rw["03"]) {
+                    catOptions += '<option value="' + rw["03"][rt] + '">' + rw["03"][rt] + "</option>";
+                }
+                target.innerHTML = catOptions;
+                break;
+            
+            //rw 04
+            case "04":
+                var catOptions = "<option selected></option>";
+
+                for (rt in rw["04"]) {
+                    catOptions += '<option value="' + rw["04"][rt] + '">' + rw["04"][rt] + "</option>";
+                }
+                target.innerHTML = catOptions;
+                break;
+            
+            //rw 05
+            case "05":
+                var catOptions = "<option selected></option>";
+
+                for (rt in rw["05"]) {
+                    catOptions += '<option value="' + rw["05"][rt] + '">' + rw["05"][rt] + "</option>";
+                }
+                target.innerHTML = catOptions;
+                break;
+            
+            default:
+                target.innnerHTML = "<option><option>"
+                break;
+        }
+    }
     
     function generateForm() {
         
@@ -112,18 +246,25 @@
                         '<?= $validation->getError('alamat_form'); ?>' +
                     '</div>' +
                 '</div>' +
-                '<div class="form-group col-md-3">' +
-                    '<label for="rt_form">RT</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form" value="<?= old('rt_form') ?>"></input>' +
-                    '<div class="invalid-feedback">' +
-                        '<?= $validation->getError('rt_form'); ?>' +
-                    '</div>' +
-                '</div>' +
-                '<div class="form-group col-md-3">' +
+                '<div class="form-group">' +
                     '<label for="rw_form">RW</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" value="<?= old('rw_form') ?>"></input>' +
+                    '<select class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" onchange="generateRT()">' +
+                        '<option selected></option>' +
+                        '<option value="01">01</option>' +
+                        '<option value="02">02</option>' +
+                        '<option value="03">03</option>' +
+                        '<option value="04">04</option>' +
+                        '<option value="05">05</option>' +
+                    '</select>' +
                     '<div class="invalid-feedback">' +
                         '<?= $validation->getError('rw_form'); ?>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="form-group">' +
+                    '<label for="rt_form">RT</label>' +
+                    '<select class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form"></select>' +
+                    '<div class="invalid-feedback">' +
+                        '<?= $validation->getError('rt_form'); ?>' +
                     '</div>' +
                 '</div>' +
                 '<div class="form-group">' +
@@ -157,18 +298,25 @@
                         '<?= $validation->getError('alamat_form'); ?>' +
                     '</div>' +
                 '</div>' +
-                '<div class="form-group col-md-3">' +
-                    '<label for="rt_form">RT</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form" value="<?= old('rt_form') ?>"></input>' +
-                    '<div class="invalid-feedback">' +
-                        '<?= $validation->getError('rt_form'); ?>' +
-                    '</div>' +
-                '</div>' +
-                '<div class="form-group col-md-3">' +
+                '<div class="form-group">' +
                     '<label for="rw_form">RW</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" value="<?= old('rw_form') ?>"></input>' +
+                    '<select class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" onchange="generateRT()">' +
+                        '<option selected></option>' +
+                        '<option value="01">01</option>' +
+                        '<option value="02">02</option>' +
+                        '<option value="03">03</option>' +
+                        '<option value="04">04</option>' +
+                        '<option value="05">05</option>' +
+                    '</select>' +
                     '<div class="invalid-feedback">' +
                         '<?= $validation->getError('rw_form'); ?>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="form-group">' +
+                    '<label for="rt_form">RT</label>' +
+                    '<select class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form"></select>' +
+                    '<div class="invalid-feedback">' +
+                        '<?= $validation->getError('rt_form'); ?>' +
                     '</div>' +
                 '</div>' +
                 '<div class="form-group">' +
@@ -223,18 +371,25 @@
                         '<?= $validation->getError('alamat_form'); ?>' +
                     '</div>' +
                 '</div>' +
-                '<div class="form-group col-md-3">' +
-                    '<label for="rt_form">RT</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form" value="<?= old('rt_form') ?>"></input>' +
-                    '<div class="invalid-feedback">' +
-                        '<?= $validation->getError('rt_form'); ?>' +
-                    '</div>' +
-                '</div>' +
-                '<div class="form-group col-md-3">' +
+                '<div class="form-group">' +
                     '<label for="rw_form">RW</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" value="<?= old('rw_form') ?>"></input>' +
+                    '<select class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" onchange="generateRT()">' +
+                        '<option selected></option>' +
+                        '<option value="01">01</option>' +
+                        '<option value="02">02</option>' +
+                        '<option value="03">03</option>' +
+                        '<option value="04">04</option>' +
+                        '<option value="05">05</option>' +
+                    '</select>' +
                     '<div class="invalid-feedback">' +
                         '<?= $validation->getError('rw_form'); ?>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="form-group">' +
+                    '<label for="rt_form">RT</label>' +
+                    '<select class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form"></select>' +
+                    '<div class="invalid-feedback">' +
+                        '<?= $validation->getError('rt_form'); ?>' +
                     '</div>' +
                 '</div>' +
                 '<div class="form-group">' +
@@ -298,14 +453,24 @@
                 '</div>' +
                 '<div class="form-group">' +
                     '<label for="panjang_bayi_form">Panjang bayi</label>' +
-                    '<input type="text" class="form-control <?= ($validation->hasError("panjang_bayi_form")) ? "is-invalid" : "";?>" id="panjang_bayi_form" name="panjang_bayi_form" value="<?= old('panjang_bayi_form') ?>"></input>' +
+                    '<div class="input-group mb-3">' +
+                        '<input type="text" class="form-control <?= ($validation->hasError("panjang_bayi_form")) ? "is-invalid" : "";?>" id="panjang_bayi_form" name="panjang_bayi_form" value="<?= old('panjang_bayi_form') ?>"></input>' +
+                        '<div class="input-group-append">' +
+                            '<span class="input-group-text">cm</span>' +
+                        '</div>' +
+                    '</div>' +
                     '<div class="invalid-feedback">' +
                         '<?= $validation->getError('panjang_bayi_form'); ?>' +
                     '</div>' +
                 '</div>' +
                 '<div class="form-group">' +
                     '<label for="berat_bayi_form">Berat bayi</label>' +
-                    '<input type="text" class="form-control <?= ($validation->hasError("berat_bayi_form")) ? "is-invalid" : "";?>" id="berat_bayi_form" name="berat_bayi_form" value="<?= old('berat_bayi_form') ?>"></input>' +
+                    '<div class="input-group mb-3">' +
+                        '<input type="text" class="form-control <?= ($validation->hasError("berat_bayi_form")) ? "is-invalid" : "";?>" id="berat_bayi_form" name="berat_bayi_form" value="<?= old('berat_bayi_form') ?>"></input>' +
+                        '<div class="input-group-append">' +
+                            '<span class="input-group-text">kg</span>' +
+                        '</div>' +
+                    '</div>' +
                     '<div class="invalid-feedback">' +
                         '<?= $validation->getError('berat_bayi_form'); ?>' +
                     '</div>' +
@@ -317,18 +482,25 @@
                         '<?= $validation->getError('alamat_form'); ?>' +
                     '</div>' +
                 '</div>' +
-                '<div class="form-group col-md-3">' +
-                    '<label for="rt_form">RT</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form" value="<?= old('rt_form') ?>"></input>' +
-                    '<div class="invalid-feedback">' +
-                        '<?= $validation->getError('rt_form'); ?>' +
-                    '</div>' +
-                '</div>' +
-                '<div class="form-group col-md-3">' +
+                '<div class="form-group">' +
                     '<label for="rw_form">RW</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" value="<?= old('rw_form') ?>"></input>' +
+                    '<select class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" onchange="generateRT()">' +
+                        '<option selected></option>' +
+                        '<option value="01">01</option>' +
+                        '<option value="02">02</option>' +
+                        '<option value="03">03</option>' +
+                        '<option value="04">04</option>' +
+                        '<option value="05">05</option>' +
+                    '</select>' +
                     '<div class="invalid-feedback">' +
                         '<?= $validation->getError('rw_form'); ?>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="form-group">' +
+                    '<label for="rt_form">RT</label>' +
+                    '<select class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form"></select>' +
+                    '<div class="invalid-feedback">' +
+                        '<?= $validation->getError('rt_form'); ?>' +
                     '</div>' +
                 '</div>' +
                 '<div class="form-group">' +
@@ -390,18 +562,25 @@
                         '<?= $validation->getError('alamat_form'); ?>' +
                     '</div>' +
                 '</div>' +
-                '<div class="form-group col-md-3">' +
-                    '<label for="rt_form">RT</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form" value="<?= old('rt_form') ?>"></input>' +
-                    '<div class="invalid-feedback">' +
-                        '<?= $validation->getError('rt_form'); ?>' +
-                    '</div>' +
-                '</div>' +
-                '<div class="form-group col-md-3">' +
+                '<div class="form-group">' +
                     '<label for="rw_form">RW</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" value="<?= old('rw_form') ?>"></input>' +
+                    '<select class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" onchange="generateRT()">' +
+                        '<option selected></option>' +
+                        '<option value="01">01</option>' +
+                        '<option value="02">02</option>' +
+                        '<option value="03">03</option>' +
+                        '<option value="04">04</option>' +
+                        '<option value="05">05</option>' +
+                    '</select>' +
                     '<div class="invalid-feedback">' +
                         '<?= $validation->getError('rw_form'); ?>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="form-group">' +
+                    '<label for="rt_form">RT</label>' +
+                    '<select class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form"></select>' +
+                    '<div class="invalid-feedback">' +
+                        '<?= $validation->getError('rt_form'); ?>' +
                     '</div>' +
                 '</div>' +
                 '<div class="form-group">' +
@@ -449,18 +628,25 @@
                         '<?= $validation->getError('alamat_form'); ?>' +
                     '</div>' +
                 '</div>' +
-                '<div class="form-group col-md-3">' +
-                    '<label for="rt_form">RT</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form" value="<?= old('rt_form') ?>"></input>' +
-                    '<div class="invalid-feedback">' +
-                        '<?= $validation->getError('rt_form'); ?>' +
-                    '</div>' +
-                '</div>' +
-                '<div class="form-group col-md-3">' +
+                '<div class="form-group">' +
                     '<label for="rw_form">RW</label>' +
-                    '<input type="number" class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" value="<?= old('rw_form') ?>"></input>' +
+                    '<select class="form-control <?= ($validation->hasError("rw_form")) ? "is-invalid" : "";?>" id="rw_form" name="rw_form" onchange="generateRT()">' +
+                        '<option selected></option>' +
+                        '<option value="01">01</option>' +
+                        '<option value="02">02</option>' +
+                        '<option value="03">03</option>' +
+                        '<option value="04">04</option>' +
+                        '<option value="05">05</option>' +
+                    '</select>' +
                     '<div class="invalid-feedback">' +
                         '<?= $validation->getError('rw_form'); ?>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="form-group">' +
+                    '<label for="rt_form">RT</label>' +
+                    '<select class="form-control <?= ($validation->hasError("rt_form")) ? "is-invalid" : "";?>" id="rt_form" name="rt_form"></select>' +
+                    '<div class="invalid-feedback">' +
+                        '<?= $validation->getError('rt_form'); ?>' +
                     '</div>' +
                 '</div>' +
                 '<div class="form-group">' +

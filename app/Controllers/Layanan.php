@@ -47,6 +47,9 @@ class Layanan extends BaseController
 
     public function tambahSurat() {
 
+        $req_form_jenis_surat = $this->request->getVar('tipe_surat');
+        $jenis_surat = strtolower(str_replace(' ', '_', $req_form_jenis_surat));
+        
         //validasi input
         if (!$this->validate([
             'nik_form' => [
@@ -255,6 +258,44 @@ class Layanan extends BaseController
             }
         }
 
+        if (!is_numeric($this->request->getVar('contact_form'))) {
+            $warning_msg = 'Nomor kontak tidak sesuai.';
+        }
+        
+        if ($this->pendudukModel->where('nik', $this->request->getVar('nik_form'))->first() == null) {
+            
+            $alert_msg = 'NIK tidak terdaftar.';            
+            
+            if (!empty($this->request->getVar('nik_ibu_form'))) {
+                if ($this->pendudukModel->where('nik', $this->request->getVar('nik_ibu_form'))->first() == null) {
+                    $alert_msg_ibu = 'NIK Ibu tidak terdaftar.';
+
+                    if ($warning_msg !== null && $warning_msg !== "") {
+                        $validation = \Config\Services::validation();
+                        return redirect()->to('Beranda/layanan')->with('alert_msg_ibu', $alert_msg_ibu)->with('alert_msg', $alert_msg)->with('warning_msg', $warning_msg)->withInput()->with('validation', $validation)->with('jenis_surat', $jenis_surat);
+                    }
+
+                    $validation = \Config\Services::validation();
+                    return redirect()->to('Beranda/layanan')->with('alert_msg_ibu', $alert_msg_ibu)->with('alert_msg', $alert_msg)->withInput()->with('validation', $validation)->with('jenis_surat', $jenis_surat);
+                }
+            }
+
+            if ($warning_msg !== null && $warning_msg !== "") {
+                $validation = \Config\Services::validation();
+                return redirect()->to('Beranda/layanan')->with('alert_msg', $alert_msg)->with('warning_msg', $warning_msg)->withInput()->with('validation', $validation)->with('jenis_surat', $jenis_surat);
+            }
+
+            $validation = \Config\Services::validation();
+            return redirect()->to('Beranda/layanan')->with('alert_msg', $alert_msg)->withInput()->with('validation', $validation)->with('jenis_surat', $jenis_surat);
+        }
+
+        else {
+            if ($warning_msg !== null && $warning_msg !== "") {
+                $validation = \Config\Services::validation();
+                return redirect()->to('Beranda/layanan')->with('warning_msg', $warning_msg)->withInput()->with('validation', $validation)->with('jenis_surat', $jenis_surat);
+            }
+        }
+
         switch ($this->request->getVar('tipe_surat')) {
 
             case "Surat Ijin Keramaian":
@@ -274,7 +315,8 @@ class Layanan extends BaseController
                     'tanggal' => $today
                 ]);
 
-                return redirect()->to('Beranda/layanan');
+                $success_msg = 'Surat Ijin Keramaian anda telah berhasil diajukan.';
+                return redirect()->to('Beranda/layanan')->with('success_msg', $success_msg);
                 break;
 
             case "Surat Keterangan Belum Nikah":
@@ -294,7 +336,8 @@ class Layanan extends BaseController
                     'tanggal' => $today
                 ]);
 
-                return redirect()->to('Beranda/layanan');
+                $success_msg = 'Surat Keterangan Belum Nikah anda telah berhasil diajukan.';
+                return redirect()->to('Beranda/layanan')->with('success_msg', $success_msg);
                 break;
 
             case "Surat Keterangan Kehilangan":
@@ -314,7 +357,8 @@ class Layanan extends BaseController
                     'tanggal' => $today
                 ]);
 
-                return redirect()->to('Beranda/layanan');
+                $success_msg = 'Surat Keterangan Kehilangan anda telah berhasil diajukan.';
+                return redirect()->to('Beranda/layanan')->with('success_msg', $success_msg);
                 break;
 
             case "Surat Keterangan Kelahiran":
@@ -336,7 +380,8 @@ class Layanan extends BaseController
                     'tanggal' => $today
                 ]);
 
-                return redirect()->to('Beranda/layanan');
+                $success_msg = 'Surat Keterangan Kelahiran anda telah berhasil diajukan.';
+                return redirect()->to('Beranda/layanan')->with('success_msg', $success_msg);
                 break;
 
             case "Surat Keterangan Kematian":
@@ -356,7 +401,8 @@ class Layanan extends BaseController
                     'tanggal' => $today
                 ]);
 
-                return redirect()->to('Beranda/layanan');
+                $success_msg = 'Surat Keterangan Kematian anda telah berhasil diajukan.';
+                return redirect()->to('Beranda/layanan')->with('success_msg', $success_msg);
                 break;
 
             case "Surat Keterangan Tidak_mampu":
@@ -376,7 +422,8 @@ class Layanan extends BaseController
                     'tanggal' => $today
                 ]);
 
-                return redirect()->to('Beranda/layanan');
+                $success_msg = 'Surat Keterangan Tidak Mampu anda telah berhasil diajukan.';
+                return redirect()->to('Beranda/layanan')->with('success_msg', $success_msg);
                 break;
             
             default:

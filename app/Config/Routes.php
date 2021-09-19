@@ -83,7 +83,7 @@ $routes->group('admin',['filter' => 'cekLogin'], function($routes){
 $routes->get('bukanadmin', 'Admin::bukan_admin');
 
 // Layanan
-$routes->get('/layanan/surat/tambah', 'Layanan::tambahSurat');
+$routes->post('/layanan/surat/tambah', 'Layanan::tambahSurat');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
