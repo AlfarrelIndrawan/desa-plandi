@@ -8,7 +8,7 @@
         <div class="card-header py-3">
             <div class="row">
                 <div class="col-md-6">
-                    <h3 class="font-weight-bold text-success">Layanan Surat Masuk</h3>
+                    <h3 class="font-weight-bold text-success">Layanan Surat Selesai dan Tertolak</h3>
                 </div>
             </div>
         </div>
@@ -52,9 +52,6 @@
                                 <td class="isi">
                                     <a href="<?= base_url('admin/informasiLengkap/' . $l['id_surat']) ?>" class="btn btn-secondary btn-circle">
                                         <i class="fas fa-user"></i>
-                                    </a>
-                                    <a href="#" data-toggle="modal" data-target="#ModalDelete<?= $l['id_surat'] ?>" class="btn btn-danger btn-circle">
-                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
                             </tr>

@@ -36,7 +36,7 @@ class Layanan extends Migration
 			],
 			'status'			=> [
 				'type'			=> 'ENUM',
-				'constraint'	=> "'Menunggu Konfirmasi RT', 'Menunggu Konfirmasi RW', 'Telah Terkonfirmasi', 'Selesai'",
+				'constraint'	=> "'Menunggu Konfirmasi RT', 'Menunggu Konfirmasi RW', 'Telah Terkonfirmasi', 'Selesai', 'Tertolak'",
 			],
 			'informasi'			=> [
 				'type'			=> 'TEXT',

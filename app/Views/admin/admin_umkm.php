@@ -95,8 +95,6 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
-
-
 <!-- modal delete -->
 <?php foreach ($umkm as $u) : ?>
     <div class="modal fade" id="ModalDelete<?= $u['id_umkm'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

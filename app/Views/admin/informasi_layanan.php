@@ -25,7 +25,7 @@ $this->section('konten');
                 ?>
                     <div class="row" style="text-align: right;">
                         <div class="col-md-6 p-2">
-                            <a href="<?= base_url('admin/layanan') ?>" class="btn btn-danger btn-block"> Batal</a>
+                            <a href="<?= base_url('admin/layanan') ?>" class="btn btn-danger btn-block">Kembali</a>
                         </div>
                         <div class="col-md-6 p-2">
                             <?php if($user == "rt" && $layanan['status'] == "Menunggu Konfirmasi RT") {?>
@@ -34,6 +34,7 @@ $this->section('konten');
                                 <a href="<?= base_url('admin/konfirmasiSurat/' . $layanan['id_surat']) ?>" class="btn btn-success btn-block"> Mempersetujui Surat</a>
                             <?php } elseif($user == "ad" && $layanan['status'] == "Telah Terkonfirmasi") {?>
                                 <a href="<?= base_url('admin/konfirmasiSurat/' . $layanan['id_surat']) ?>" class="btn btn-success btn-block"> Mempersetujui Surat</a>
+                            <?php } elseif($layanan['status'] == "Tertolak" || $layanan['status'] == "Selesai" ) {?>
                             <?php } else {?>
                                 <a href="#" class="btn btn-success btn-block disabled"> Mempersetujui Surat</a>
                                 <?php }?>

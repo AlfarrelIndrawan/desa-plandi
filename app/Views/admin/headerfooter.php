@@ -64,7 +64,6 @@
             <div class="sidebar-heading">
                 Data Desa
             </div>
-
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <?php if($user == "ad") { ?>
@@ -81,9 +80,23 @@
                     <span>UMKM</span>
                 </a>
                 <?php } ?>
+            </li>
+            
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Layanan Surat
+            </div>
+            <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('/admin/layanan') ?>">
                     <i class="fas fa-envelope"></i>
-                    <span>Layanan Surat</span>
+                    <span>Surat Masuk</span>
+                </a>
+                <a class="nav-link" href="<?= base_url('/admin/layanan_selesai') ?>">
+                    <i class="fas fa-envelope"></i>
+                    <span>Surat Tertolak dan Selesai</span>
                 </a>
             </li>
             <!-- Logout Modal-->
@@ -91,15 +104,15 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Yakin untuk keluar?</h5>
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
                         </div>
-                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div class="modal-body">Pilih "Keluar" jika yakin untuk keluar dari akun tersebut</div>
                         <div class="modal-footer">
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                            <a class="btn btn-primary" href="<?=base_url('admin/logout')?>">Logout</a>
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Kembali</button>
+                            <a class="btn btn-primary" href="<?=base_url('admin/logout')?>">Keluar</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +176,7 @@
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Keluar
                                 </a>
                             </div>
                         </li>
@@ -189,8 +202,7 @@
 
                 <!-- Page level custom scripts -->
                 <script src="<?= base_url('js/demo/chart-area-demo.js') ?>"></script>
-                <script src="<?= base_url('js/demo/chart-pie-demo.js') ?>"></script>
-
+                
                 <!-- Page level plugins -->
                 <script src="<?= base_url('asset/datatables/jquery.dataTables.min.js') ?>"></script>
                 <script src="<?= base_url('asset/datatables/dataTables.bootstrap4.min.js') ?>"></script>
@@ -198,26 +210,6 @@
                 <!-- Page level custom scripts -->
                 <script src="<?= base_url('js/demo/datatables-demo.js') ?>"></script>
                 <script src="<?= base_url('js/preview-img.js') ?>"></script>
-
-                <!-- Logout Modal-->
-                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-primary" href="">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- batas modal logout -->
 </body>
 
 </html>

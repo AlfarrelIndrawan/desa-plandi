@@ -647,13 +647,27 @@ class Admin extends BaseController
         $data['user'] = substr($_SESSION['username'], 0, 2);
         $angka = substr($_SESSION['username'], 2, 4);
         if($data['user'] == "rt") {
-            $data['layanan'] = $this->layananModel->where('rt', $angka)->findAll();
+            $data['layanan'] = $this->layananModel->get_surat_masuk("rt", $angka);
         } else if($data['user'] == "rw") {
-            $data['layanan'] = $this->layananModel->where('rw', $angka)->findAll();    
+            $data['layanan'] = $this->layananModel->get_surat_masuk("rw", $angka);
         } else {
-            $data['layanan'] = $this->layananModel->findAll();
+            $data['layanan'] = $this->layananModel->get_surat_masuk_admin();
         }
         return view('admin/admin_layanan', $data);
+    }
+
+    public function layanan_selesai()
+    {
+        $data['user'] = substr($_SESSION['username'], 0, 2);
+        $angka = substr($_SESSION['username'], 2, 4);
+        if($data['user'] == "rt") {
+            $data['layanan'] = $this->layananModel->get_surat_selesai("rt", $angka);
+        } else if($data['user'] == "rw") {
+            $data['layanan'] = $this->layananModel->get_surat_selesai("rw", $angka);
+        } else {
+            $data['layanan'] = $this->layananModel->get_surat_selesai_admin();
+        }
+        return view('admin/admin_layanan_selesai', $data);
     }
 
     public function informasiLengkap($id)
@@ -686,9 +700,8 @@ class Admin extends BaseController
 
     public function hapusSurat($id)
     {
-        $ambil = $this->layananModel->find($id);
-        $this->layananModel->delete($id);
-
+        $update = (['status' => 'Tertolak']);
+        $this->layananModel->update($id, $update);
         return redirect()->to('/admin/layanan');
     }
 }

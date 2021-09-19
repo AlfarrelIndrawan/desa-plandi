@@ -73,7 +73,8 @@ $routes->group('admin',['filter' => 'cekLogin'], function($routes){
 
 	// Admin Layanan
 	$routes->get('layanan', 'Admin::layanan');
-	$routes->get('layanan/info', 'Admin::informasiLengkap');
+	$routes->get('layanan-selesai', 'Admin::layanan_selesai');
+	$routes->get('layanan/info/(:any)', 'Admin::informasiLengkap');
 	$routes->get('layanan/konfirmasi/(:any)', 'Admin::konfirmasiSurat/$1');
 	$routes->get('layanan/delete/(:any)', 'Admin::hapusSurat/$i');
 });
