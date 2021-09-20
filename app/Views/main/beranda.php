@@ -2,7 +2,6 @@
 
 <?= $this->section('konten') ?>
 <link rel="stylesheet" type="text/css" href="<?= base_url('css/cssberanda.css') ?>">
-<meta name="google-site-verification" content="AjJYhtWaBU7M6zwCs58d_MD5PUvxswpCC_9cvw9XBxE" />
 <!-- carousel berita -->
 <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
