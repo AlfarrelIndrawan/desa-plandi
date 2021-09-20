@@ -710,6 +710,6 @@ class Admin extends BaseController
     public function hapusSurat($id)
     {
         $this->layananModel->delete($id);
-        return redirect()->to('/admin/layanan');
+        return redirect()->to('/admin/layanan_selesai');
     }
 }
