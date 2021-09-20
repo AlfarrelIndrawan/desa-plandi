@@ -5,6 +5,7 @@
   filter: brightness(60%);
   max-width: 1600px;
   max-height: 900px;
+  background-color: rgba(0, 0, 0, 0.7); 
 }
 
 .carousel {
