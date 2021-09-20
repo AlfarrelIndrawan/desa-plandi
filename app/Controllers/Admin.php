@@ -2,11 +2,11 @@
 
 namespace App\Controllers;
 
-use App\models\BeritaModel;
-use App\models\UmkmModel;
-use App\models\PendudukModel;
+use App\Models\BeritaModel;
+use App\Models\UmkmModel;
+use App\Models\PendudukModel;
 use App\Models\authModel;
-use App\models\LayananModel;
+use App\Models\LayananModel;
 
 class Admin extends BaseController
 {
