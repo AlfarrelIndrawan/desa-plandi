@@ -93,7 +93,7 @@
 <!-- modal delete -->
 <?php foreach ($layanan as $l) : ?>
     <div class="modal fade" id="ModalDelete<?= $l['id_surat'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <form action="<?= base_url('admin/hapusSurat/' . $l['id_surat']) ?>" method="GET">
+        <form action="<?= base_url('admin/tolakSurat/' . $l['id_surat']) ?>" method="GET">
             <div class="modal-dialog " role="document">
                 <div class="modal-content border-left-danger">
                     <div class="modal-header">
@@ -104,8 +104,8 @@
                     </div>
                     <div class="modal-body">Pilih tombol "Tolak" dibawah jika anda yakin untuk menolak surat milik <b>"<?= $l['nama_pengaju'] ?>"</b></div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Tolak</button>
-                        <input type="submit" class="btn btn-danger" value="Hapus">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Kembali</button>
+                        <input type="submit" class="btn btn-danger" value="Tolak">
                     </div>
                 </div>
             </div>

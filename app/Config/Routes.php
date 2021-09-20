@@ -76,6 +76,7 @@ $routes->group('admin',['filter' => 'cekLogin'], function($routes){
 	$routes->get('layanan-selesai', 'Admin::layanan_selesai');
 	$routes->get('layanan/info/(:any)', 'Admin::informasiLengkap');
 	$routes->get('layanan/konfirmasi/(:any)', 'Admin::konfirmasiSurat/$1');
+	$routes->get('layanan/tolak/(:any)', 'Admin::tolakSurat/$i');
 	$routes->get('layanan/delete/(:any)', 'Admin::hapusSurat/$i');
 });
 

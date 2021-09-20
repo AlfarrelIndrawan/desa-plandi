@@ -700,10 +700,16 @@ class Admin extends BaseController
         return redirect()->to('admin/layanan');
     }
 
-    public function hapusSurat($id)
+    public function tolakSurat($id)
     {
         $update = (['status' => 'Tertolak']);
         $this->layananModel->update($id, $update);
+        return redirect()->to('/admin/layanan');
+    }
+
+    public function hapusSurat($id)
+    {
+        $this->layananModel->delete($id);
         return redirect()->to('/admin/layanan');
     }
 }

@@ -53,6 +53,9 @@
                                     <a href="<?= base_url('admin/informasiLengkap/' . $l['id_surat']) ?>" class="btn btn-secondary btn-circle">
                                         <i class="fas fa-user"></i>
                                     </a>
+                                    <a href="#" data-toggle="modal" data-target="#ModalDelete<?= $l['id_surat'] ?>" class="btn btn-danger btn-circle">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
                                 </td>
                             </tr>
                         <?php
@@ -94,14 +97,14 @@
             <div class="modal-dialog " role="document">
                 <div class="modal-content border-left-danger">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Yakin Menolak?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Yakin Menghapus?</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body">Pilih tombol "Tolak" dibawah jika anda yakin untuk menolak surat milik <b>"<?= $l['nama_pengaju'] ?>"</b></div>
+                    <div class="modal-body">Pilih tombol "Hapus" dibawah jika anda yakin untuk menghapus surat milik <b>"<?= $l['nama_pengaju'] ?>"</b></div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Tolak</button>
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Kembali</button>
                         <input type="submit" class="btn btn-danger" value="Hapus">
                     </div>
                 </div>
